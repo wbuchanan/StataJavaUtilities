@@ -1,0 +1,5 @@
+src/main/java/org/paces/Stata/*/*.java linguist-vendored=true
+target/*.jar linguist-vendored=true
+
+
+
