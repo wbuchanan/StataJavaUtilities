@@ -3,10 +3,11 @@ package org.paces.Stata.MetaData;
 import com.stata.sfi.Macro;
 
 /**
- * @author Billy Buchanan
- * @version 0.0.0
  * Class with Static Methods to retrieve data about the source of the Stata data
  * files.
+ * @author Billy Buchanan
+ * @version 0.0.0
+ *
  */
 public class DataSource {
 

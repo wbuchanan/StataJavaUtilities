@@ -5,11 +5,11 @@ import java.util.Collections;
 import java.util.List;
 
 /**
+ * Convenience Method to Convert String[] args to List of String objects
+ * that can use the Streaming API and other newer iterator methods in Java.
  * @author Billy Buchanan
  * @version 0.0.0
- * <h2>Convenience Method to Convert String[] args to List of String objects
- * that can use the Streaming API and other newer iterator methods in Java.
- * </h2>
+ *
  */
 class StataArgsToCollector {
 
@@ -56,4 +56,4 @@ class StataArgsToCollector {
 
 	} // End of method declaration for String object
 
-}
+} // End of class definition

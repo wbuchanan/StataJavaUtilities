@@ -11,7 +11,10 @@ import java.util.List;
 import java.util.Map;
 
 /***
- * Inner class containing variable -> value label maps
+ * Class used to store value labels from Stata data set
+ * @author Billy Buchanan
+ * @version 0.0.0
+ *
  */
 public class ValLabels {
 

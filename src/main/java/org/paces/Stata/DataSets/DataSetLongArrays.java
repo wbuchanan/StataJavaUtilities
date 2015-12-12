@@ -5,11 +5,11 @@ import com.stata.sfi.Macro;
 import org.paces.Stata.MetaData.Meta;
 
 /**
+ * A 2d Array of Longs containing the data from the active data set in memory.
+ *
  * @author Billy Buchanan
  * @version 0.0.0
- * <h2>Stata DataSet Class Object</h2>
- * <p>A 2d Array of Long containing the data from the active data set in
- * memory.</p>
+ *
  */
 public class DataSetLongArrays implements StataData {
 	

@@ -11,6 +11,9 @@ import java.util.Map;
 
 /***
  * Class containing variable label map
+ * @author Billy Buchanan
+ * @version 0.0.0
+ *
  */
 public class VarLabels {
 

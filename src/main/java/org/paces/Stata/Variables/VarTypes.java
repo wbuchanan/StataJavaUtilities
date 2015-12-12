@@ -7,7 +7,10 @@ import java.util.List;
 import java.util.Map;
 
 /***
- * Inner class containing string variable indicators
+ * Class containing string variable indicators
+ * @author Billy Buchanan
+ * @version 0.0.0
+ *
  */
 public class VarTypes {
 

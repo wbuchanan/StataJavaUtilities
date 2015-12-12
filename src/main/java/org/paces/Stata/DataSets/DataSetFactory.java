@@ -3,12 +3,13 @@ package org.paces.Stata.DataSets;
 import org.paces.Stata.MetaData.Meta;
 
 /**
+ * Object used to initialize DataSet class objects given the dataset meta
+ * data and an argument defining the return type to be created by the
+ * method.
+ *
  * @author Billy Buchanan
  * @version 0.0.0
- * <h1>Factory Object to Create Data Set Objects</h1>
- * <p>Object has a single method (getData) that takes a single string
- * argument for the dispatch in addition to the arugments to be passed to
- * the data set constructors. </p>
+ *
  */
 public class DataSetFactory {
 

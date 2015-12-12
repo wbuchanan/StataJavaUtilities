@@ -3,14 +3,14 @@ package org.paces.Stata.MetaData;
 import java.util.List;
 
 /**
- * @author Billy Buchanan
- * @version 0.0.0
- * <h2>Stata Meta Class Object</h2>
- * <p>Class used for Stata's Java API to access dataset Metadata.
+ * Class used for Stata's Java API to access dataset Metadata.
  * Initializes Observations and Variables objects to construct data for
  * individual records and the entire data set.  DataRecord and
  * DataSet objects inherit Meta to construct these representations.
- * </p>
+ *
+ * @author Billy Buchanan
+ * @version 0.0.0
+ *
  */
 public class Meta {
 

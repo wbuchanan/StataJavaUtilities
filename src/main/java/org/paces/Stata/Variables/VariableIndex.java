@@ -9,7 +9,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 /***
- * Class containing the variable indices
+ * Class containing the variable indices.  This is used by all of the other
+ * classes in the Variables package to extract and store data about the
+ * variables in the active Stata session.
+ * @author Billy Buchanan
+ * @version 0.0.0
+ *
  */
 public class VariableIndex {
 

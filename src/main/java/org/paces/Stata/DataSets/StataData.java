@@ -1,11 +1,12 @@
 package org.paces.Stata.DataSets;
 
 /**
+ * Interface used to access and construct representations of Stata data
+ * set as POJOs.
+ *
  * @author Billy Buchanan
  * @version 0.0.0
- * <h2>Stata Data Interface Class Object</h2>
- * <p>Interface used to access and construct representations of Stata data
- * set as POJOs.  </p>
+ *
  */
 public interface StataData {
 

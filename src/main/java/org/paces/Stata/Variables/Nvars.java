@@ -3,7 +3,10 @@ package org.paces.Stata.Variables;
 import java.util.List;
 
 /***
- * Class containing number of variables
+ * Class containing number of variables in the active Stata session
+ * @author Billy Buchanan
+ * @version 0.0.0
+ *
  */
 public class Nvars {
 

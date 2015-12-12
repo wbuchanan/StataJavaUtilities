@@ -9,9 +9,10 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 /**
+ * Class to return all values of a single numeric Stata variable
  * @author Billy Buchanan
  * @version 0.0.0
- * <h1>Class to return all values of a single variable</h1>
+ *
  */
 public class NumDataColumn {
 

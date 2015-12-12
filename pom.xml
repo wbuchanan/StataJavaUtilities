@@ -7,12 +7,18 @@
 	<!-- This contains the overall package metadata -->
 	<groupId>org.paces.Stata</groupId>
 	<artifactId>java</artifactId>
-	<version>0.0.0</version>
+	<version>0.0.1</version>
 	<packaging>jar</packaging>
-	<name>Stata Java Tools</name>
+	<name>${project.groupId}:${project.artifactId}</name>
 	<description>Java plugins used to extend capabilities in Stata
 		statical software platform.</description>
-	<url>https://github.com/wbuchanan/StataJava</url>
+
+	<!-- Information regarding Source Control Management -->
+	<scm>
+		<connection>scm:git:git@github.com:wbuchanan/StataJavaUtilities.git</connection>
+		<developerConnection>scm:git:git@github.com:wbuchanan/StataJavaUtilities.git</developerConnection>
+		<url>git@github.com:wbuchanan/StataJavaUtilities.git</url>
+	</scm>
 
 	<!-- Information regarding organization publishing the plugin -->
 	<organization>
@@ -46,8 +52,8 @@
 
 	<!-- Defines how Maven should build the Java binaries -->
 	<build>
-		<defaultGoal>install</defaultGoal>
-		<finalName>StataJava</finalName>
+		<defaultGoal>jar</defaultGoal>
+		<finalName>StataJavaUtilities</finalName>
 		<plugins>
 
 			<!-- Sets the JDK to 1.8 -->
@@ -66,6 +72,39 @@
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-jar-plugin</artifactId>
 				<version>2.6</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>attach-sources</id>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>attach-javadocs</id>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
 			</plugin>
 
 		</plugins>

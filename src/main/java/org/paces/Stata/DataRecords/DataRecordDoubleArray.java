@@ -4,9 +4,11 @@ import com.stata.sfi.Data;
 import org.paces.Stata.MetaData.Meta;
 
 /***
+ * Creates an Array of Doubles for Individual Observation
+ *
  * @author Billy Buchanan
  * @version 0.0.0
- * <h1>Creates an Array of Doubles for Individual Observation</h1>
+ *
  */
 public class DataRecordDoubleArray implements Record {
 

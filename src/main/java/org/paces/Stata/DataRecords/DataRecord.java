@@ -9,11 +9,12 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
+ * A POJO representation of a single observation from the Stata dataset
+ * loaded in memory.
+ *
  * @author Billy Buchanan
  * @version 0.0.0
- * <h2>Stata Record Class Object</h2>
- * <p>A POJO representation of a single observation from the Stata dataset
- * loaded in memory. </p>
+ *
  */
 public class DataRecord implements Record {
 

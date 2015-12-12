@@ -1,11 +1,12 @@
 package org.paces.Stata.DataRecords;
 
 /***
+ * Defines methods for Objects that construct individual observation
+ * records.
+ *
  * @author Billy Buchanan
  * @version 0.0.0
- * <h1>Interface for Record Objects</h1>
- * <p>Defines methods for Objects that construct individual observation
- * records.</p>
+ *
  */
 public interface Record {
 

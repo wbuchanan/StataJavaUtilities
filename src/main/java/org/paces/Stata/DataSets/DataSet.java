@@ -10,11 +10,12 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 /**
+ * A POJO representation of the Stata dataset currently in memory.
+ * Created by iterating over calls to DataRecord.
+ *
  * @author Billy Buchanan
  * @version 0.0.0
- * <h2>Stata DataSet Class Object</h2>
- * <p>A POJO representation of the Stata dataset currently in memory.
- * Created by iterating over calls to DataRecord.</p>
+ *
  */
 public class DataSet implements StataData {
 

@@ -11,31 +11,32 @@ import static java.time.temporal.ChronoUnit.MILLIS;
 import static java.time.temporal.ChronoUnit.YEARS;
 
 /**
+ * Class and Methods to convert Java Date, Time, and Timestamp objects to Stata
+ * representations. This class and the methods should be tested a bit more
+ * before use in a production environment.
  * @author Billy Buchanan
  * @version 0.0.0
- * <h2>Stata XT/TS Methods</h2>
- * <p>Methods to convert Java Date, Time, and Timestamp objects to Stata
- * representations.  </p>
+ *
  */
 public class StataXTTS {
 
 	/***
 	 * Constant for the Stata Epoch date
 	 */
-	public static final Instant stataEpoch =
-			LocalDateTime.of(1960, 1, 1, 0, 0, 0, 0).toInstant(ZoneOffset.UTC);
+	public static final Instant STATAEPOCH =
+			LocalDateTime.of(1970, 1, 1, 0, 0, 0, 0).toInstant(ZoneOffset.UTC);
 
 	/***
 	 * Constant for the Java Epoch date
 	 */
-	public static final Instant javaEpoch =
+	public static final Instant JAVAEPOCH =
 			LocalDateTime.of(1960, 1, 1, 0, 0, 0, 0).toInstant(ZoneOffset.UTC);
 
 	/***
 	 * Constant for the Stata to Java offset
 	 */
-	public static final Instant stataOffset =
-			stataEpoch.minusMillis(javaEpoch.toEpochMilli());
+	public static final Instant STATAOFFSET =
+			STATAEPOCH.minusMillis(JAVAEPOCH.toEpochMilli());
 
 	/**
 	 * Method to convert Java Dates to Stata Dates
@@ -78,7 +79,7 @@ public class StataXTTS {
 		Instant javadate = datetime.toInstant();
 
 		// Return the object with the time offset adjustment
-		return javadate.plus(stataOffset.toEpochMilli(), MILLIS).toEpochMilli();
+		return javadate.plus(STATAOFFSET.toEpochMilli(), MILLIS).toEpochMilli();
 
 	} // End toStata method declaration for Timestamp object classes
 

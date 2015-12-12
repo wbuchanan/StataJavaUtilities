@@ -4,9 +4,11 @@ import com.stata.sfi.Data;
 import org.paces.Stata.MetaData.Meta;
 
 /***
+ * Creates an Array of Integers for Individual Observation
+ *
  * @author Billy Buchanan
  * @version 0.0.0
- * <h1>Creates an Array of Integers for Individual Observation</h1>
+ *
  */
 public class DataRecordIntArray implements Record {
 
@@ -92,7 +94,6 @@ public class DataRecordIntArray implements Record {
 
 	/***
 	 * Retrieves the data for a given record
-	 *
 	 * @return An object with the values for variables of interest on a given
 	 * observation
 	 */

@@ -6,10 +6,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
+ * Class to construct object used to iterate over observations in Stata
+ * dataset and to store metadata related to observations.
+ *
  * @author Billy Buchanan
  * @version 0.0.0
- * <h2>Stata Observations Interface Implementation</h2>
- * <p>Implementation of the Stata Observation interface class.</p>
+ *
  */
 public class Observations {
 

@@ -11,6 +11,9 @@ import java.util.stream.Collectors;
 
 /***
  * Class containing variable names list
+ * @author Billy Buchanan
+ * @version 0.0.0
+ *
  */
 public class VarNames {
 

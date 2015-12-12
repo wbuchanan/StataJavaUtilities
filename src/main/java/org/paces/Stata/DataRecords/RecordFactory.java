@@ -3,12 +3,12 @@ package org.paces.Stata.DataRecords;
 import org.paces.Stata.MetaData.Meta;
 
 /**
+ * Object used to initialize a DataRecord type object given an observation
+ * ID, a Meta class object, and a string argument to define the return type.
+ *
  * @author Billy Buchanan
  * @version 0.0.0
- * <h1>Factory Object to Create Data Record Objects</h1>
- * <p>Object has a single method (getRecord) that takes a single string
- * argument for the dispatch in addition to the arugments to be passed to
- * the data record constructors. </p>
+ *
  */
 public class RecordFactory {
 

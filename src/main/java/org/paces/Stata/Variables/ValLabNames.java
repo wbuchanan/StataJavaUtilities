@@ -12,6 +12,9 @@ import java.util.Map;
 
 /***
  * Class used to store value label names
+ * @author Billy Buchanan
+ * @version 0.0.0
+ *
  */
 public class ValLabNames {
 
