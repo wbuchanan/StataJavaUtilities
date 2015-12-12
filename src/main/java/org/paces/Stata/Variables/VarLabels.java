@@ -38,6 +38,7 @@ public class VarLabels {
 	/***
 	 * Sets an object containing variable labels from Stata data set.
 	 * Requires the variable index.
+	 * @param vdx The variable index over which the method will iterate.
 	 */
 	public void setVariableLabels(List<Integer> vdx) {
 

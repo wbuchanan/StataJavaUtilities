@@ -38,6 +38,7 @@ public class VarNames {
 	/***
 	 * Sets an object containing variable names from Stata data set.
 	 * Requires the variable index.
+	 * @param vdx The Variable index over which the method will iterate.
 	 */
 	public void setVariableNames(List<Integer> vdx) {
 

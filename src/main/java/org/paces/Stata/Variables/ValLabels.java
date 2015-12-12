@@ -44,6 +44,7 @@ public class ValLabels {
 	/***
 	 * Sets an object with the value labels defined for a given variable.
 	 * Requires the variable index.
+	 * @param vdx The Variable index over which the method will iterate.
 	 */
 	public void setValueLabels(List<Integer> vdx) {
 

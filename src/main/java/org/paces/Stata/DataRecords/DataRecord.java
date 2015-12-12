@@ -163,7 +163,7 @@ public class DataRecord implements Record {
 
 	/***
 	 * Method to access the name
-	 * @return
+	 * @return The name of the DataRecord object
 	 */
 	public String getName() { return this.name; }
 
