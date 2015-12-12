@@ -1,5 +1,10 @@
 .idea/*
 src/test/*
 *.iml
-
+target/apidocs
+target/classes
+target/generated-sources
+target/javadoc-bundle-options
+target/maven-archiver
+target/maven-status
 
