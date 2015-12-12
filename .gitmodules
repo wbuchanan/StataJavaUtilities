@@ -1,0 +1,3 @@
+[submodule "apidocs"]
+	path = apidocs
+	url = /Users/billy/Desktop/Programs/Java/StataJavaUtilities/target/apidocs
