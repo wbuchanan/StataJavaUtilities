@@ -1,4 +1,6 @@
 package org.paces.Stata.Utilities;
+
+import java.nio.file.attribute.FileTime;
 import java.sql.Date;
 import java.sql.Time;
 import java.sql.Timestamp;
@@ -81,5 +83,25 @@ public class StataXTTS {
 		return javadate - STATAOFFSET;
 
 	} // End toStata method declaration for Timestamp object classes
+
+	/**
+	 * Method to convert Java Timestamps to Stata Datetimes
+	 * @param datetime  A timestamp object returned from the JDBC query
+	 * @return A long integer containing the number of milliseconds past the
+	 * Stata epoch (01jan1960) precision milliseconds elapsed since
+	 * 01jan1960.  The value can be displayed correctly in Stata using the
+	 * %tc format.
+	 */
+	public static long toStata(FileTime datetime) {
+
+		// Convert the FileTime object into the number of Milliseconds since
+		// the Java epoch date
+		Long javadate = datetime.toInstant().toEpochMilli();
+
+		// Returns a long value containing the number of milliseconds since
+		// 01jan1960
+		return javadate - STATAOFFSET;
+
+	} // End of Method declaration for FileTime objects
 
 } // End of StataXTTS object declaration

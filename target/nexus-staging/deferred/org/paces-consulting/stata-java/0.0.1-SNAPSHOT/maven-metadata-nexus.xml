@@ -7,73 +7,51 @@
     <snapshot>
       <localCopy>true</localCopy>
     </snapshot>
-    <lastUpdated>20151216153459</lastUpdated>
+    <lastUpdated>20151216164141</lastUpdated>
     <snapshotVersions>
       <snapshotVersion>
         <classifier>javadoc</classifier>
         <extension>jar.asc</extension>
         <value>0.0.1-SNAPSHOT</value>
-        <updated>20151216153459</updated>
+        <updated>20151216164141</updated>
       </snapshotVersion>
       <snapshotVersion>
         <classifier>sources</classifier>
         <extension>jar.asc</extension>
         <value>0.0.1-SNAPSHOT</value>
-        <updated>20151216153459</updated>
-      </snapshotVersion>
-      <snapshotVersion>
-        <classifier>javadoc</classifier>
-        <extension>jar.asc.asc</extension>
-        <value>0.0.1-SNAPSHOT</value>
-        <updated>20151216153459</updated>
-      </snapshotVersion>
-      <snapshotVersion>
-        <classifier>sources</classifier>
-        <extension>jar.asc.asc</extension>
-        <value>0.0.1-SNAPSHOT</value>
-        <updated>20151216153459</updated>
-      </snapshotVersion>
-      <snapshotVersion>
-        <extension>pom.asc.asc</extension>
-        <value>0.0.1-SNAPSHOT</value>
-        <updated>20151216153459</updated>
-      </snapshotVersion>
-      <snapshotVersion>
-        <extension>jar.asc.asc</extension>
-        <value>0.0.1-SNAPSHOT</value>
-        <updated>20151216153459</updated>
+        <updated>20151216164141</updated>
       </snapshotVersion>
       <snapshotVersion>
         <extension>pom.asc</extension>
         <value>0.0.1-SNAPSHOT</value>
-        <updated>20151216153459</updated>
+        <updated>20151216164141</updated>
       </snapshotVersion>
       <snapshotVersion>
         <extension>jar.asc</extension>
         <value>0.0.1-SNAPSHOT</value>
-        <updated>20151216153459</updated>
+        <updated>20151216164141</updated>
       </snapshotVersion>
       <snapshotVersion>
         <classifier>javadoc</classifier>
         <extension>jar</extension>
         <value>0.0.1-SNAPSHOT</value>
-        <updated>20151216153459</updated>
+        <updated>20151216164141</updated>
       </snapshotVersion>
       <snapshotVersion>
         <classifier>sources</classifier>
         <extension>jar</extension>
         <value>0.0.1-SNAPSHOT</value>
-        <updated>20151216153459</updated>
+        <updated>20151216164141</updated>
       </snapshotVersion>
       <snapshotVersion>
         <extension>jar</extension>
         <value>0.0.1-SNAPSHOT</value>
-        <updated>20151216153459</updated>
+        <updated>20151216164141</updated>
       </snapshotVersion>
       <snapshotVersion>
         <extension>pom</extension>
         <value>0.0.1-SNAPSHOT</value>
-        <updated>20151216153459</updated>
+        <updated>20151216164141</updated>
       </snapshotVersion>
     </snapshotVersions>
   </versioning>
