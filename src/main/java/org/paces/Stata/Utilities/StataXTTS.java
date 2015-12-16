@@ -2,12 +2,8 @@ package org.paces.Stata.Utilities;
 import java.sql.Date;
 import java.sql.Time;
 import java.sql.Timestamp;
-import java.time.Instant;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.LocalTime;
-import java.time.ZoneOffset;
-import static java.time.temporal.ChronoUnit.MILLIS;
+import java.time.*;
+
 import static java.time.temporal.ChronoUnit.YEARS;
 
 /**
@@ -24,19 +20,19 @@ public class StataXTTS {
 	 * Constant for the Stata Epoch date
 	 */
 	public static final Instant STATAEPOCH =
-			LocalDateTime.of(1970, 1, 1, 0, 0, 0, 0).toInstant(ZoneOffset.UTC);
+			LocalDateTime.of(1960, 1, 1, 0, 0, 0, 0).toInstant(ZoneOffset.UTC);
 
 	/***
 	 * Constant for the Java Epoch date
 	 */
 	public static final Instant JAVAEPOCH =
-			LocalDateTime.of(1960, 1, 1, 0, 0, 0, 0).toInstant(ZoneOffset.UTC);
+			LocalDateTime.of(1970, 1, 1, 0, 0, 0, 0).toInstant(ZoneOffset.UTC);
 
 	/***
 	 * Constant for the Stata to Java offset
 	 */
-	public static final Instant STATAOFFSET =
-			STATAEPOCH.minusMillis(JAVAEPOCH.toEpochMilli());
+	public static final Long STATAOFFSET =
+			STATAEPOCH.minusMillis(JAVAEPOCH.toEpochMilli()).toEpochMilli();
 
 	/**
 	 * Method to convert Java Dates to Stata Dates
@@ -71,15 +67,18 @@ public class StataXTTS {
 	/**
 	 * Method to convert Java Timestamps to Stata Datetimes
 	 * @param datetime  A timestamp object returned from the JDBC query
-	 * @return Double precision milliseconds elapsed since 01jan1960
+	 * @return A long integer containing the number of milliseconds past the
+	 * Stata epoch (01jan1960) precision milliseconds elapsed since
+	 * 01jan1960.  The value can be displayed correctly in Stata using the
+	 * %tc format.
 	 */
-	public static double toStata(Timestamp datetime) {
+	public static Long toStata(Timestamp datetime) {
 
 		// Convert timestamp variable to an instant class object
-		Instant javadate = datetime.toInstant();
+		Long javadate = datetime.toInstant().toEpochMilli();
 
 		// Return the object with the time offset adjustment
-		return javadate.plus(STATAOFFSET.toEpochMilli(), MILLIS).toEpochMilli();
+		return javadate - STATAOFFSET;
 
 	} // End toStata method declaration for Timestamp object classes
 
