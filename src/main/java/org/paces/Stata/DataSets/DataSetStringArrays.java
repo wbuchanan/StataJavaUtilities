@@ -103,7 +103,7 @@ public class DataSetStringArrays implements StataData {
 	 * @return A POJO representation of the Stata Dataset
 	 */
 	@Override
-	public Object getData() {
+	public String[][] getData() {
 		
 		// Returns the sole member variable of the class
 		return this.stataDataSet;

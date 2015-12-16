@@ -26,7 +26,7 @@ public class DataSetByteArrays implements StataData {
 	/***
 	 * A 2d array of Byte objects
 	 */
-	private byte[][] stataDataSet;
+	private Byte[][] stataDataSet;
 
 	/***
 	 * Generic constructor method for the class
@@ -79,7 +79,7 @@ public class DataSetByteArrays implements StataData {
 
 		// Initialize container to ID the observation and contains a Map
 		// object with key/value pairs
-		byte[][] obs = new byte[metaob.obsindex.size()][];
+		Byte[][] obs = new Byte[metaob.obsindex.size()][];
 
 		for (int i = 0; i < metaob.obsindex.size(); i++) {
 
@@ -113,7 +113,7 @@ public class DataSetByteArrays implements StataData {
 	 * @return A POJO representation of the Stata Dataset
 	 */
 	@Override
-	public Object getData() {
+	public Byte[][] getData() {
 
 		// Returns the sole member variable of the class
 		return this.stataDataSet;

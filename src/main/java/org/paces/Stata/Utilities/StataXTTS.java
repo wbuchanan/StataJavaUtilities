@@ -19,35 +19,35 @@ import static java.time.temporal.ChronoUnit.YEARS;
 public class StataXTTS {
 
 	/***
+	 * System default zone ID
+	 */
+	private final ZoneId zid = ZoneId.systemDefault();
+
+	/***
 	 * Constant for the Stata Epoch date
 	 */
-	public static final Instant STATAEPOCH =
+	private final Instant STATAEPOCH =
 			LocalDateTime.of(1960, 1, 1, 0, 0, 0, 0).toInstant(ZoneOffset.UTC);
 
 	/***
 	 * Constant for the Java Epoch date
 	 */
-	public static final Instant JAVAEPOCH =
+	private final Instant JAVAEPOCH =
 			LocalDateTime.of(1970, 1, 1, 0, 0, 0, 0).toInstant(ZoneOffset.UTC);
 
-	/***
-	 * Constant for the Stata to Java offset
-	 */
-	public static final Long STATAOFFSET =
-			STATAEPOCH.minusMillis(JAVAEPOCH.toEpochMilli()).toEpochMilli();
+	public static void main(String[] args) {
+		new StataXTTS();
+	}
 
 	/**
 	 * Method to convert Java Dates to Stata Dates
 	 * @param datetime A date object to convert to a Stata datetime value
 	 * @return Double precision milliseconds elapsed since 01jan1960
 	 */
-	public static double toStata(Date datetime) {
-
-		// Convert to a local date object
-		LocalDate dbLocalDate = datetime.toLocalDate();
+	public Double toStata(Date datetime) {
 
 		// Return the date value with the epoch date adjusted
-		return dbLocalDate.minusYears(10).toEpochDay();
+		return (double) datetime.toLocalDate().minusYears(10).toEpochDay();
 
 	} // End toStata method declaration for Date object classes
 
@@ -56,13 +56,10 @@ public class StataXTTS {
 	 * @param datetime A time object returned from the JDBC query
 	 * @return Double precision milliseconds elapsed since 01jan1960
 	 */
-	public static double toStata(Time datetime) {
-
-		// Convert to a local time object
-		LocalTime dbLocalTime = datetime.toLocalTime().minus(10, YEARS);
+	public Double toStata(Time datetime) {
 
 		// Return the double value to convert to a Stata value
-		return dbLocalTime.toNanoOfDay();
+		return (double) datetime.toLocalTime().minus(10, YEARS).toNanoOfDay();
 
 	} // End toStata method declaration for Time object classes
 
@@ -74,13 +71,14 @@ public class StataXTTS {
 	 * 01jan1960.  The value can be displayed correctly in Stata using the
 	 * %tc format.
 	 */
-	public static Long toStata(Timestamp datetime) {
+	public Double toStata(Timestamp datetime) {
 
 		// Convert timestamp variable to an instant class object
 		Long javadate = datetime.toInstant().toEpochMilli();
 
 		// Return the object with the time offset adjustment
-		return javadate - STATAOFFSET;
+		return (double) javadate - STATAEPOCH.minusMillis(JAVAEPOCH
+				.toEpochMilli()).toEpochMilli();
 
 	} // End toStata method declaration for Timestamp object classes
 
@@ -92,16 +90,62 @@ public class StataXTTS {
 	 * 01jan1960.  The value can be displayed correctly in Stata using the
 	 * %tc format.
 	 */
-	public static long toStata(FileTime datetime) {
+	public String[] toStata(FileTime datetime) {
+
+		// Strings with the date pieces
+		String month, day, year, hour, minute, second, zone, offset;
 
 		// Convert the FileTime object into the number of Milliseconds since
 		// the Java epoch date
-		Long javadate = datetime.toInstant().toEpochMilli();
+		ZonedDateTime zdt = ZonedDateTime.ofInstant(datetime.toInstant(), zid);
 
-		// Returns a long value containing the number of milliseconds since
-		// 01jan1960
-		return javadate - STATAOFFSET;
+		// Year value
+		year = String.valueOf(zdt.getYear());
+
+		// Day of year (numeric) value
+		if (String.valueOf(zdt.getDayOfMonth()).length() == 2) day = String.valueOf(zdt.getDayOfMonth());
+		else day = "0" + String.valueOf(zdt.getDayOfMonth());
+
+		// Month of year (string) value
+ 		month = zdt.getMonth().toString().toLowerCase().substring(0, 3);
+
+		// Hour of the day value
+		if (String.valueOf(zdt.getHour()).length() == 2) hour = String.valueOf(zdt.getHour());
+		else hour = "0" + String.valueOf(zdt.getHour());
+
+		// Minute of the hour value
+		if (String.valueOf(zdt.getMinute()).length() == 2) minute = String.valueOf(zdt.getMinute());
+		else minute = "0" + String.valueOf(zdt.getMinute());
+
+		// Second of the minute value
+		if (String.valueOf(zdt.getSecond()).length() == 2) second = String.valueOf(zdt.getSecond());
+		else second = "0" + String.valueOf(zdt.getSecond());
+
+		// The time zone ID America/Chicago
+		zone = zdt.getZone().toString();
+
+		// The Offset value
+		offset = zdt.getOffset().getId();
+
+		// String array returned by the method
+		String[] retval = {day, month, year, hour, minute, second, zone, offset};
+
+		// Returns a String array that can be used to construct a Stata
+		// string that can be formatted as a date time variable
+		return retval;
 
 	} // End of Method declaration for FileTime objects
+
+	/***
+	 * Method that returns a String formatted to be included in Stata date
+	 * function like date(retval, "YMDHms")
+	 * @param toStata A string array created by the toStata method used for
+	 *                   FileTime objects
+	 * @return A String with the date and time prepared for use in Stata.
+	 */
+	public String stringArrayToStataDate(String[] toStata) {
+		return toStata[0] + toStata[1] + toStata[2] + " " + toStata[3] +
+				":" + toStata[4] + ":" + toStata[5];
+	}
 
 } // End of StataXTTS object declaration

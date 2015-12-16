@@ -113,7 +113,7 @@ public class DataSetLongArrays implements StataData {
 	 * @return A POJO representation of the Stata Dataset
 	 */
 	@Override
-	public Object getData() {
+	public Long[][] getData() {
 		
 		// Returns the sole member variable of the class
 		return this.stataDataSet;
