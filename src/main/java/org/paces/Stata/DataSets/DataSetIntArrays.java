@@ -96,7 +96,7 @@ public class DataSetIntArrays implements StataData {
 				} else {
 
 					// Convert numeric variables to string
-					obs[i][j] = (int) Math.round(Data.getNum(metaob.getVarindex(j), (long) i) / 1);
+					obs[i][j] = (int) Math.floor(Data.getNum(metaob.getVarindex(j), (long) i));
 
 				} // End ELSE Block for non-missing values
 
