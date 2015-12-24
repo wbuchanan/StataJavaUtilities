@@ -95,7 +95,7 @@ public class DataSetByteArrays implements StataData {
 				} else {
 
 					// Make sure the value is truncated to a byte type
-					obs[i][j] = (byte) Math.floor(Data.getNum(metaob.getVarindex(j), (long) i));
+					obs[i][j] = (byte) Data.getNum(metaob.getVarindex(j), (long) i);
 
 				} // End ELSE Block for non-missing values
 

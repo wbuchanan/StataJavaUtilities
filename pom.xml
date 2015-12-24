@@ -123,7 +123,7 @@
 				</executions>
 			</plugin>
 
-			<!-- Used to sign the files with GPG key -->
+			<!-- Used to sign the files with GPG key
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-gpg-plugin</artifactId>
@@ -138,8 +138,9 @@
 					</execution>
 				</executions>
 			</plugin>
+			-->
 
-			<!-- Plugin used to deploy the artifacts to the server -->
+			<!-- Plugin used to deploy the artifacts to the server
 			<plugin>
 				<groupId>org.sonatype.plugins</groupId>
 				<artifactId>nexus-staging-maven-plugin</artifactId>
@@ -151,6 +152,7 @@
 					<autoReleaseAfterClose>true</autoReleaseAfterClose>
 				</configuration>
 			</plugin>
+			-->
 
 		</plugins>
 	</build>
