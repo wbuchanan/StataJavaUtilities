@@ -26,7 +26,7 @@ public class DataSetByteArrays implements StataData {
 	/***
 	 * A 2d array of Byte objects
 	 */
-	private Byte[][] stataDataSet;
+	private byte[][] stataDataSet;
 
 	/***
 	 * Generic constructor method for the class
@@ -79,15 +79,15 @@ public class DataSetByteArrays implements StataData {
 
 		// Initialize container to ID the observation and contains a Map
 		// object with key/value pairs
-		Byte[][] obs = new Byte[metaob.obsindex.size()][];
+		byte[][] obs = new byte[this.metaob.getObsindex().size()][this.metaob.getVarindex().size()];
 
-		for (int i = 0; i < metaob.obsindex.size(); i++) {
+		for (int i = 0; i < this.metaob.getObsindex().size(); i++) {
 
 			// Loop over the variable indices
-			for (int j = 0; j < metaob.varindex.size(); j++) {
+			for (int j = 0; j < this.metaob.getVarindex().size(); j++) {
 
 				// Check to see if value is missing
-				if (Data.isValueMissing(Data.getNum(metaob.getVarindex(j), (long) i))) {
+				if (Data.isValueMissing(Data.getNum(this.metaob.getVarindex(j), (long) i))) {
 
 					// If value is missing, set value to -1.0
 					obs[i][j] = -1;
@@ -95,7 +95,7 @@ public class DataSetByteArrays implements StataData {
 				} else {
 
 					// Make sure the value is truncated to a byte type
-					obs[i][j] = (byte) Data.getNum(metaob.getVarindex(j), (long) i);
+					obs[i][j] = ((byte)(int)Math.round(Data.getNum(this.metaob.getVarindex(j), (long)i) / 1.0D));
 
 				} // End ELSE Block for non-missing values
 
@@ -104,7 +104,7 @@ public class DataSetByteArrays implements StataData {
 		} // End of Loop over observations
 
 		// Set the member variable to this value
-		stataDataSet = obs;
+		this.stataDataSet = obs;
 
 	} // End method declaration to set data value of class
 
@@ -113,7 +113,7 @@ public class DataSetByteArrays implements StataData {
 	 * @return A POJO representation of the Stata Dataset
 	 */
 	@Override
-	public Byte[][] getData() {
+	public byte[][] getData() {
 
 		// Returns the sole member variable of the class
 		return this.stataDataSet;

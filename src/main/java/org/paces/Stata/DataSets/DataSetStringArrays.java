@@ -79,12 +79,12 @@ public class DataSetStringArrays implements StataData {
 		
 		// Initialize container to ID the observation and contains a Map
 		// object with key/value pairs
-		String[][] obs = new String[metaob.obsindex.size()][];
+		String[][] obs = new String[this.metaob.getObsindex().size()][this.metaob.getVarindex().size()];
 		
-		for (int i = 0; i < metaob.obsindex.size(); i++) {
+		for (int i = 0; i < metaob.getObsindex().size(); i++) {
 			
 			// Loop over the variable indices
-			for (int j = 0; j < metaob.varindex.size(); j++) {
+			for (int j = 0; j < metaob.getVarindex().size(); j++) {
 				
 				// Convert numeric variables to string
 				obs[i][j] = Data.getStr(metaob.getVarindex(j), (long) i);

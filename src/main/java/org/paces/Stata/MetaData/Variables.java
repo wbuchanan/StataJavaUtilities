@@ -15,42 +15,42 @@ import java.util.Map;
  */
 public class Variables {
 
-	/***
+	/**
 	 * Class containing the variable index
 	 */
-	private VariableIndex varindex;
+	protected VariableIndex varindex;
 
-	/***
+	/**
 	 * Class containing the variable index
 	 */
-	private Nvars nvars;
+	protected Nvars nvars;
 
-	/***
+	/**
 	 * Class containing variable names
 	 */
-	private VarNames varnames;
+	protected VarNames varnames;
 
-	/***
-	 * Class containing variable -> variable label Map
+	/**
+	 * Class containing variable to variable label Map
 	 */
-	private VarLabels varlabels;
+	protected VarLabels varlabels;
 
-	/***
+	/**
 	 * Class containing value label names
 	 */
-	private ValLabNames valueLabelNames;
+	protected ValLabNames valueLabelNames;
 
-	/***
-	 * Class containing variable -> variable label map
+	/**
+	 * Class containing variable to variable label map
 	 */
-	private ValLabels valueLabels;
+	protected ValLabels valueLabels;
 
-	/***
+	/**
 	 * Class containing string variable indicators
 	 */
-	private VarTypes varTypes;
+	protected VarTypes varTypes;
 
-	/***
+	/**
 	 * Initializes an instance of a VarNames class object
 	 * @param varindex A VariableIndex object used to identify the variables
 	 *                    over which the method will iterate over.

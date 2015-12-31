@@ -18,22 +18,22 @@ public class Observations {
 	/***
 	 * Starting observation index number
 	 */
-	private long sobs;
+	protected long sobs;
 
 	/***
 	 * Ending observation index number
 	 */
-	private long eobs;
+	protected long eobs;
 
 	/***
 	 * Total Number of Observations
 	 */
-	private long nobs;
+	protected long nobs;
 
 	/***
 	 * Observation indices
 	 */
-	private List<Long> obindex;
+	protected List<Long> obindex;
 
 	/***
 	 * Constructor method for class ObservationsImpl

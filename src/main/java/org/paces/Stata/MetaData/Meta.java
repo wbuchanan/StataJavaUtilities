@@ -60,7 +60,7 @@ public class Meta {
 	public void setStataobs() {
 
 		// Initialize a new observations object
-		stataobs = new Observations();
+		this.stataobs = new Observations();
 
 	} // End setter method for observations member variable
 
@@ -70,7 +70,7 @@ public class Meta {
 	public void setStatavars() {
 
 		// Initialize a new variables metadata object
-		statavars = new Variables();
+		this.statavars = new Variables();
 
 	} // End setter method for variables metadata member variable
 
@@ -81,7 +81,7 @@ public class Meta {
 	public void setObsindex(Observations observations) {
 
 		// Initialize a new observation index object
-		obsindex = observations.getObservationIndex();
+		this.obsindex = observations.getObservationIndex();
 
 	} // End setter method for observation index member variable
 
@@ -92,7 +92,7 @@ public class Meta {
 	public void setVarindex(Variables variables) {
 
 		// Initialize a new variable index object
-		varindex = variables.getVariableIndex();
+		this.varindex = variables.getVariableIndex();
 
 	} // End setter method for variable index member variable
 
@@ -100,25 +100,25 @@ public class Meta {
 	 * Getter for the observations member variable
 	 * @return Returns the observation member variable
 	 */
-	public Observations getStataobs() { return stataobs; }
+	public Observations getStataobs() { return this.stataobs; }
 
 	/***
 	 * Getter for the variables member variable
 	 * @return Returns the variables member variable
 	 */
-	public Variables getStatavars() { return statavars; }
+	public Variables getStatavars() { return this.statavars; }
 
 	/***
 	 * Getter for the observation index member variable
 	 * @return Returns the observation index member variable
 	 */
-	public List<Long> getObsindex() { return obsindex; }
+	public List<Long> getObsindex() { return this.obsindex; }
 
 	/***
 	 * Getter for the variable index member variable
 	 * @return Returns the variable index member variable
 	 */
-	public List<Integer> getVarindex() { return varindex; }
+	public List<Integer> getVarindex() { return this.varindex; }
 
 	/***
 	 * Getter for single variable index value
@@ -129,7 +129,7 @@ public class Meta {
 
 		// Return the element of the variable index identified by the value
 		// of the argument passed to the method
-		return varindex.get(idxid);
+		return ((Integer)this.statavars.getVariableIndex(idxid)).intValue();
 
 	} // End getVarIndex method declaration
 

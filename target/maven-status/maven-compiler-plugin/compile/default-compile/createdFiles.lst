@@ -8,6 +8,7 @@ org/paces/Stata/Variables/NumDataColumn.class
 org/paces/Stata/Variables/VarTypes.class
 org/paces/Stata/DataSets/StataData.class
 org/paces/Stata/MetaData/Variables.class
+org/paces/Stata/Missing/StataMissings.class
 org/paces/Stata/Variables/StringDataColumn.class
 org/paces/Stata/Utilities/StataArgsToCollector.class
 org/paces/Stata/Variables/VarLabels.class

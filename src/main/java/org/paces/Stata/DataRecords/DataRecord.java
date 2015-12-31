@@ -64,7 +64,7 @@ public class DataRecord implements Record {
 		this.vars = metaob.getStatavars();
 
 		// Set the observation ID variable
-		setObid(id);
+		setObid(id.longValue());
 
 		// Set the data (observation) variable
 		setData();
@@ -79,7 +79,7 @@ public class DataRecord implements Record {
 
 		// Observation IDs need to be offset by 1 when converting from Stata to
 		// Java.
-		this.obid = observationNumber;
+		this.obid = Long.valueOf(observationNumber);
 
 	} // End Method declaration to set observation ID
 

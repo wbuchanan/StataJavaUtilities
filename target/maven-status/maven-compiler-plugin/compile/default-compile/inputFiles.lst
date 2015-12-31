@@ -27,6 +27,7 @@
 /Users/billy/Desktop/Programs/Java/StataJavaUtilities/src/main/java/org/paces/Stata/Variables/ValLabNames.java
 /Users/billy/Desktop/Programs/Java/StataJavaUtilities/src/main/java/org/paces/Stata/Variables/VarNames.java
 /Users/billy/Desktop/Programs/Java/StataJavaUtilities/src/main/java/org/paces/Stata/DataRecords/DataRecordByteArray.java
+/Users/billy/Desktop/Programs/Java/StataJavaUtilities/src/main/java/org/paces/Stata/Missing/StataMissings.java
 /Users/billy/Desktop/Programs/Java/StataJavaUtilities/src/main/java/org/paces/Stata/Utilities/StataArgsToCollector.java
 /Users/billy/Desktop/Programs/Java/StataJavaUtilities/src/main/java/org/paces/Stata/Variables/VarTypes.java
 /Users/billy/Desktop/Programs/Java/StataJavaUtilities/src/main/java/org/paces/Stata/DataSets/DataSetIntArrays.java

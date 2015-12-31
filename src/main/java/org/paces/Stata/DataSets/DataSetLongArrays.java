@@ -26,7 +26,7 @@ public class DataSetLongArrays implements StataData {
 	/***
 	 * A 2d array of Long objects
 	 */
-	private Long[][] stataDataSet;
+	private long[][] stataDataSet;
 	
 	/***
 	 * Generic constructor method for the class
@@ -79,23 +79,23 @@ public class DataSetLongArrays implements StataData {
 		
 		// Initialize container to ID the observation and contains a Map
 		// object with key/value pairs
-		Long[][] obs = new Long[metaob.obsindex.size()][];
+		long[][] obs = new long[this.metaob.getObsindex().size()][this.metaob.getVarindex().size()];
 		
-		for (int i = 0; i < metaob.obsindex.size(); i++) {
+		for (int i = 0; i < metaob.getObsindex().size(); i++) {
 			
 			// Loop over the variable indices
-			for (int j = 0; j < metaob.varindex.size(); j++) {
+			for (int j = 0; j < metaob.getVarindex().size(); j++) {
 				
 				// Check to see if value is missing
 				if (Data.isValueMissing(Data.getNum(metaob.getVarindex(j), (long) i))) {
 					
 					// If value is missing, set value to -1.0
-					obs[i][j] = (long) -1;
+					obs[i][j] = -1L;
 					
 				} else {
-					
+
 					// Convert numeric variables to string
-					obs[i][j] = (long) Data.getNum(metaob.getVarindex(j), (long) i);
+					obs[i][j] = Math.round(Data.getNum(this.metaob.getVarindex(j), (long)i) / 1.0D);
 					
 				} // End ELSE Block for non-missing values
 				
@@ -113,7 +113,7 @@ public class DataSetLongArrays implements StataData {
 	 * @return A POJO representation of the Stata Dataset
 	 */
 	@Override
-	public Long[][] getData() {
+	public long[][] getData() {
 		
 		// Returns the sole member variable of the class
 		return this.stataDataSet;

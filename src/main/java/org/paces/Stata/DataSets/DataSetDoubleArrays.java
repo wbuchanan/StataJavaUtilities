@@ -26,7 +26,7 @@ public class DataSetDoubleArrays implements StataData {
 	/***
 	 * A 2d array of Double objects
 	 */
-	private Double[][] stataDataSet;
+	private double[][] stataDataSet;
 	
 	/***
 	 * Generic constructor method for the class
@@ -79,12 +79,12 @@ public class DataSetDoubleArrays implements StataData {
 		
 		// Initialize container to ID the observation and contains a Map
 		// object with key/value pairs
-		Double[][] obs = new Double[metaob.obsindex.size()][];
+		double[][] obs = new double[this.metaob.getObsindex().size()][this.metaob.getVarindex().size()];
 		
-		for (int i = 0; i < metaob.obsindex.size(); i++) {
+		for (int i = 0; i < metaob.getObsindex().size(); i++) {
 			
 			// Loop over the variable indices
-			for (int j = 0; j < metaob.varindex.size(); j++) {
+			for (int j = 0; j < metaob.getVarindex().size(); j++) {
 				
 				// Check to see if value is missing
 				if (Data.isValueMissing(Data.getNum(metaob.getVarindex(j), (long) i))) {
@@ -113,7 +113,7 @@ public class DataSetDoubleArrays implements StataData {
 	 * @return A POJO representation of the Stata Dataset
 	 */
 	@Override
-	public Double[][] getData() {
+	public double[][] getData() {
 		
 		// Returns the sole member variable of the class
 		return this.stataDataSet;

@@ -27,7 +27,7 @@ public class DataSetIntArrays implements StataData {
 	/***
 	 * A 2d array of Integer objects
 	 */
-	private Integer[][] stataDataSet;
+	private int[][] stataDataSet;
 
 	/***
 	 * Generic constructor method for the class
@@ -80,23 +80,23 @@ public class DataSetIntArrays implements StataData {
 
 		// Initialize container to ID the observation and contains a Map
 		// object with key/value pairs
-		Integer[][] obs = new Integer[metaob.obsindex.size()][];
+		int[][] obs = new int[this.metaob.getObsindex().size()][this.metaob.getVarindex().size()];
 
-		for (int i = 0; i < metaob.obsindex.size(); i++) {
+		for (int i = 0; i < metaob.getObsindex().size(); i++) {
 
 			// Loop over the variable indices
-			for (int j = 0; j < metaob.varindex.size(); j++) {
+			for (int j = 0; j < metaob.getVarindex().size(); j++) {
 
 				// Check to see if value is missing
 				if (Data.isValueMissing(Data.getNum(metaob.getVarindex(j), (long) i))) {
 
 					// If value is missing, set value to -1.0
-					obs[i][j] = -1;
+					obs[i][j] = Integer.valueOf(-1);
 
 				} else {
 
 					// Convert numeric variables to string
-					obs[i][j] = (int) Data.getNum(metaob.getVarindex(j), (long) i);
+					obs[i][j] = Integer.valueOf((int)Math.round(Data.getNum(this.metaob.getVarindex(j), (long)i) / 1.0D));
 
 				} // End ELSE Block for non-missing values
 
@@ -114,7 +114,7 @@ public class DataSetIntArrays implements StataData {
 	 * @return A POJO representation of the Stata Dataset
 	 */
 	@Override
-	public Integer[][] getData() {
+	public int[][] getData() {
 
 		// Returns the sole member variable of the class
 		return this.stataDataSet;
