@@ -46,7 +46,7 @@ public class MataMatrix {
 	/***
 	 * POJO representation of the Mata matrix
 	 */
-	public Object matrix;
+	public Map<Long, Map<Long, Object>> matrix;
 
 	/***
 	 * Constructor method used to build the MataMatrix object
@@ -197,7 +197,7 @@ public class MataMatrix {
 	public void setMatrix(List<Long> observations, List<Long> variables) {
 
 		// Initializes a Map object to store a Map object for each row
-		Map<Long, Object> tmpMatrix = new HashMap<Long, Object>();
+		Map<Long, Map<Long, Object>> tmpMatrix = new HashMap<Long, Map<Long, Object>>();
 
 		// Initializes a Map object to store column values for a single row
 		Map<Long, Object> tmprow = new HashMap<Long, Object>();

@@ -7,73 +7,73 @@
     <snapshot>
       <localCopy>true</localCopy>
     </snapshot>
-    <lastUpdated>20151231220456</lastUpdated>
+    <lastUpdated>20160101144056</lastUpdated>
     <snapshotVersions>
       <snapshotVersion>
         <classifier>javadoc</classifier>
         <extension>jar.asc</extension>
         <value>0.0.1-SNAPSHOT</value>
-        <updated>20151231220456</updated>
+        <updated>20160101144056</updated>
       </snapshotVersion>
       <snapshotVersion>
         <classifier>sources</classifier>
         <extension>jar.asc</extension>
         <value>0.0.1-SNAPSHOT</value>
-        <updated>20151231220456</updated>
+        <updated>20160101144056</updated>
       </snapshotVersion>
       <snapshotVersion>
         <classifier>javadoc</classifier>
         <extension>jar.asc.asc</extension>
         <value>0.0.1-SNAPSHOT</value>
-        <updated>20151231220456</updated>
+        <updated>20160101144056</updated>
       </snapshotVersion>
       <snapshotVersion>
         <classifier>sources</classifier>
         <extension>jar.asc.asc</extension>
         <value>0.0.1-SNAPSHOT</value>
-        <updated>20151231220456</updated>
+        <updated>20160101144056</updated>
       </snapshotVersion>
       <snapshotVersion>
         <extension>pom.asc.asc</extension>
         <value>0.0.1-SNAPSHOT</value>
-        <updated>20151231220456</updated>
+        <updated>20160101144056</updated>
       </snapshotVersion>
       <snapshotVersion>
         <extension>jar.asc.asc</extension>
         <value>0.0.1-SNAPSHOT</value>
-        <updated>20151231220456</updated>
+        <updated>20160101144056</updated>
       </snapshotVersion>
       <snapshotVersion>
         <extension>pom.asc</extension>
         <value>0.0.1-SNAPSHOT</value>
-        <updated>20151231220456</updated>
+        <updated>20160101144056</updated>
       </snapshotVersion>
       <snapshotVersion>
         <extension>jar.asc</extension>
         <value>0.0.1-SNAPSHOT</value>
-        <updated>20151231220456</updated>
+        <updated>20160101144056</updated>
       </snapshotVersion>
       <snapshotVersion>
         <classifier>javadoc</classifier>
         <extension>jar</extension>
         <value>0.0.1-SNAPSHOT</value>
-        <updated>20151231220456</updated>
+        <updated>20160101144056</updated>
       </snapshotVersion>
       <snapshotVersion>
         <classifier>sources</classifier>
         <extension>jar</extension>
         <value>0.0.1-SNAPSHOT</value>
-        <updated>20151231220456</updated>
+        <updated>20160101144056</updated>
       </snapshotVersion>
       <snapshotVersion>
         <extension>jar</extension>
         <value>0.0.1-SNAPSHOT</value>
-        <updated>20151231220456</updated>
+        <updated>20160101144056</updated>
       </snapshotVersion>
       <snapshotVersion>
         <extension>pom</extension>
         <value>0.0.1-SNAPSHOT</value>
-        <updated>20151231220456</updated>
+        <updated>20160101144056</updated>
       </snapshotVersion>
     </snapshotVersions>
   </versioning>

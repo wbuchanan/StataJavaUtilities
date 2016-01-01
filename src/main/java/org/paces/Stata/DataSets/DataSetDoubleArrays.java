@@ -4,6 +4,9 @@ import com.stata.sfi.Data;
 import com.stata.sfi.Macro;
 import org.paces.Stata.MetaData.Meta;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * A 2d Array of Doubles containing the data from the active data set in memory.
  *
@@ -131,6 +134,74 @@ public class DataSetDoubleArrays implements StataData {
 		return this.filename;
 		
 	} // End of getName method declaration
+
+	/***
+	 * Method to retrieve a single record of values
+	 * @param record The integer value of the first index in the 2d Array
+	 * @return An array of bytes
+	 */
+	@Override
+	public double[] getData(Integer record) {
+
+		// Returns a single row of data from the dataset object
+		return this.getData()[record];
+
+	} // End overloaded getter method declaration
+
+	/***
+	 * Method to retrieve a datum from the dataset object
+	 * @param record The integer value of the first index of the 2d array
+	 * @param var The integer value of the second index of the 2d array
+	 * @return An object containing the datum[i, j] of the data set
+	 */
+	@Override
+	public Double getData(Integer record, Integer var) {
+
+		// Returns a single datum[i, j] from the dataset object
+		// where i is passed as the parameter record and
+		// j is passed as the parameter var
+		return this.getData()[record][var];
+
+	} // End overloaded getter method declaration
+
+	/***
+	 * Converts the dataset into a list of variable values nested within a
+	 * list of records
+	 * @return A List of Objects containing the datum[i, j] nested within a
+	 * List containing the data[i, j...n]
+	 */
+	@Override
+	public List<List<Double>> toList() {
+
+		// Initializes the object to store the data that will be returned by
+		// this method
+		List<List<Double>> dataset = new ArrayList<>();
+
+		// Starts loop over the record indices
+		for (int i = 0; i < this.metaob.getObsindex().size(); i++) {
+
+			// Initializes an object to store the values for a given record
+			List<Double> record = new ArrayList<>();
+
+			// Starts loop over the individual variables
+			for (int j = 0; j < this.metaob.getVarindex().size(); j++) {
+
+				// Adds the datum to the record object using the getData
+				// method with the row and column indices passed as arguments
+				record.add(j, getData(i, j));
+
+			} // Ends the loop over the variables
+
+			// Adds the complete record to the object initialized at the
+			// beginning of the method
+			dataset.add(i, record);
+
+		} // Ends the loop over the observations
+
+		// Returns the List object
+		return dataset;
+
+	} // End of Method declaration
 	
 } // End Class declaration
 

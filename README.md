@@ -7,8 +7,14 @@ allow you to construct a complete representation of a Stata dataset (loaded
 into the current Stata session) on the JVM including: variable labels, value 
 labels, variable names, value label names, the data, etc....  
 
-# Additional Information
-These classes and methods were derived from work I started on building out a 
-[JSON serializer/deserializer in Stata.](https://wbuchanan.github.io/StataJSON/about/)
-
+## News
+Additional getter methods have been added to the DataSets package classes to 
+enable retrieving a single record, indivdual datum, and a List representation
+ of the dataset object.  The StataMissings class also includes values 
+ corresponding to the set of extended missing values for the `float` and 
+ `double` types.  The additions to this class also include a method that will
+  return the String mask for the extended missing value for any type.  Other 
+  than the methods that return NavigableMap type objects, all methods in the 
+  class are overloaded to make it easier to code without worrying about 
+  needing to remember type specific implementations of the methods.
 

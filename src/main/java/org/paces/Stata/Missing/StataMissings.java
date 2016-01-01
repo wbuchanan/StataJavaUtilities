@@ -61,6 +61,15 @@ public class StataMissings {
 	} // End of method declaration
 
 	/**
+	 * Method that returns the string mask for missing values of type byte
+	 * @param value A Byte value for which the mask should be returned
+	 * @return A string containing the extended missing value mask
+	 */
+	public String getMask(Byte value) {
+		return byteMissing().get(value);
+	}
+
+	/**
 	 * Method to test if a Stata int type value (a Java short) is an extended
 	 * missing value or not.
 	 * @param shortValue A Short value to test
@@ -113,6 +122,16 @@ public class StataMissings {
 		return mask;
 	} // End of method declaration
 
+	/**
+	 * Method that returns the string mask for missing values of type short.
+	 * <em>The short type in Java is equivalent to the int type in Stata.</em>
+	 * @param value A Short (Stata int type) value for which the mask should be
+	 *                 returned
+	 * @return A string containing the extended missing value mask
+	 */
+	public String getMask(Short value) {
+		return integerMissing().get(value);
+	}
 
 	/**
 	 * Method to test if a Stata long type value (a Java int) is an extended
@@ -167,5 +186,149 @@ public class StataMissings {
 		return mask;
 	} // End of method declaration
 
+	/**
+	 * Method that returns the string mask for missing values of type int.
+	 * <em>The int type in Java is equivalent to the long type in Stata </em>
+	 * @param value An Integer value for which the mask should be returned
+	 * @return A string containing the extended missing value mask
+	 */
+	public String getMask(Integer value) {
+		return longMissing().get(value);
+	}
+
+
+	/**
+	 * Method to test if a Stata long type value (a Java int) is an extended
+	 * missing value or not.
+	 * @param fltValue A Float value to test
+	 * @return A boolean indicating if the value is an extended missing value
+	 * or not.
+	 */
+	public static Boolean isExtendedMissing(Float fltValue) {
+
+		// If the value is between the .a and .z values return true
+		// If not return false
+		return fltValue >= 1.7014118E38 && fltValue <= 1.7122118E38;
+
+	} // End of method declaration
+
+	/***
+	 * Method returning a map object containing Stata missing values and
+	 * their string masks (e.g., .a - .z)
+	 * @return A map object containing mapped values of Stata long types (e.g
+	 * ., Java int types)
+	 */
+	public static NavigableMap<Float, String> floatMissing() {
+		NavigableMap<Float, String> mask = new TreeMap<>();
+		mask.put(1.7014118E38F, ".");
+		mask.put(1.7018272E38F, ".a");
+		mask.put(1.7022426E38F, ".b");
+		mask.put(1.702658E38F, ".c");
+		mask.put(1.7030734E38F, ".d");
+		mask.put(1.7034888E38F, ".e");
+		mask.put(1.7039041E38F, ".f");
+		mask.put(1.7043195E38F, ".g");
+		mask.put(1.704735E38F, ".h");
+		mask.put(1.7051503E38F, ".i");
+		mask.put(1.7055657E38F, ".j");
+		mask.put(1.705981E38F, ".k");
+		mask.put(1.7063964E38F, ".l");
+		mask.put(1.7068118E38F, ".m");
+		mask.put(1.7072272E38F, ".n");
+		mask.put(1.7076426E38F, ".o");
+		mask.put(1.708058E38F, ".p");
+		mask.put(1.7084734E38F, ".q");
+		mask.put(1.7088887E38F, ".r");
+		mask.put(1.7093041E38F, ".s");
+		mask.put(1.7097195E38F, ".t");
+		mask.put(1.7101349E38F, ".u");
+		mask.put(1.7105503E38F, ".v");
+		mask.put(1.7109657E38F, ".w");
+		mask.put(1.711381E38F, ".x");
+		mask.put(1.7117964E38F, ".y");
+		mask.put(1.7122118E38F, ".z");
+		return mask;
+	} // End of method declaration
+
+	/**
+	 * Method that returns the string mask for missing values of type float.
+	 * Unlike the extended missing value types for whole numbers, floating
+	 * point missing values are defined by a range of possible floating point
+	 * values.  The range can be expressed roughly as n_[1] = [n_[1], n_[2]) or
+	 * the minimum value for the extended missing value up to - but excluding
+	 * - the next extended missing value.
+	 * @param value A Float value for which the mask should be returned
+	 * @return A string containing the extended missing value mask
+	 */
+	public String getMask(Float value) {
+		return floatMissing().get(floatMissing().floorKey(value));
+	}
+
+	/**
+	 * Method to test if a Stata long type value (a Java int) is an extended
+	 * missing value or not.
+	 * @param dblValue An Integer value to test
+	 * @return A boolean indicating if the value is an extended missing value
+	 * or not.
+	 */
+	public static Boolean isExtendedMissing(Double dblValue) {
+
+		// If the value is between the .a and .z values return true
+		// If not return false
+		return dblValue >= 8.98846567431158E307 && dblValue <= 9.045521364627034E307;
+
+	} // End of method declaration
+
+	/***
+	 * Method returning a map object containing Stata missing values and
+	 * their string masks (e.g., .a - .z)
+	 * @return A map object containing mapped values of Stata long types (e.g
+	 * ., Java int types)
+	 */
+	public static NavigableMap<Double, String> doubleMissing() {
+		NavigableMap<Double, String> mask = new TreeMap<>();
+		mask.put(8.98846567431158E307D, ".");
+		mask.put(8.990660123939097E307D, ".a");
+		mask.put(8.992854573566614E307D, ".b");
+		mask.put(8.995049023194132E307D, ".c");
+		mask.put(8.99724347282165E307D, ".d");
+		mask.put(8.999437922449167E307D, ".e");
+		mask.put(9.001632372076684E307D, ".f");
+		mask.put(9.003826821704202E307D, ".g");
+		mask.put(9.00602127133172E307D, ".h");
+		mask.put(9.008215720959237E307D, ".i");
+		mask.put(9.010410170586754E307D, ".j");
+		mask.put(9.012604620214272E307D, ".k");
+		mask.put(9.01479906984179E307D, ".l");
+		mask.put(9.016993519469307E307D, ".m");
+		mask.put(9.019187969096824E307D, ".n");
+		mask.put(9.021382418724342E307D, ".o");
+		mask.put(9.02357686835186E307D, ".p");
+		mask.put(9.025771317979377E307D, ".q");
+		mask.put(9.027965767606894E307D, ".r");
+		mask.put(9.030160217234412E307D, ".s");
+		mask.put(9.03235466686193E307D, ".t");
+		mask.put(9.034549116489447E307D, ".u");
+		mask.put(9.036743566116964E307D, ".v");
+		mask.put(9.038938015744481E307D, ".w");
+		mask.put(9.041132465371999E307D, ".x");
+		mask.put(9.043326914999516E307D, ".y");
+		mask.put(9.045521364627034E307D, ".z");
+		return mask;
+	} // End of method declaration
+
+	/**
+	 * Method that returns the string mask for missing values of type double.
+	 * Unlike the extended missing value types for whole numbers, floating
+	 * point missing values are defined by a range of possible floating point
+	 * values.  The range can be expressed roughly as n_[1] = [n_[1], n_[2]) or
+	 * the minimum value for the extended missing value up to - but excluding
+	 * - the next extended missing value.
+	 * @param value A Double value for which the mask should be returned
+	 * @return A string containing the extended missing value mask
+	 */
+	public String getMask(Double value) {
+		return doubleMissing().get(doubleMissing().floorKey(value));
+	}
 
 } // End of Class declaration
