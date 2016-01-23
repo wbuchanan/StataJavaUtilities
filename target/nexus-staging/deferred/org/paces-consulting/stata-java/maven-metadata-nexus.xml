@@ -4,8 +4,8 @@
   <artifactId>stata-java</artifactId>
   <versioning>
     <versions>
-      <version>0.0.1-SNAPSHOT</version>
+      <version>0.0.2-SNAPSHOT</version>
     </versions>
-    <lastUpdated>20160101144056</lastUpdated>
+    <lastUpdated>20160123144409</lastUpdated>
   </versioning>
 </metadata>

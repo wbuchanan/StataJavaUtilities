@@ -51,6 +51,11 @@ public class Variables {
 	protected VarTypes varTypes;
 
 	/**
+	 * Member containing the integer mappings for the Stata variable types
+	 */
+	protected List<Integer> stVarTypes;
+
+	/**
 	 * Initializes an instance of a VarNames class object
 	 * @param varindex A VariableIndex object used to identify the variables
 	 *                    over which the method will iterate over.
@@ -112,6 +117,13 @@ public class Variables {
 		this.varindex = new VariableIndex();
 	}
 
+	/**
+	 * Method used to set the Stata variable types member
+	 */
+	public void setStVarTypes() {
+		this.stVarTypes = this.varTypes.getStataTypes();
+	}
+
 	/***
 	 * Class constructor method
 	 */
@@ -138,7 +150,26 @@ public class Variables {
 		// Set the variable is string index member variable
 		setVarTypes(this.varindex);
 
+		// Sets the Stata variable type list
+		setStVarTypes();
+
 	} // End constructor method
+
+	/**
+	 * Method to access the list of Stata variable types
+	 * @return A list of integer values representing the data types specified
+	 * in the .dta file specification.
+	 */
+	public List<Integer> getStVarTypes() { return this.stVarTypes; }
+
+	/**
+	 * Method used to access the getStataType method of the VarTypes class
+	 * @param idx The variable index to look up
+	 * @return The integer valued data type mapping
+	 */
+	public Integer getStVarType(Integer idx) {
+		return this.varTypes.getStataType(idx);
+	}
 
 	/***
 	 * Method used to retrieve a List of Integer values containing the
@@ -254,6 +285,62 @@ public class Variables {
 	 */
 	public Boolean getVarType(String varnm) {
 		return this.varTypes.getValue(varnm);
+	}
+
+	/**
+	 * Accessor to VariableIndex class object
+	 * @return The member variable of class VariableIndex
+	 */
+	public VariableIndex getVarIndexObject() {
+		return this.varindex;
+	}
+
+	/**
+	 * Accessor to Nvars class object
+	 * @return The member variable of class Nvars
+	 */
+	public Nvars getNvarsObject() {
+		return this.nvars;
+	}
+
+	/**
+	 * Accessor to VarNames class object
+	 * @return The member variable of class VarNames
+	 */
+	public VarNames getVarNamesObject() {
+		return this.varnames;
+	}
+
+	/**
+	 * Accessor to VarLabels class object
+	 * @return The member variable of class VarLabels
+	 */
+	public VarLabels getVarLabelsObject() {
+		return this.varlabels;
+	}
+
+	/**
+	 * Accessor to ValLabNames class object
+	 * @return The member variable of class ValLabNames
+	 */
+	public ValLabNames getValLabNamesObject() {
+		return this.valueLabelNames;
+	}
+
+	/**
+	 * Accessor to ValLabels class object
+	 * @return The member variable of class ValLabels
+	 */
+	public ValLabels getValLabelsObject() {
+		return this.valueLabels;
+	}
+
+	/**
+	 * Accessor to VarTypes class object
+	 * @return The member variable of class VarTypes
+	 */
+	public VarTypes getVarTypesObject() {
+		return this.varTypes;
 	}
 
 } // End Class definition

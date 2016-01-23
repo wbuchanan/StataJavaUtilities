@@ -5,7 +5,9 @@ import org.paces.Stata.MetaData.DataSource;
 import org.paces.Stata.MetaData.Meta;
 import org.paces.Stata.MetaData.Variables;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -64,7 +66,7 @@ public class DataRecord implements Record {
 		this.vars = metaob.getStatavars();
 
 		// Set the observation ID variable
-		setObid(id.longValue());
+		setObid(id);
 
 		// Set the data (observation) variable
 		setData();
@@ -140,6 +142,40 @@ public class DataRecord implements Record {
 		this.observation = record;
 
 	} // End of Method declaration
+
+	/**
+	 * Method to return a record as a list of objects
+	 * @return
+	 */
+	public List<?> getListData() {
+		List<Object> therecord = new ArrayList<>();
+		// Loop over the variable indices
+		for (int i = 0; i < vars.getVariableIndex().size(); i++) {
+			if (vars.getStVarType(i) == 0) {
+				String value = "";
+				therecord.add(i, value);
+			} else if (vars.getStVarType(i) < 32769) {
+				String value = Data.getStr(vars.getVariableIndex(i), obid);
+				therecord.add(i, value);
+			} else if (vars.getStVarType(i) == 65526) {
+				Double value = Data.getNum(vars.getVariableIndex(i), obid);
+				therecord.add(i, value);
+			} else if (vars.getStVarType(i) == 65527) {
+				Float value = (float) Data.getNum(vars.getVariableIndex(i), obid);
+				therecord.add(i, value);
+			} else if (vars.getStVarType(i) == 65528) {
+				Integer value = (int) Data.getNum(vars.getVariableIndex(i), obid);
+				therecord.add(i, value);
+			} else if (vars.getStVarType(i) == 65529) {
+				Short value = (short) Data.getNum(vars.getVariableIndex(i), obid);
+				therecord.add(i, value);
+			} else {
+				Byte value = (byte) Data.getNum(vars.getVariableIndex(i), obid);
+				therecord.add(i, value);
+			}
+		}
+		return therecord;
+	}
 
 	/***
 	 * Getter method to retrieve the data variable from the object

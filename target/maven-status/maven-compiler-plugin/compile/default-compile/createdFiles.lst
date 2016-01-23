@@ -1,5 +1,6 @@
 org/paces/Stata/DataRecords/DataRecordDoubleArray.class
 org/paces/Stata/MetaData/Meta.class
+org/paces/Stata/Variables/StataTypes.class
 org/paces/Stata/DataSets/DataSetByteArrays.class
 org/paces/Stata/DataSets/DataSetFactory.class
 org/paces/Stata/Variables/VariableIndex.class
@@ -9,6 +10,7 @@ org/paces/Stata/Variables/VarTypes.class
 org/paces/Stata/DataSets/StataData.class
 org/paces/Stata/MetaData/Variables.class
 org/paces/Stata/Missing/StataMissings.class
+org/paces/Stata/Variables/DataColumn.class
 org/paces/Stata/Variables/StringDataColumn.class
 org/paces/Stata/Utilities/StataArgsToCollector.class
 org/paces/Stata/Variables/VarLabels.class

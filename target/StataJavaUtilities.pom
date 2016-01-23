@@ -7,7 +7,7 @@
 	<!-- This contains the overall package metadata -->
 	<groupId>org.paces-consulting</groupId>
 	<artifactId>stata-java</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.2-SNAPSHOT</version>
 	<packaging>jar</packaging>
 	<name>${project.groupId}:${project.artifactId}</name>
 	<description>Java plugins used to extend capabilities in Stata
@@ -44,6 +44,27 @@
 	<!-- Reserved for potential future collaborators -->
 	<contributors>
 	</contributors>
+
+	<repositories>
+		<repository>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+			<id>central</id>
+			<name>bintray</name>
+			<url>http://jcenter.bintray.com</url>
+		</repository>
+	</repositories>
+	<pluginRepositories>
+		<pluginRepository>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+			<id>central</id>
+			<name>bintray-plugins</name>
+			<url>http://jcenter.bintray.com</url>
+		</pluginRepository>
+	</pluginRepositories>
 
 	<!-- Overall properties -->
 	<properties>
@@ -164,6 +185,13 @@
 			<version>14</version>
 			<type>jar</type>
 			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>joinery</groupId>
+			<artifactId>joinery-dataframe</artifactId>
+			<version>1.7</version>
+			<type>jar</type>
+			<scope>compile</scope>
 		</dependency>
 	</dependencies>
 

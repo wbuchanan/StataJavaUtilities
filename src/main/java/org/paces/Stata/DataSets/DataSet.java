@@ -1,8 +1,10 @@
 package org.paces.Stata.DataSets;
 
+import joinery.DataFrame;
 import org.paces.Stata.DataRecords.DataRecord;
 import org.paces.Stata.MetaData.DataSource;
 import org.paces.Stata.MetaData.Meta;
+import org.paces.Stata.Variables.DataColumn;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -182,6 +184,21 @@ public class DataSet implements StataData {
 		return dataset;
 
 	} // End of Method declaration
+
+	/**
+	 * Method to try coercing the dataset object to a joinery.DataFrame class
+	 * object
+	 * @return A DataFrame object
+	 */
+	@SuppressWarnings("unchecked")
+	public DataFrame toDataFrame() {
+		List<List<?>> dataset = new ArrayList<>();
+		for(Integer i : this.metaob.getVarindex()) {
+			DataColumn dc = new DataColumn(this.metaob, i);
+			dataset.add(dc.getData());
+		}
+		return new DataFrame(dataset);
+	}
 
 } // End Class declaration
 

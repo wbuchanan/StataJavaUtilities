@@ -3,10 +3,12 @@
 /Users/billy/Desktop/Programs/Java/StataJavaUtilities/src/main/java/org/paces/Stata/Variables/VarLabels.java
 /Users/billy/Desktop/Programs/Java/StataJavaUtilities/src/main/java/org/paces/Stata/MetaData/Meta.java
 /Users/billy/Desktop/Programs/Java/StataJavaUtilities/src/main/java/org/paces/Stata/DataSets/DataSet.java
+/Users/billy/Desktop/Programs/Java/StataJavaUtilities/src/main/java/org/paces/Stata/Variables/StataTypes.java
 /Users/billy/Desktop/Programs/Java/StataJavaUtilities/src/main/java/org/paces/Stata/Variables/StringDataColumn.java
 /Users/billy/Desktop/Programs/Java/StataJavaUtilities/src/main/java/org/paces/Stata/DataRecords/DataRecordLongArray.java
 /Users/billy/Desktop/Programs/Java/StataJavaUtilities/src/main/java/org/paces/Stata/DataRecords/Record.java
 /Users/billy/Desktop/Programs/Java/StataJavaUtilities/src/main/java/org/paces/Stata/Matrices/MataMatrix.java
+/Users/billy/Desktop/Programs/Java/StataJavaUtilities/src/main/java/org/paces/Stata/Variables/DataColumn.java
 /Users/billy/Desktop/Programs/Java/StataJavaUtilities/src/main/java/org/paces/Stata/Utilities/StataXTTS.java
 /Users/billy/Desktop/Programs/Java/StataJavaUtilities/src/main/java/org/paces/Stata/Variables/NumDataColumn.java
 /Users/billy/Desktop/Programs/Java/StataJavaUtilities/src/main/java/org/paces/Stata/MetaData/Variables.java

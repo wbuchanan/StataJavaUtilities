@@ -4,7 +4,8 @@ import java.util.NavigableMap;
 import java.util.TreeMap;
 
 /**
- * Created by billy on 12/27/15.
+ * @author Billy Buchanan
+ * @version 0.0.0
  */
 public class StataMissings {
 
