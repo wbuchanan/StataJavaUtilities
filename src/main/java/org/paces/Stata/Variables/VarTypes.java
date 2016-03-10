@@ -1,13 +1,8 @@
 package org.paces.Stata.Variables;
 
-import com.stata.sfi.Data;
-import com.stata.sfi.Macro;
+import com.stata.sfi.*;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.stream.Collectors;
+import java.util.*;
 
 /***
  * Class containing string variable indicators
@@ -48,9 +43,9 @@ public class VarTypes {
 	 * variable name the types will be inaccessible.
 	 *
 	 */
-	public List<Integer> stVarTypes = new ArrayList<>();
+	// public List<Integer> stVarTypes = new ArrayList<>();
 
-	public List<String> stJavaTypes = new ArrayList<>();
+	// public List<String> stJavaTypes = new ArrayList<>();
 
 	/***
 	 * Class constructor
@@ -63,10 +58,10 @@ public class VarTypes {
 		setVariableTypeIndex(varIndex.getValues());
 
 		// Set the member containing the Stata variable types
-		setStataVariableTypes(varIndex);
+		// setStataVariableTypes(varIndex);
 
 		// Sets the member containing the Java types
-		setJavaVariableTypes(varIndex);
+		// setJavaVariableTypes(varIndex);
 
 	} // End of Class constructor
 
@@ -74,11 +69,16 @@ public class VarTypes {
 	 * Method to create a list of integer values representing Stata data
 	 * types based on the .dta file specification
 	 * @param vdx An object of class VariableIndex
-	 */
 	public void setStataVariableTypes(VariableIndex vdx) {
 
 		// Get the variable names to look up the local macro values
 		VarNames stvnm = new VarNames(vdx);
+
+		List<Integer> vindex = vdx.getValues();
+
+		for (Integer v : vindex) {
+
+		}
 
 		// Loops over the indices and adds all of the values to the list object
 		stVarTypes.addAll(vdx.getValues().stream().map(i ->
@@ -87,12 +87,13 @@ public class VarTypes {
 				)).collect(Collectors.toList()));
 
 	} // End of Method declaration
+	*/
 
 	/**
 	 * Method to create a list of integer values representing Stata data
 	 * types based on the .dta file specification
 	 * @param vdx An object of class VariableIndex
-	 */
+
 	public void setJavaVariableTypes(VariableIndex vdx) {
 
 		// Get the variable names to look up the local macro values
@@ -105,6 +106,7 @@ public class VarTypes {
 				)).collect(Collectors.toList()));
 
 	} // End of Method declaration
+	*/
 
 	/***
 	 * Sets an object containing booleans indicating whether the variable
@@ -158,9 +160,9 @@ public class VarTypes {
 	 * @return A list of integers representing the data type mappings from
 	 * the .dta file specification
 	 */
-	public List<Integer> getStataTypes() {
-		return this.stVarTypes;
-	}
+	// public List<Integer> getStataTypes() {
+	// 	return this.stVarTypes;
+	// }
 
 	/**
 	 * Method used to access the Stata data type of a single variable
@@ -168,16 +170,16 @@ public class VarTypes {
 	 * @return An integer value representing the data type of the variable
 	 * indexed by the parameter index based on the .dta file specification.
 	 */
-	public Integer getStataType(Integer index) {
-		return this.stVarTypes.get(index);
-	}
+	// public Integer getStataType(Integer index) {
+	// 	return this.stVarTypes.get(index);
+	// }
 
-	public List<String> getJavaTypes() {
-		return this.stJavaTypes;
-	}
+	// public List<String> getJavaTypes() {
+	// 	return this.stJavaTypes;
+	// }
 
-	public String getJavaType(Integer index) {
-		return this.stJavaTypes.get(index);
-	}
+	// public String getJavaType(Integer index) {
+	// 	return this.stJavaTypes.get(index);
+	// }
 
 } // End of Inner class object definition

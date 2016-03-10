@@ -28,13 +28,12 @@ public class StringDataColumn {
 
 	/***
 	 * Generic constructor for the class
-	 * @param args Arguments passed to the Meta class constructor
 	 * @param varidx The variable index from which to get records
 	 */
-	public StringDataColumn(String[] args, int varidx) {
+	public StringDataColumn(Integer varidx) {
 
 		// Populates the Meta class member variable
-		metaob = new Meta(args);
+		metaob = new Meta();
 
 		// Sets the values in the object based on a variable from the Stata
 		// dataset

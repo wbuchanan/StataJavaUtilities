@@ -1,14 +1,9 @@
 package org.paces.Stata.DataRecords;
 
-import com.stata.sfi.Data;
-import org.paces.Stata.MetaData.DataSource;
-import org.paces.Stata.MetaData.Meta;
-import org.paces.Stata.MetaData.Variables;
+import com.stata.sfi.*;
+import org.paces.Stata.MetaData.*;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 /**
  * A POJO representation of a single observation from the Stata dataset
@@ -146,7 +141,7 @@ public class DataRecord implements Record {
 	/**
 	 * Method to return a record as a list of objects
 	 * @return
-	 */
+
 	public List<?> getListData() {
 		List<Object> therecord = new ArrayList<>();
 		// Loop over the variable indices
@@ -176,6 +171,7 @@ public class DataRecord implements Record {
 		}
 		return therecord;
 	}
+	*/
 
 	/***
 	 * Getter method to retrieve the data variable from the object

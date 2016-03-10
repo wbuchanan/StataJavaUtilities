@@ -7,7 +7,7 @@ import java.util.Map;
  * @author Billy Buchanan
  * @version 0.0.0
  */
-public class StataTypes {
+public class StataTypes implements StataTypeInterface {
 
 	/**
 	 * Member used to map string values returned by the `: type [varname]'

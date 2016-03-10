@@ -1,5 +1,6 @@
 org/paces/Stata/DataRecords/DataRecordDoubleArray.class
 org/paces/Stata/MetaData/Meta.class
+org/paces/Stata/Variables/StataTypeInterface.class
 org/paces/Stata/Variables/StataTypes.class
 org/paces/Stata/DataSets/DataSetByteArrays.class
 org/paces/Stata/DataSets/DataSetFactory.class

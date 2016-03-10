@@ -4,6 +4,7 @@
 /Users/billy/Desktop/Programs/Java/StataJavaUtilities/src/main/java/org/paces/Stata/MetaData/Meta.java
 /Users/billy/Desktop/Programs/Java/StataJavaUtilities/src/main/java/org/paces/Stata/DataSets/DataSet.java
 /Users/billy/Desktop/Programs/Java/StataJavaUtilities/src/main/java/org/paces/Stata/Variables/StataTypes.java
+/Users/billy/Desktop/Programs/Java/StataJavaUtilities/src/main/java/org/paces/Stata/Variables/StataTypeInterface.java
 /Users/billy/Desktop/Programs/Java/StataJavaUtilities/src/main/java/org/paces/Stata/Variables/StringDataColumn.java
 /Users/billy/Desktop/Programs/Java/StataJavaUtilities/src/main/java/org/paces/Stata/DataRecords/DataRecordLongArray.java
 /Users/billy/Desktop/Programs/Java/StataJavaUtilities/src/main/java/org/paces/Stata/DataRecords/Record.java

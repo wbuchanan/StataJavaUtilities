@@ -38,7 +38,15 @@ public class Meta {
 	 * Constructor for object w/o any arguments passed
 	 * @param args Arguments passed from the javacall command in Stata
 	 */
+	@Deprecated
 	public Meta(String[] args) {
+		this();
+	}
+
+	/***
+	 * Constructor for object w/o any arguments passed
+	 */
+	public Meta() {
 
 		// Create an observations member variable
 		setStataobs();

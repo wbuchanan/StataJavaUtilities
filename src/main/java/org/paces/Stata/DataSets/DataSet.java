@@ -194,7 +194,7 @@ public class DataSet implements StataData {
 	public DataFrame toDataFrame() {
 		List<List<?>> dataset = new ArrayList<>();
 		for(Integer i : this.metaob.getVarindex()) {
-			DataColumn dc = new DataColumn(this.metaob, i);
+			DataColumn dc = new DataColumn(i);
 			dataset.add(dc.getData());
 		}
 		return new DataFrame(dataset);

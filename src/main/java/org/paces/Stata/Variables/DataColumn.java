@@ -47,7 +47,7 @@ public class DataColumn {
 	/**
 	 * Member to store the variable type string
 	 */
-	protected String dataclass;
+	//protected String dataclass;
 
 	/**
 	 * Member containing the Stata data type.
@@ -65,43 +65,25 @@ public class DataColumn {
 	public String getVarLabel() {
 		return this.varlabel;
 	}
-	public String getJavaType() {
-		return this.dataclass;
-	}
-	public Integer getStataType() {
-		return this.stDataType;
-	}
+
+	// public String getJavaType() {
+	// 	return this.dataclass;
+	// }
+	// public Integer getStataType() {
+	// 	return this.stDataType;
+	// }
+
 	public Map<Integer, String> getValueLabel() {
 		return this.valuelabel;
 	}
 	/***
 	 * Generic constructor for the class
-	 * @param metadata Arguments passed to the Meta class constructor
 	 * @param varidx The variable index from which to get records
 	 */
-	public DataColumn(Meta metadata, Integer varidx) {
+	public DataColumn(Integer varidx) {
 
 		// Populates the Meta class member variable
-		this.metaob = metadata;
-
-		this.stvars = this.metaob.getStatavars();
-
-		// Sets the values in the object based on a variable from the Stata
-		// dataset
-		setData(varidx) ;
-
-	} // End Class constructor method
-
-
-	/***
-	 * Generic constructor for the class
-	 * @param args Arguments passed to the Meta class constructor
-	 * @param varidx The variable index from which to get records
-	 */
-	public DataColumn(String[] args, Integer varidx) {
-
-		// Populates the Meta class member variable
-		this.metaob = new Meta(args);
+		this.metaob = new Meta();
 
 		this.stvars = this.metaob.getStatavars();
 
@@ -123,8 +105,8 @@ public class DataColumn {
 		} else {
 			this.valuelabel.put(0, "");
 		}
-		this.stDataType = this.stvars.getStVarType(idx);
-		this.dataclass = this.stvars.getVarTypesObject().getJavaType(idx);
+		// this.stDataType = this.stvars.getStVarType(idx);
+		// this.dataclass = this.stvars.getVarTypesObject().getJavaType(idx);
 		this.vardata = makeList(this.stDataType, idx, this.metaob.getObsindex());
 	}
 

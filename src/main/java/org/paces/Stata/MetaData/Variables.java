@@ -50,10 +50,10 @@ public class Variables {
 	 */
 	protected VarTypes varTypes;
 
-	/**
-	 * Member containing the integer mappings for the Stata variable types
-	 */
-	protected List<Integer> stVarTypes;
+	//
+	// Member containing the integer mappings for the Stata variable types
+	//
+	// protected List<Integer> stVarTypes;
 
 	/**
 	 * Initializes an instance of a VarNames class object
@@ -117,12 +117,12 @@ public class Variables {
 		this.varindex = new VariableIndex();
 	}
 
-	/**
-	 * Method used to set the Stata variable types member
-	 */
-	public void setStVarTypes() {
-		this.stVarTypes = this.varTypes.getStataTypes();
-	}
+	//
+	// Method used to set the Stata variable types member
+	//
+	// public void setStVarTypes() {
+	// 	this.stVarTypes = this.varTypes.getStataTypes();
+	// }
 
 	/***
 	 * Class constructor method
@@ -151,25 +151,25 @@ public class Variables {
 		setVarTypes(this.varindex);
 
 		// Sets the Stata variable type list
-		setStVarTypes();
+		// setStVarTypes();
 
 	} // End constructor method
 
-	/**
-	 * Method to access the list of Stata variable types
-	 * @return A list of integer values representing the data types specified
-	 * in the .dta file specification.
-	 */
-	public List<Integer> getStVarTypes() { return this.stVarTypes; }
+	//
+	// Method to access the list of Stata variable types
+	// @return A list of integer values representing the data types specified
+	// in the .dta file specification.
+	//
+	// public List<Integer> getStVarTypes() { return this.stVarTypes; }
 
-	/**
-	 * Method used to access the getStataType method of the VarTypes class
-	 * @param idx The variable index to look up
-	 * @return The integer valued data type mapping
-	 */
-	public Integer getStVarType(Integer idx) {
-		return this.varTypes.getStataType(idx);
-	}
+
+	// Method used to access the getStataType method of the VarTypes class
+	// @param idx The variable index to look up
+	// @return The integer valued data type mapping
+	//
+	// public Integer getStVarType(Integer idx) {
+	// 	return this.varTypes.getStataType(idx);
+	// }
 
 	/***
 	 * Method used to retrieve a List of Integer values containing the

@@ -28,13 +28,12 @@ public class NumDataColumn {
 
 	/***
 	 * Generic constructor for the class
-	 * @param args Arguments passed to the Meta class constructor
 	 * @param varidx The variable index from which to get records
 	 */
-	public NumDataColumn(String[] args, int varidx) {
+	public NumDataColumn(Integer varidx) {
 
 		// Populates the Meta class member variable
-		metaob = new Meta(args);
+		metaob = new Meta();
 
 		// Sets the values in the object based on a variable from the Stata
 		// dataset
