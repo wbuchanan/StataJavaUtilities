@@ -152,7 +152,7 @@
 				<executions>
 					<execution>
 						<id>sign-artifacts</id>
-						<phase>verify</phase>
+						<phase>deploy</phase>
 						<goals>
 							<goal>sign</goal>
 						</goals>
@@ -185,6 +185,7 @@
 			<version>14</version>
 			<type>jar</type>
 			<scope>provided</scope>
+			<optional>false</optional>
 		</dependency>
 		<dependency>
 			<groupId>joinery</groupId>
@@ -192,6 +193,7 @@
 			<version>1.7</version>
 			<type>jar</type>
 			<scope>compile</scope>
+			<optional>true</optional>
 		</dependency>
 	</dependencies>
 
