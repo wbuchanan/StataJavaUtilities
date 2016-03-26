@@ -18,7 +18,7 @@ public class Nvars {
 	/***
 	 * Number of variables passed from javacall
 	 */
-	private int nvars;
+	private Integer nvars;
 
 	/***
 	 * Class constructor method
@@ -46,7 +46,7 @@ public class Nvars {
 	 * Method to access the number of variables passed from javacall
 	 * @return An integer value with the number of variables passed to javacall
 	 */
-	public int getValues() {
+	public Integer getValues() {
 
 		// Returns the nvars member variable
 		return this.nvars;

@@ -1,7 +1,9 @@
 package org.paces.Stata.DataRecords;
 
-import com.stata.sfi.Data;
+import com.stata.sfi.*;
 import org.paces.Stata.MetaData.Meta;
+
+import java.util.*;
 
 /***
  * Creates an Array of Bytes for Individual Observation
@@ -25,7 +27,7 @@ public class DataRecordByteArray implements Record {
 	/***
 	 * Variable containing the data for a given observation
 	 */
-	private byte[] observation;
+	private Byte[] observation;
 
 	/***
 	 * Constructor method for DataRecordByteArray class
@@ -43,16 +45,22 @@ public class DataRecordByteArray implements Record {
 		setObid(id);
 
 		// Set the data (observation) variable
-		setData();
+		setData(id);
 
 	} // End declaration of constructor method
+
+	public DataRecordByteArray(Integer id, Meta metaobject) {
+		this.metaob = metaobject;
+		setObid(id);
+		setData(id);
+	}
 
 	/***
 	 * Method to set the observation index value for the record
 	 * @param observationNumber An observation index value
 	 */
 	@Override
-	public void setObid(long observationNumber) {
+	public void setObid(Long observationNumber) {
 
 		// Sets the observation index value for the object
 		this.obid = observationNumber;
@@ -60,18 +68,32 @@ public class DataRecordByteArray implements Record {
 	} // End of setObid method declaration
 
 	/***
-	 * Constructs the object containing the data for the record
+	 * Method to set the observation index value for the record
+	 * @param observationNumber An observation index value
 	 */
 	@Override
-	public void setData() {
+	public void setObid(Integer observationNumber) {
 
-		byte[] values = new byte[metaob.varindex.size()];
+		// Sets the observation index value for the object
+		this.obid = Long.valueOf(observationNumber);
+
+	} // End of setObid method declaration
+
+
+	/***
+	 * Constructs the object containing the data for the record
+	 * @param obid The observation ID for which the data are to be extracted
+	 */
+	@Override
+	public void setData(Long obid) {
+
+		Byte[] values = new Byte[metaob.varindex.size()];
 
 		// Loop over the variable indices
-		for (int i = 0; i < metaob.varindex.size(); i++) {
+		for (Integer i : metaob.getVarindex()) {
 
 			// Check to see if value is missing
-			if (Data.isValueMissing(Data.getNum(metaob.getVarindex(i), obid))) {
+			if (Data.isValueMissing(Data.getNum(i, obid))) {
 
 				// If value is missing, set value to -1.0
 				values[i] = -1;
@@ -79,8 +101,39 @@ public class DataRecordByteArray implements Record {
 			} else {
 
 				// Convert numeric variables to string
-				values[i] = (byte) Math.round(Data.getNum(metaob
-						.getVarindex(i), obid) / 1);
+				values[i] = (byte) Math.round(Data.getNum(i, obid) / 1);
+
+			} // End ELSE Block for non-missing values
+
+		} // End of Loop
+
+		// Set the observation value
+		this.observation = values;
+
+	} // End of setData method declaration
+
+	/***
+	 * Constructs the object containing the data for the record
+	 * @param obid The observation ID for which the data are to be extracted
+	 */
+	@Override
+	public void setData(Integer obid) {
+
+		Byte[] values = new Byte[metaob.varindex.size()];
+
+		// Loop over the variable indices
+		for (Integer i : metaob.getVarindex()) {
+
+			// Check to see if value is missing
+			if (Data.isValueMissing(Data.getNum(i, obid))) {
+
+				// If value is missing, set value to -1.0
+				values[i] = -1;
+
+			} else {
+
+				// Convert numeric variables to string
+				values[i] = (byte) Math.round(Data.getNum(i, obid) / 1);
 
 			} // End ELSE Block for non-missing values
 
@@ -98,11 +151,21 @@ public class DataRecordByteArray implements Record {
 	 * observation
 	 */
 	@Override
-	public byte[] getData() {
+	public Byte[] getData() {
 
 		// Returns the array for the observation
 		return this.observation;
 
 	} // End of getData method declaration
+
+	/**
+	 * Method to retrieve the data as a List of Byte objects
+	 * @return The array as a List of Byte elements
+	 */
+	public List<Byte> toList() {
+
+		return Arrays.asList(this.observation);
+
+	} // End Method declaration
 
 } // End of Class declaration

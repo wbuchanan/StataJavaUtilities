@@ -14,12 +14,25 @@ public interface Record {
 	 * Method to set the observation index value for the record
 	 * @param observationNumber An observation index value
 	 */
-	public void setObid(long observationNumber);
+	public void setObid(Long observationNumber);
+
+	/***
+	 * Method to set the observation index value for the record
+	 * @param observationNumber An observation index value
+	 */
+	public void setObid(Integer observationNumber);
 
 	/***
 	 * Constructs the object containing the data for the record
+	 * @param obid Observation ID for which data is to be retrieved
 	 */
-	public void setData();
+	public void setData(Long obid);
+
+	/***
+	 * Constructs the object containing the data for the record
+	 * @param obid Observation ID for which data is to be retrieved
+	 */
+	public void setData(Integer obid);
 
 	/***
 	 * Retrieves the data for a given record

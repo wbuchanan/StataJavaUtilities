@@ -22,6 +22,7 @@ org/paces/Stata/Utilities/StataXTTS.class
 org/paces/Stata/DataRecords/DataRecordByteArray.class
 org/paces/Stata/MetaData/DataSource.class
 org/paces/Stata/DataRecords/RecordFactory.class
+org/paces/Stata/MetaData/Obs13.class
 org/paces/Stata/Variables/VarNames.class
 org/paces/Stata/Variables/Nvars.class
 org/paces/Stata/DataRecords/DataRecordLongArray.class

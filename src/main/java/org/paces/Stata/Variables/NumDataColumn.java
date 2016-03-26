@@ -47,7 +47,7 @@ public class NumDataColumn {
 	 * member variable
 	 * @param var The variable index to retrieve
 	 */
-	public void setData(int var) {
+	public void setData(Integer var) {
 
 		// Temp variable to store results
 		List<Double> dblvar = new ArrayList<Double>();
@@ -78,7 +78,7 @@ public class NumDataColumn {
 	public Double[] getDataAsDoubleArray() {
 
 		// Get the length of the vector
-		int x = this.colvar.size();
+		Integer x = this.colvar.size();
 
 		// Initialize a new array class object with the same length
 		Double[] y = new Double[x];

@@ -1,7 +1,9 @@
 package org.paces.Stata.DataRecords;
 
-import com.stata.sfi.Data;
+import com.stata.sfi.*;
 import org.paces.Stata.MetaData.Meta;
+
+import java.util.*;
 
 /***
  * Creates an Array of Doubles for Individual Observation
@@ -25,7 +27,7 @@ public class DataRecordDoubleArray implements Record {
 	/***
 	 * Variable containing the data for a given observation
 	 */
-	private double[] observation;
+	private Double[] observation;
 
 	/***
 	 * Constructor method for DataRecordDoubleArray class
@@ -43,7 +45,27 @@ public class DataRecordDoubleArray implements Record {
 		setObid(id);
 
 		// Set the data (observation) variable
-		setData();
+		setData(id);
+
+	} // End declaration of constructor method
+
+	/***
+	 * Constructor method for DataRecordDoubleArray class
+	 * @param id The observation index value for which to retrieve the data for
+	 * @param metaobject A Meta class object containing metadata from the
+	 *                      Stata dataset
+	 *
+	 */
+	public DataRecordDoubleArray(Integer id, Meta metaobject) {
+
+		// The metadata object
+		this.metaob = metaobject;
+
+		// Set the observation ID variable
+		setObid(id);
+
+		// Set the data (observation) variable
+		setData(id);
 
 	} // End declaration of constructor method
 
@@ -53,7 +75,7 @@ public class DataRecordDoubleArray implements Record {
 	 * @param observationNumber An observation index value
 	 */
 	@Override
-	public void setObid(long observationNumber) {
+	public void setObid(Long observationNumber) {
 
 		// Sets the observation index value for the object
 		this.obid = observationNumber;
@@ -61,18 +83,32 @@ public class DataRecordDoubleArray implements Record {
 	} // End of setObid method declaration
 
 	/***
-	 * Constructs the object containing the data for the record
+	 * Method to set the observation index value for the record
+	 * @param observationNumber An observation index value
 	 */
 	@Override
-	public void setData() {
+	public void setObid(Integer observationNumber) {
 
-		double[] values = new double[metaob.varindex.size()];
+		// Sets the observation index value for the object
+		this.obid = Long.valueOf(observationNumber);
+
+	} // End of setObid method declaration
+
+
+	/***
+	 * Constructs the object containing the data for the record
+	 * @param obid The observation ID for which the data are to be extracted
+	 */
+	@Override
+	public void setData(Long obid) {
+
+		Double[] values = new Double[metaob.varindex.size()];
 
 		// Loop over the variable indices
-		for (int i = 0; i < metaob.varindex.size(); i++) {
+		for (Integer i : metaob.getVarindex()) {
 
 			// Check to see if value is missing
-			if (Data.isValueMissing(Data.getNum(metaob.getVarindex(i), obid))) {
+			if (Data.isValueMissing(Data.getNum(i, obid))) {
 
 				// If value is missing, set value to -1.0
 				values[i] = -1.0;
@@ -80,7 +116,39 @@ public class DataRecordDoubleArray implements Record {
 			} else {
 
 				// Convert numeric variables to string
-				values[i] = Data.getNum(metaob.getVarindex(i), obid);
+				values[i] = Data.getNum(i, obid);
+
+			} // End ELSE Block for non-missing values
+
+		} // End of Loop
+
+		// Set the observation value
+		this.observation = values;
+
+	} // End of setData method declaration
+
+	/***
+	 * Constructs the object containing the data for the record
+	 * @param obid The observation ID for which the data are to be extracted
+	 */
+	@Override
+	public void setData(Integer obid) {
+
+		Double[] values = new Double[metaob.varindex.size()];
+
+		// Loop over the variable indices
+		for (Integer i : metaob.getVarindex()) {
+
+			// Check to see if value is missing
+			if (Data.isValueMissing(Data.getNum(i, obid))) {
+
+				// If value is missing, set value to -1.0
+				values[i] = -1.0;
+
+			} else {
+
+				// Convert numeric variables to string
+				values[i] = Data.getNum(i, obid);
 
 			} // End ELSE Block for non-missing values
 
@@ -97,11 +165,22 @@ public class DataRecordDoubleArray implements Record {
 	 * observation
 	 */
 	@Override
-	public double[] getData() {
+	public Double[] getData() {
 
 		// Returns the array for the observation
 		return this.observation;
 
 	} // End of getData method declaration
+
+	/**
+	 * Method to retrieve the data as a List object
+	 * @return The data in a List object
+	 */
+	public List<Double> toList() {
+
+		// Converts the array of objects into a List of the same objects
+		return Arrays.asList(this.observation);
+
+	} // End of the method declaration
 
 } // End of Class declaration

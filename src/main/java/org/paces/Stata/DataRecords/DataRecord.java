@@ -64,7 +64,29 @@ public class DataRecord implements Record {
 		setObid(id);
 
 		// Set the data (observation) variable
-		setData();
+		setData(id);
+
+	} // End declaration of constructor method
+
+	/***
+	 * Constructor method for DataRecord class
+	 * @param id The observation index value for which to retrieve the data for
+	 * @param metaobject A Meta class object containing metadata from the
+	 *                      Stata dataset
+	 *
+	 */
+	public DataRecord(Integer id, Meta metaobject) {
+
+		// The metadata object
+		this.metaob = metaobject;
+
+		this.vars = metaob.getStatavars();
+
+		// Set the observation ID variable
+		setObid(id);
+
+		// Set the data (observation) variable
+		setData(id);
 
 	} // End declaration of constructor method
 
@@ -72,7 +94,21 @@ public class DataRecord implements Record {
 	 * Setter method for the observation ID variable
 	 * @param observationNumber An observation index value
 	 */
-	public void setObid(long observationNumber) {
+	@Override
+	public void setObid(Long observationNumber) {
+
+		// Observation IDs need to be offset by 1 when converting from Stata to
+		// Java.
+		this.obid = observationNumber;
+
+	} // End Method declaration to set observation ID
+
+	/***
+	 * Setter method for the observation ID variable
+	 * @param observationNumber An observation index value
+	 */
+	@Override
+	public void setObid(Integer observationNumber) {
 
 		// Observation IDs need to be offset by 1 when converting from Stata to
 		// Java.
@@ -83,8 +119,10 @@ public class DataRecord implements Record {
 	/***
 	 * Method to get an individual record for a given observation index
 	 * variable index member variable
+	 * @param obid The observation ID for which the data are to be extracted
 	 */
-	public void setData() {
+	@Override
+	public void setData(Long obid) {
 
 		// Initialize empty variable to store the variable name
 		String key;
@@ -113,6 +151,66 @@ public class DataRecord implements Record {
 				// Check for missing numeric values
 				if (Data.isValueMissing(Data.getNum(vars.getVariableIndex(i),
 						obid))) {
+
+					// If value is missing, populate field with the string
+					// value null.
+					value = "null";
+
+				} else {
+
+					// Convert numeric variables to string
+					value = Data.getNum(vars.getVariableIndex(i), obid);
+
+				} // End ELSE Block for non-missing values
+
+			} // End IF/ELSE Block for string/numeric type handling
+
+			// Add the key/value pair to the container object
+			record.put(key, value);
+
+		} // End of Loop
+
+		// Return the object containing the observation ID and the key/value
+		// pairs
+		this.observation = record;
+
+	} // End of Method declaration
+
+	/***
+	 * Method to get an individual record for a given observation index
+	 * variable index member variable
+	 * @param obid The observation ID for which the data are to be extracted
+	 */
+	@Override
+	public void setData(Integer obid) {
+
+		// Initialize empty variable to store the variable name
+		String key;
+
+		// Initialize empty variable to store the value for a given
+		// observation on a specified variable
+		Object value;
+
+		// Initialize empty container for key/value pairs
+		Map<String, Object> record = new HashMap<>();
+
+		// Loop over the variable indices
+		for (int i = 0; i < vars.getVariableIndex().size(); i++) {
+
+			// Set the variable name as the key in the map object
+			key = vars.getVariableName(i);
+
+			// Test for string/numeric
+			if (vars.getVarType(key)) {
+
+				// Store string value if variable contains strings
+				value = Data.getStr(vars.getVariableIndex(i), obid);
+
+			} else {
+
+				// Check for missing numeric values
+				if (Data.isValueMissing(Data.getNum(vars.getVariableIndex(i),
+					obid))) {
 
 					// If value is missing, populate field with the string
 					// value null.

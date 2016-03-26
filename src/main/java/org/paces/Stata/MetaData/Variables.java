@@ -188,17 +188,17 @@ public class Variables {
 	 *                list to retrieve
 	 * @return The variable index used to retrieve the data from Stata
 	 */
-	public int getVariableIndex(Integer indx) {
+	public Integer getVariableIndex(Integer indx) {
 		return this.varindex.getValue(indx);
 	}
 
 	/***
 	 * Method used to retrieve the number of variables represented on the JVM
 	 * from the Stata dataset
-	 * @return An int value of the number of variables represented in this
+	 * @return An Integer value of the number of variables represented in this
 	 * object
 	 */
-	public int getNvars() {
+	public Integer getNvars() {
 		return this.nvars.getValues();
 	}
 
@@ -218,7 +218,7 @@ public class Variables {
 	 *                  containing the variable name
 	 * @return A string containing the Stata variable name
 	 */
-	public String getVariableName(int varidx) {
+	public String getVariableName(Integer varidx) {
 		return this.varnames.getValue(varidx);
 	}
 

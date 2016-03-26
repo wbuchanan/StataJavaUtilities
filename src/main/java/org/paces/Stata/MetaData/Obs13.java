@@ -13,32 +13,32 @@ import java.util.List;
  * @version 0.0.0
  *
  */
-public class Observations {
+public class Obs13 {
 
 	/***
 	 * Starting observation index number
 	 */
-	protected Long sobs;
+	protected Integer sobs;
 
 	/***
 	 * Ending observation index number
 	 */
-	protected Long eobs;
+	protected Integer eobs;
 
 	/***
 	 * Total Number of Observations
 	 */
-	protected Long nobs;
+	protected Integer nobs;
 
 	/***
 	 * Observation indices
 	 */
-	protected List<Long> obindex;
+	protected List<Integer> obindex;
 
 	/***
 	 * Constructor method for class ObservationsImpl
 	 */
-	public Observations() {
+	public Obs13() {
 
 		// Set the starting observation index
 		setSobs();
@@ -58,14 +58,14 @@ public class Observations {
 	 * Sets the starting observation index
 	 */
 	public void setSobs() {
-		this.sobs = Data.getObsParsedIn1();
+		this.sobs = Data.getParsedIn1();
 	}
 
 	/***
 	 * Sets the starting observation index
 	 */
 	public void setEobs() {
-		this.eobs = Data.getObsParsedIn2();
+		this.eobs = Data.getParsedIn2();
 	}
 
 	/***
@@ -74,7 +74,7 @@ public class Observations {
 	public void setNobs() {
 
 		// Return the size of the list object
-		this.nobs = (long) this.obindex.size();
+		this.nobs = (Integer) this.obindex.size();
 
 	} // End Method returning the number of observations
 
@@ -83,13 +83,13 @@ public class Observations {
 	 * @param start The starting observation index
 	 * @param end The ending observation index
 	 */
-	public void setObservationIndex(Long start, Long end) {
+	public void setObservationIndex(Integer start, Integer end) {
 
 		// Initialize temp variable
 		List tmp = new ArrayList<>();
 
 		// Loop over the observations
-		for(Long i = start; i <= end; i++) {
+		for(Integer i = start; i <= end; i++) {
 
 			// Test whether the observation satisfies an existing if condition
 			if (!Data.isParsedIfTrue(i)) continue;
@@ -108,24 +108,24 @@ public class Observations {
 	/***
 	 * @return the starting observation index value
 	 */
-	public Long getSobs() { return(this.sobs); }
+	public Integer getSobs() { return(this.sobs); }
 
 	/***
 	 * @return the ending observation index value
 	 */
-	public Long getEobs() { return(this.eobs); }
+	public Integer getEobs() { return(this.eobs); }
 
 	/***
 	 *
 	 * @return the number of effective observations
 	 */
-	public Long getNobs() {
+	public Integer getNobs() {
 		return(this.nobs);
 	}
 
 	/***
 	 * @return the list of effective observation indices
 	 */
-	public List<Long> getObservationIndex() { return(this.obindex); }
+	public List<Integer> getObservationIndex() { return(this.obindex); }
 
 } // End Class definition
