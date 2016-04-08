@@ -60,7 +60,7 @@ public class Variables {
 	 * @param varindex A VariableIndex object used to identify the variables
 	 *                    over which the method will iterate over.
 	 */
-	public void setVarNames(VariableIndex varindex) {
+	private void setVarNames(VariableIndex varindex) {
 		this.varnames = new VarNames(this.varindex);
 	}
 
@@ -69,7 +69,7 @@ public class Variables {
 	 * @param varindex A VariableIndex object used to identify the variables
 	 *                    over which the method will iterate over.
 	 */
-	public void setNvars(VariableIndex varindex) {
+	private void setNvars(VariableIndex varindex) {
 		this.nvars = new Nvars(this.varindex);
 	}
 
@@ -78,7 +78,7 @@ public class Variables {
 	 * @param varindex A VariableIndex object used to identify the variables
 	 *                    over which the method will iterate over.
 	 */
-	public void setVarLabels(VariableIndex varindex) {
+	private void setVarLabels(VariableIndex varindex) {
 		this.varlabels = new VarLabels(this.varindex);
 	}
 
@@ -87,7 +87,7 @@ public class Variables {
 	 * @param varindex A VariableIndex object used to identify the variables
 	 *                    over which the method will iterate over.
 	 */
-	public void setValLabNames(VariableIndex varindex) {
+	private void setValLabNames(VariableIndex varindex) {
 		this.valueLabelNames = new ValLabNames(this.varindex);
 	}
 
@@ -96,7 +96,7 @@ public class Variables {
 	 * @param varindex A VariableIndex object used to identify the variables
 	 *                    over which the method will iterate over.
 	 */
-	public void setValLabels(VariableIndex varindex) {
+	private void setValLabels(VariableIndex varindex) {
 		this.valueLabels = new ValLabels(this.varindex);
 	}
 
@@ -105,7 +105,7 @@ public class Variables {
 	 * @param varindex A VariableIndex object used to identify the variables
 	 *                    over which the method will iterate over.
 	 */
-	public void setVarTypes(VariableIndex varindex) {
+	private void setVarTypes(VariableIndex varindex) {
 		this.varTypes = new VarTypes(this.varindex);
 	}
 
@@ -113,7 +113,7 @@ public class Variables {
 	 * Initializes an instance of a VariableIndex object used by other
 	 * methods to construct POJO representations of the variables' metadata.
 	 */
-	public void setVariableIndex() {
+	private void setVariableIndex() {
 		this.varindex = new VariableIndex();
 	}
 

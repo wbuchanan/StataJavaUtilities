@@ -39,7 +39,7 @@ public class VariableIndex {
 	 * Populates the variable index member variable with the indices used to
 	 * identify variables in the Stata dataset in memory.
 	 */
-	public void setVariableIndex() {
+	private void setVariableIndex() {
 
 		// Initialize an empty array list of Integer objects
 		List<Integer> vars = new ArrayList<>();
@@ -96,7 +96,7 @@ public class VariableIndex {
 	 * @return Returns the index value in the position specified by the
 	 * parameter indx.
 	 */
-	public int getValue(Integer indx) {
+	public Integer getValue(Integer indx) {
 		return this.varindex.get(indx);
 	}
 
@@ -122,7 +122,7 @@ public class VariableIndex {
 	 * @return Returns the index value in the position specified by the
 	 * parameter indx.
 	 */
-	public int getVarIndexValue(Integer indx) {
+	public Integer getVarIndexValue(Integer indx) {
 		return this.varindex.get(indx);
 	}
 

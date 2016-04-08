@@ -1,12 +1,7 @@
 package org.paces.Stata.Variables;
-/**
- * Created by billy on 12/10/15.
- */
 
-import com.stata.sfi.Data;
-
-import java.util.ArrayList;
-import java.util.List;
+import com.stata.sfi.*;
+import java.util.*;
 import java.util.stream.Collectors;
 
 /***
@@ -15,7 +10,7 @@ import java.util.stream.Collectors;
  * @version 0.0.0
  *
  */
-public class VarNames {
+public class VarNames implements VarInterface {
 
 	/***
 	 * A name property for the class
@@ -40,7 +35,7 @@ public class VarNames {
 	 * Requires the variable index.
 	 * @param vdx The Variable index over which the method will iterate.
 	 */
-	public void setVariableNames(List<Integer> vdx) {
+	private void setVariableNames(List<Integer> vdx) {
 
 		List<String> tmp = new ArrayList<>();
 
@@ -76,5 +71,23 @@ public class VarNames {
 	public String getName() {
 		return this.name;
 	}
+
+	/**
+	 * Method used to return the appropriate iterator needed to iterate over the
+	 * values stored in the object.
+	 *
+	 * For this object the iterator values are the individual variable names
+	 *
+	 * @return An Iterator object
+	 */
+	@Override
+	public Iterator getIterator() {
+
+		// Returns an iterator over the individual keys.
+		return this.varnames.iterator();
+
+	} // End of getIterator method
+
+
 
 } // End of Inner class object definition

@@ -1,7 +1,6 @@
 package org.paces.Stata.Variables;
 
 import com.stata.sfi.*;
-
 import java.util.*;
 
 /***
@@ -10,7 +9,7 @@ import java.util.*;
  * @version 0.0.0
  *
  */
-public class VarTypes {
+public class VarTypes implements VarInterface {
 
 	/***
 	 * A name property for the object
@@ -21,7 +20,7 @@ public class VarTypes {
 	 * Member variable containing indicators for whether or not the variable
 	 * is of type String
 	 */
-	public Map<String, Boolean> varTypes;
+	private Map<String, Boolean> varTypes;
 
 	/**
 	 * Member used to store Stata variable type integer values.
@@ -52,7 +51,7 @@ public class VarTypes {
 	 * @param varIndex A variable index object used to iterate over when
 	 *                    checking the type of a given variable
 	 */
-	public VarTypes(org.paces.Stata.Variables.VariableIndex varIndex) {
+	public VarTypes(VariableIndex varIndex) {
 
 		// Sets the type index with booleans representing string types
 		setVariableTypeIndex(varIndex.getValues());
@@ -114,10 +113,10 @@ public class VarTypes {
 	 * @param vdx A list of integers containing the variable indices for
 	 *               which the types are requested
 	 */
-	public void setVariableTypeIndex(List<Integer> vdx) {
+	private void setVariableTypeIndex(List<Integer> vdx) {
 
 		// Temporary Map variable
-		Map<String, Boolean> tmpMap = new HashMap<String, Boolean>();
+		Map<String, Boolean> tmpMap = new HashMap<>();
 
 		// Loop over the variable index
 		for (Integer varidx : vdx) {
@@ -154,6 +153,24 @@ public class VarTypes {
 	public String getName() {
 		return this.name;
 	}
+
+	/**
+	 * Method used to return the appropriate iterator needed to iterate over the
+	 * values stored in the object.
+	 *
+	 * For this object the iterator values can be passed to the .getValue()
+	 * method to access individual data elements.
+	 *
+	 * @return An Iterator object
+	 */
+	@Override
+	public Iterator getIterator() {
+
+		// Returns an iterator over the individual keys.
+		return this.varTypes.keySet().iterator();
+
+	} // End of getIterator method
+
 
 	/**
 	 * Method used to access the Stata data type list member of this class

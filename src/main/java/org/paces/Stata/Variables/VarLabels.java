@@ -1,13 +1,6 @@
 package org.paces.Stata.Variables;
-/**
- * Created by billy on 12/10/15.
- */
-
-import com.stata.sfi.Data;
-
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import com.stata.sfi.*;
+import java.util.*;
 
 /***
  * Class containing variable label map
@@ -15,7 +8,7 @@ import java.util.Map;
  * @version 0.0.0
  *
  */
-public class VarLabels {
+public class VarLabels implements VarInterface {
 
 	/***
 	 * Name property for the class
@@ -40,7 +33,7 @@ public class VarLabels {
 	 * Requires the variable index.
 	 * @param vdx The variable index over which the method will iterate.
 	 */
-	public void setVariableLabels(List<Integer> vdx) {
+	private void setVariableLabels(List<Integer> vdx) {
 
 		Map<String, String> newVariableLabels = new HashMap<String, String>();
 
@@ -81,5 +74,23 @@ public class VarLabels {
 	public String getName() {
 		return this.name;
 	}
+
+
+	/**
+	 * Method used to return the appropriate iterator needed to iterate over the
+	 * values stored in the object.
+	 *
+	 * For this object the iterator values can be passed to the .getValue()
+	 * method to access individual data elements.
+	 *
+	 * @return An Iterator object
+	 */
+	@Override
+	public Iterator getIterator() {
+
+		// Returns an iterator over the individual keys.
+		return this.varlabels.keySet().iterator();
+
+	} // End of getIterator method
 
 } // End of Inner class object definition

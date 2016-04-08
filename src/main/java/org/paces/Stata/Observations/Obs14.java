@@ -1,9 +1,8 @@
-package org.paces.Stata.MetaData;
+package org.paces.Stata.Observations;
 
-import com.stata.sfi.Data;
+import com.stata.sfi.*;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 /**
  * Class to construct object used to iterate over observations in Stata
@@ -13,32 +12,37 @@ import java.util.List;
  * @version 0.0.0
  *
  */
-public class Observations {
+public class Obs14 implements ObsInterface {
+
+	/**
+	 * Member used to pass type parameters to accessor methods
+	 */
+	protected Long dataType = Long.valueOf("1");
 
 	/***
 	 * Starting observation index number
 	 */
-	protected Long sobs;
+	private Long sobs;
 
 	/***
 	 * Ending observation index number
 	 */
-	protected Long eobs;
+	private Long eobs;
 
 	/***
 	 * Total Number of Observations
 	 */
-	protected Long nobs;
+	private Long nobs;
 
 	/***
 	 * Observation indices
 	 */
-	protected List<Long> obindex;
+	private List<Long> obindex;
 
 	/***
 	 * Constructor method for class ObservationsImpl
 	 */
-	public Observations() {
+	public Obs14() {
 
 		// Set the starting observation index
 		setSobs();
@@ -47,7 +51,7 @@ public class Observations {
 		setEobs();
 
 		// Set the observation indices
-		setObservationIndex(this.sobs, this.eobs);
+		setObservationIndex(getSobs(this.dataType), getEobs(this.dataType));
 
 		// Set the total number of observations
 		setNobs();
@@ -57,21 +61,21 @@ public class Observations {
 	/***
 	 * Sets the starting observation index
 	 */
-	public void setSobs() {
+	private void setSobs() {
 		this.sobs = Data.getObsParsedIn1();
 	}
 
 	/***
 	 * Sets the starting observation index
 	 */
-	public void setEobs() {
+	private void setEobs() {
 		this.eobs = Data.getObsParsedIn2();
 	}
 
 	/***
 	 * Sets the number of effective observations
 	 */
-	public void setNobs() {
+	private void setNobs() {
 
 		// Return the size of the list object
 		this.nobs = (long) this.obindex.size();
@@ -83,7 +87,7 @@ public class Observations {
 	 * @param start The starting observation index
 	 * @param end The ending observation index
 	 */
-	public void setObservationIndex(Long start, Long end) {
+	private void setObservationIndex(Long start, Long end) {
 
 		// Initialize temp variable
 		List tmp = new ArrayList<>();
@@ -105,27 +109,61 @@ public class Observations {
 
 	} // End method definition to set observation index
 
-	/***
-	 * @return the starting observation index value
-	 */
-	public Long getSobs() { return(this.sobs); }
 
-	/***
-	 * @return the ending observation index value
-	 */
-	public Long getEobs() { return(this.eobs); }
-
-	/***
+	/**
+	 * Returns an iterator over the observation indices in the dataset
 	 *
-	 * @return the number of effective observations
+	 * @return An iterator of type Integer (Stata 13) or type Long (Stata 14 and
+	 * later) that provides a consistent API for iterations over observations
 	 */
-	public Long getNobs() {
-		return(this.nobs);
+	@Override
+	public Iterator<Long> getIterator() {
+		return this.obindex.iterator();
 	}
 
 	/***
-	 * @return the list of effective observation indices
+	 * @param dataType A class object which should be used to cast the return
+	 *                 object
+	 *
+	 * @return the starting observation index value
 	 */
-	public List<Long> getObservationIndex() { return(this.obindex); }
+	@Override
+	public <T> T getSobs(T dataType) {
+		return (T)this.sobs;
+	}
+
+	/***
+	 * @param dataType A class object which should be used to cast the return
+	 *                 object
+	 *
+	 * @return the ending observation index value
+	 */
+	@Override
+	public <T> T getEobs(T dataType) {
+		return (T)this.eobs;
+	}
+
+	/***
+	 * @param dataType A class object which should be used to cast the return
+	 *                 object
+	 *
+	 * @return the total number of observations
+	 */
+	@Override
+	public <T> T getNobs(T dataType) {
+		return (T)this.nobs;
+	}
+
+	/**
+	 * Method used to return the list of observation indices for the current
+	 * dataset
+	 *
+	 * @return A List of Integers (Stata 13) or Longs (Stata 14 or later) that identify
+	 * observation index values for data accessors and setters
+	 */
+	@Override
+	public List<Long> getObservationIndex() {
+		return this.obindex;
+	}
 
 } // End Class definition

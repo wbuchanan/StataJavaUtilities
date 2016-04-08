@@ -1,14 +1,9 @@
 package org.paces.Stata.Variables;
-/**
- * Created by billy on 12/10/15.
- */
 
 import com.stata.sfi.Data;
 import com.stata.sfi.ValueLabel;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 /***
  * Class used to store value label names
@@ -16,7 +11,7 @@ import java.util.Map;
  * @version 0.0.0
  *
  */
-public class ValLabNames {
+public class ValLabNames implements VarInterface {
 
 	/***
 	 * Member variable to store a name property
@@ -27,7 +22,7 @@ public class ValLabNames {
 	 * Member variable containing Stata value label names associated with a
 	 * given variable
 	 */
-	public Map<String, String> valueLabelNames;
+	private Map<String, String> valueLabelNames;
 
 	/***
 	 * Class constructor method
@@ -42,7 +37,7 @@ public class ValLabNames {
 	 * index value. Requires the variable index.
 	 * @param vdx A list of integers for variable index values to iterate over
 	 */
-	public void setValueLabelNames(List<Integer> vdx) {
+	private void setValueLabelNames(List<Integer> vdx) {
 
 		// Initialize object used to store the variabel name to value label
 		// name mapping object
@@ -92,5 +87,22 @@ public class ValLabNames {
 	public String getName() {
 		return this.name;
 	}
+
+	/**
+	 * Method used to return the appropriate iterator needed to iterate over the
+	 * values stored in the object.
+	 *
+	 * For this object the iterator values can be passed to the .getValue()
+	 * method to access individual data elements.
+	 *
+	 * @return An Iterator object
+	 */
+	@Override
+	public Iterator getIterator() {
+
+		// Returns an iterator over the individual keys.
+		return this.valueLabelNames.keySet().iterator();
+
+	} // End of getIterator method
 
 } // End of Inner class object definition

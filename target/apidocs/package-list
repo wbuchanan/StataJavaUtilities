@@ -3,5 +3,6 @@ org.paces.Stata.DataSets
 org.paces.Stata.Matrices
 org.paces.Stata.MetaData
 org.paces.Stata.Missing
+org.paces.Stata.Observations
 org.paces.Stata.Utilities
 org.paces.Stata.Variables

@@ -1,5 +1,8 @@
 package org.paces.Stata.MetaData;
 
+import com.stata.sfi.*;
+import org.paces.Stata.Observations.Observations;
+
 import java.util.List;
 
 /**
@@ -68,7 +71,7 @@ public class Meta {
 	public void setStataobs() {
 
 		// Initialize a new observations object
-		this.stataobs = new Observations();
+		this.stataobs = new Observations(SFIToolkit.getCallerVersion());
 
 	} // End setter method for observations member variable
 
