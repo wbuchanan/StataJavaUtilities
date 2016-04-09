@@ -1,7 +1,6 @@
 package org.paces.Stata.DataSets;
 
-import com.stata.sfi.Data;
-import com.stata.sfi.Macro;
+import com.stata.sfi.*;
 import org.paces.Stata.MetaData.Meta;
 
 import java.util.ArrayList;
@@ -29,8 +28,13 @@ public class DataSetDoubleArrays implements StataData {
 	/***
 	 * A 2d array of Double objects
 	 */
-	private double[][] stataDataSet;
+	private Double[][] stataDataSet;
 	
+	/**
+	 * Version of the Stata caller
+	 */
+	private final Integer ver = Double.valueOf(SFIToolkit.getCallerVersion()).intValue();
+
 	/***
 	 * Generic constructor method for the class
 	 * @param metaobject A Meta class object containing metadata for the
@@ -79,44 +83,90 @@ public class DataSetDoubleArrays implements StataData {
 	 */
 	@Override
 	public void setData() {
-		
+
+		// Gets the size of the number of observations
+		Integer osize = this.metaob.getStataobs().getNobs().intValue();
+
 		// Initialize container to ID the observation and contains a Map
 		// object with key/value pairs
-		double[][] obs = new double[this.metaob.getObsindex().size()][this.metaob.getVarindex().size()];
-		
-		for (int i = 0; i < metaob.getObsindex().size(); i++) {
-			
+		Double[][] obs = new Double[osize][this.metaob.getVarindex().size()];
+
+		for (Integer i = 0; i < this.metaob.getObs13().size(); i++) {
+
 			// Loop over the variable indices
-			for (int j = 0; j < metaob.getVarindex().size(); j++) {
-				
+			for (Integer j = 0; j < this.metaob.getVarindex().size(); j++) {
+
 				// Check to see if value is missing
-				if (Data.isValueMissing(Data.getNum(metaob.getVarindex(j), (long) i))) {
-					
-					// If value is missing, set value to -1.0
-					obs[i][j] =  -1.0;
-					
+				if (Data.isValueMissing(Data.getNum(metaob.getVarindex(j),  i))) {
+
+					// If value is missing, set value to NaN
+					obs[i][j] =  Double.MAX_VALUE;
+
 				} else {
-					
+
 					// Convert numeric variables to string
-					obs[i][j] = Data.getNum(metaob.getVarindex(j), (long) i);
-					
+					obs[i][j] = Data.getNum(metaob.getVarindex(j), i);
+
 				} // End ELSE Block for non-missing values
-				
+
 			} // End of Loop over variable
-			
+
 		} // End of Loop over observations
-		
+
 		// Set the member variable to this value
 		stataDataSet = obs;
-		
+
 	} // End method declaration to set data value of class
 	
+	/***
+	 * Method to store Stata dataset as a 2d Array of Double objects.  This is
+	 * used for passing the data set to objects/methods in the com.itemanalysis
+	 * .psychometrics package to expand IRT modeling options in Stata.
+	 * @param missingValue Used to allow user specified missing value Overrides
+	 */
+	@Override
+	public void setData(Number missingValue) {
+
+		// Gets the size of the number of observations
+		Integer osize = this.metaob.getStataobs().getNobs().intValue();
+
+		// Initialize container to ID the observation and contains a Map
+		// object with key/value pairs
+		Double[][] obs = new Double[osize][this.metaob.getVarindex().size()];
+
+		for (Integer i = 0; i < this.metaob.getObs13().size(); i++) {
+
+			// Loop over the variable indices
+			for (Integer j = 0; j < this.metaob.getVarindex().size(); j++) {
+
+				// Check to see if value is missing
+				if (Data.isValueMissing(Data.getNum(metaob.getVarindex(j),  i))) {
+
+					// If value is missing, set value to NaN
+					obs[i][j] =  missingValue.doubleValue();
+
+				} else {
+
+					// Convert numeric variables to string
+					obs[i][j] = Data.getNum(metaob.getVarindex(j), i);
+
+				} // End ELSE Block for non-missing values
+
+			} // End of Loop over variable
+
+		} // End of Loop over observations
+
+		// Set the member variable to this value
+		stataDataSet = obs;
+
+	} // End method declaration to set data value of class
+
 	/***
 	 * Getter method to access the POJO representation of the Stata dataset
 	 * @return A POJO representation of the Stata Dataset
 	 */
 	@Override
-	public double[][] getData() {
+	public Double[][] getData() {
 		
 		// Returns the sole member variable of the class
 		return this.stataDataSet;
@@ -141,7 +191,7 @@ public class DataSetDoubleArrays implements StataData {
 	 * @return An array of bytes
 	 */
 	@Override
-	public double[] getData(Integer record) {
+	public Double[] getData(Integer record) {
 
 		// Returns a single row of data from the dataset object
 		return this.getData()[record];
@@ -178,17 +228,17 @@ public class DataSetDoubleArrays implements StataData {
 		List<List<Double>> dataset = new ArrayList<>();
 
 		// Starts loop over the record indices
-		for (int i = 0; i < this.metaob.getObsindex().size(); i++) {
+		for (Integer i = 0; i < this.metaob.getObs13().size(); i++) {
 
 			// Initializes an object to store the values for a given record
 			List<Double> record = new ArrayList<>();
 
 			// Starts loop over the individual variables
-			for (int j = 0; j < this.metaob.getVarindex().size(); j++) {
+			for (Integer j = 0; j < this.metaob.getVarindex().size(); j++) {
 
 				// Adds the datum to the record object using the getData
 				// method with the row and column indices passed as arguments
-				record.add(j, getData(i, j));
+				record.add(j, getData(this.metaob.getObs13().get(i), this.metaob.getVarindex(j)));
 
 			} // Ends the loop over the variables
 

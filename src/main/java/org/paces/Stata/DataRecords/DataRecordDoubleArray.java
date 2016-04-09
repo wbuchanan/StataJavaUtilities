@@ -1,6 +1,7 @@
 package org.paces.Stata.DataRecords;
 
 import com.stata.sfi.*;
+import org.paces.Stata.DataTypes.StTypes;
 import org.paces.Stata.MetaData.Meta;
 
 import java.util.*;
@@ -102,7 +103,7 @@ public class DataRecordDoubleArray implements Record {
 	@Override
 	public void setData(Long obid) {
 
-		Double[] values = new Double[metaob.varindex.size()];
+		Double[] values = new Double[metaob.getVarindex().size()];
 
 		// Loop over the variable indices
 		for (Integer i : metaob.getVarindex()) {
@@ -111,7 +112,7 @@ public class DataRecordDoubleArray implements Record {
 			if (Data.isValueMissing(Data.getNum(i, obid))) {
 
 				// If value is missing, set value to -1.0
-				values[i] = -1.0;
+				values[i] = Double.MAX_VALUE;
 
 			} else {
 
@@ -134,7 +135,7 @@ public class DataRecordDoubleArray implements Record {
 	@Override
 	public void setData(Integer obid) {
 
-		Double[] values = new Double[metaob.varindex.size()];
+		Double[] values = new Double[metaob.getVarindex().size()];
 
 		// Loop over the variable indices
 		for (Integer i : metaob.getVarindex()) {
@@ -143,12 +144,13 @@ public class DataRecordDoubleArray implements Record {
 			if (Data.isValueMissing(Data.getNum(i, obid))) {
 
 				// If value is missing, set value to -1.0
-				values[i] = -1.0;
+				values[i] = Double.MAX_VALUE;
+
 
 			} else {
 
 				// Convert numeric variables to string
-				values[i] = Data.getNum(i, obid);
+				values[i] = StTypes.asDouble(i, obid);
 
 			} // End ELSE Block for non-missing values
 
@@ -158,6 +160,43 @@ public class DataRecordDoubleArray implements Record {
 		this.observation = values;
 
 	} // End of setData method declaration
+
+	/***
+	 * Method to construct row object with user specified missing value
+	 * override
+	 *
+	 * @param obid         The observation ID for which the data are to be
+	 *                     retrieved
+	 * @param missingValue The value to use if missing data are present
+	 */
+	@Override
+	public void setData(Number obid, Number missingValue) {
+
+		Double[] values = new Double[metaob.getVarindex().size()];
+
+		// Loop over the variable indices
+		for (Integer i : metaob.getVarindex()) {
+
+			// Check to see if value is missing
+			if (Data.isValueMissing(Data.getNum(i, obid.intValue()))) {
+
+				// If value is missing, set value to -1.0
+				values[i] = missingValue.doubleValue();
+
+
+			} else {
+
+				// Convert numeric variables to string
+				values[i] = StTypes.asDouble(i, obid);
+
+			} // End ELSE Block for non-missing values
+
+		} // End of Loop
+
+		// Set the observation value
+		this.observation = values;
+
+	}
 
 	/***
 	 * Retrieves the data for a given record

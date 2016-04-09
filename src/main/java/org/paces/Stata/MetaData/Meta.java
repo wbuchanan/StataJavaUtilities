@@ -3,7 +3,7 @@ package org.paces.Stata.MetaData;
 import com.stata.sfi.*;
 import org.paces.Stata.Observations.Observations;
 
-import java.util.List;
+import java.util.*;
 
 /**
  * Class used for Stata's Java API to access dataset Metadata.
@@ -20,22 +20,22 @@ public class Meta {
 	/***
 	 * Observations metadata object
 	 */
-	public Observations stataobs;
+	private Observations stataobs;
 
 	/***
 	 * Variables metadata object
 	 */
-	public Variables statavars;
+	private Variables statavars;
 
 	/***
 	 * Variable index metadata object
 	 */
-	public List<Integer> varindex;
+	private List<Integer> varindex;
 
 	/***
 	 * Observation index metadata object
 	 */
-	public List<Long> obsindex;
+	private List<Number> obsindex;
 
 	/***
 	 * Constructor for object w/o any arguments passed
@@ -68,7 +68,7 @@ public class Meta {
 	/***
 	 * Generic setter method for observations member variable
 	 */
-	public void setStataobs() {
+	private void setStataobs() {
 
 		// Initialize a new observations object
 		this.stataobs = new Observations(SFIToolkit.getCallerVersion());
@@ -78,7 +78,7 @@ public class Meta {
 	/***
 	 * Generic setter method for variables member variable
 	 */
-	public void setStatavars() {
+	private void setStatavars() {
 
 		// Initialize a new variables metadata object
 		this.statavars = new Variables();
@@ -89,7 +89,7 @@ public class Meta {
 	 * Sets teh observation index member variable
 	 * @param observations An observations class object
 	 */
-	public void setObsindex(Observations observations) {
+	private void setObsindex(Observations observations) {
 
 		// Initialize a new observation index object
 		this.obsindex = observations.getObservationIndex();
@@ -100,7 +100,7 @@ public class Meta {
 	 * Sets the variable index member variable
 	 * @param variables A variables class object
 	 */
-	public void setVarindex(Variables variables) {
+	private void setVarindex(Variables variables) {
 
 		// Initialize a new variable index object
 		this.varindex = variables.getVariableIndex();
@@ -120,10 +120,28 @@ public class Meta {
 	public Variables getStatavars() { return this.statavars; }
 
 	/***
-	 * Getter for the observation index member variable
+	 * Getter for the observation index for the Stata 14 API
 	 * @return Returns the observation index member variable
 	 */
-	public List<Long> getObsindex() { return this.obsindex; }
+	public List<Long> getObs14() {
+		List<Long> stata14ObservationIndex = new ArrayList<>();
+		for(Number i : this.obsindex) {
+			stata14ObservationIndex.add(i.longValue());
+		}
+		return stata14ObservationIndex;
+	}
+
+	/***
+	 * Getter for the observation index for the Stata 14 API
+	 * @return Returns the observation index member variable
+	 */
+	public List<Integer> getObs13() {
+		List<Integer> stata13ObservationIndex = new ArrayList<>();
+		for(Number i : this.obsindex) {
+			stata13ObservationIndex.add(i.intValue());
+		}
+		return stata13ObservationIndex;
+	}
 
 	/***
 	 * Getter for the variable index member variable
@@ -136,12 +154,50 @@ public class Meta {
 	 * @param idxid The variable index element whose value is to be retrieved
 	 * @return The element of the variable index passed to the method call
 	 */
-	public int getVarindex(int idxid) {
+	public Integer getVarindex(Integer idxid) {
 
 		// Return the element of the variable index identified by the value
 		// of the argument passed to the method
-		return ((Integer)this.statavars.getVariableIndex(idxid)).intValue();
+		return this.statavars.getVariableIndex(idxid);
 
 	} // End getVarIndex method declaration
+
+	public List<String> getVarNames() {
+		return this.statavars.getVariableNames();
+	}
+
+	public String getVarName(Integer varIdx) {
+		return this.statavars.getVariableName(varIdx);
+	}
+
+	public Map<String, Boolean> getAreStrings() {
+		return this.statavars.getVariableTypes();
+	}
+
+	public Boolean getIsString(String varname) {
+		return this.statavars.getVariableTypes().get(varname);
+	}
+
+	public Map<String, String> getValueLabelNames() {
+		return this.statavars.getValueLabelNames();
+	}
+
+	public String getValueLabelName(String varname) {
+		return this.statavars.getValueLabelNames().get(varname);
+	}
+
+	public Map<String, String> getVariableLabels() {
+		return this.statavars.getVariableLabels();
+	}
+
+	public String getVariableLabel(String varname) {
+		return this.statavars.getVariableLabels().get(varname);
+	}
+
+	public List<Number> getObsindex() {
+		return this.obsindex;
+	}
+
+
 
 } // End object declaration

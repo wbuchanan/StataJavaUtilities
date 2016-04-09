@@ -13,7 +13,7 @@ public class Observations {
 	private Integer version;
 
 	public Observations(Double callerVersion) {
-		this.version = Integer.valueOf(callerVersion.toString());
+		this.version = callerVersion.intValue();
 		if (version < 14) this.obs = new Obs13();
 		else this.obs = new Obs14();
 	}
@@ -24,33 +24,30 @@ public class Observations {
 	 * and later) that provides a consistent API for iterations over
 	 * observations
 	 */
-	public Iterator getIterator() {
+	public Iterator<Number> getIterator() {
 		return this.obs.getIterator();
-	};
+	}
 
 	/***
 	 * @return the starting observation index value
 	 */
-	public Object getSobs() {
-		if (this.version < 14) return this.obs.getSobs(Integer.valueOf(1));
-		else return this.obs.getSobs(Long.valueOf(1L));
-	};
+	public Number getSobs() {
+		return this.obs.getSobs();
+	}
 
 	/***
 	 * @return the ending observation index value
 	 */
-	public Object getEobs() {
-		if (this.version < 14) return this.obs.getEobs(Integer.valueOf(1));
-		else return this.obs.getEobs(Long.valueOf(1L));
-	};
+	public Number getEobs() {
+		return this.obs.getEobs();
+	}
 
 	/***
 	 * @return the total number of observations
 	 */
-	public Object getNobs() {
-		if (this.version < 14) return this.obs.getNobs(Integer.valueOf(1));
-		else return this.obs.getNobs(Long.valueOf(1L));
-	};
+	public Number getNobs() {
+		return this.obs.getNobs();
+	}
 
 	/**
 	 * Method used to return the list of observation indices for the current
@@ -58,9 +55,9 @@ public class Observations {
 	 * @return A List of Integers (Stata 13) or Longs (Stata 14 or later) that
 	 * identify observation index values for data accessors and setters
 	 */
-	public List getObservationIndex() {
+	public List<Number> getObservationIndex() {
 		return this.obs.getObservationIndex();
-	};
+	}
 
 
 }

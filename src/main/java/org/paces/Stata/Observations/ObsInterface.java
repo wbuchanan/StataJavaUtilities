@@ -15,37 +15,22 @@ public interface ObsInterface {
 	 * and later) that provides a consistent API for iterations over
 	 * observations
 	 */
-	Iterator getIterator();
+	Iterator<Number> getIterator();
 
 	/***
-	 * @param <T> The type to be returned.  Should be Integer for Stata 13
-	 *              API or Long for Stata 14 and later APIs
-	 * @param dataType A class object which should be used to cast the return
-	 *                    object
 	 * @return the starting observation index value
 	 */
-	@SuppressWarnings("unchecked")
-	<T> T getSobs(T dataType);
+	Number getSobs();
 
 	/***
-	 * @param <T> The type to be returned.  Should be Integer for Stata 13
-	 *              API or Long for Stata 14 and later APIs
-	 * @param dataType A class object which should be used to cast the return
-	 *                    object
 	 * @return the ending observation index value
 	 */
-	@SuppressWarnings("unchecked")
-	<T> T getEobs(T dataType);
+	Number getEobs();
 
 	/***
-	 * @param <T> The type to be returned.  Should be Integer for Stata 13
-	 *              API or Long for Stata 14 and later APIs
-	 * @param dataType A class object which should be used to cast the return
-	 *                    object
 	 * @return the total number of observations
 	 */
-	@SuppressWarnings("unchecked")
-	<T> T getNobs(T dataType);
+	Number getNobs();
 
 	/**
 	 * Method used to return the list of observation indices for the current
@@ -53,6 +38,6 @@ public interface ObsInterface {
 	 * @return A List of Integers (Stata 13) or Longs (Stata 14 or later) that
 	 * identify observation index values for data accessors and setters
 	 */
-	List getObservationIndex();
+	List<Number> getObservationIndex();
 
 } // End Interface declaration

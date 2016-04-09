@@ -91,6 +91,49 @@ public class DataRecord implements Record {
 	} // End declaration of constructor method
 
 	/***
+	 * Constructor method for DataRecord class
+	 * @param id The observation index value for which to retrieve the data for
+	 * @param metaobject A Meta class object containing metadata from the
+	 *                      Stata dataset
+	 * @param missingValue Missing value override passed to the setData method
+	 */
+	public DataRecord(Long id, Meta metaobject, Number missingValue) {
+
+		// The metadata object
+		this.metaob = metaobject;
+
+		this.vars = metaob.getStatavars();
+
+		// Set the observation ID variable
+		setObid(id);
+
+		// Set the data (observation) variable
+		setData(id, missingValue);
+
+	}
+
+	/***
+	 * Constructor method for DataRecord class
+	 * @param id The observation index value for which to retrieve the data for
+	 * @param metaobject A Meta class object containing metadata from the
+	 *                      Stata dataset
+	 * @param missingValue Missing value override passed to the setData method
+	 */
+	public DataRecord(Integer id, Meta metaobject, Number missingValue) {
+
+		// The metadata object
+		this.metaob = metaobject;
+
+		this.vars = metaob.getStatavars();
+
+		// Set the observation ID variable
+		setObid(id);
+
+		// Set the data (observation) variable
+		setData(id, missingValue);
+
+	}
+	/***
 	 * Setter method for the observation ID variable
 	 * @param observationNumber An observation index value
 	 */
@@ -235,6 +278,69 @@ public class DataRecord implements Record {
 		this.observation = record;
 
 	} // End of Method declaration
+
+	/***
+	 * Method to construct row object with user specified missing value
+	 * override
+	 *
+	 * @param obid         The observation ID for which the data are to be
+	 *                     retrieved
+	 * @param missingValue The value to use if missing data are present
+	 */
+	@Override
+	public void setData(Number obid, Number missingValue) {
+
+		// Initialize empty variable to store the variable name
+		String key;
+
+		// Initialize empty variable to store the value for a given
+		// observation on a specified variable
+		Object value;
+
+		// Initialize empty container for key/value pairs
+		Map<String, Object> record = new HashMap<>();
+
+		// Loop over the variable indices
+		for (Integer i : metaob.getVarindex()) {
+
+			// Set the variable name as the key in the map object
+			key = vars.getVariableName(i);
+
+			// Test for string/numeric
+			if (vars.getVarType(key)) {
+
+				// Store string value if variable contains strings
+				value = Data.getStr(vars.getVariableIndex(i), obid.intValue());
+
+			} else {
+
+				// Check for missing numeric values
+				if (Data.isValueMissing(Data.getNum(vars.getVariableIndex(i),
+					obid.intValue()))) {
+
+					// If value is missing, populate field with the string
+					// value null.
+					value = "null";
+
+				} else {
+
+					// Convert numeric variables to string
+					value = Data.getNum(vars.getVariableIndex(i), obid.intValue());
+
+				} // End ELSE Block for non-missing values
+
+			} // End IF/ELSE Block for string/numeric type handling
+
+			// Add the key/value pair to the container object
+			record.put(key, value);
+
+		} // End of Loop
+
+		// Return the object containing the observation ID and the key/value
+		// pairs
+		this.observation = record;
+
+	}
 
 	/**
 	 * Method to return a record as a list of objects

@@ -37,7 +37,7 @@ public class Obs14 implements ObsInterface {
 	/***
 	 * Observation indices
 	 */
-	private List<Long> obindex;
+	private List<Number> obindex;
 
 	/***
 	 * Constructor method for class ObservationsImpl
@@ -51,7 +51,7 @@ public class Obs14 implements ObsInterface {
 		setEobs();
 
 		// Set the observation indices
-		setObservationIndex(getSobs(this.dataType), getEobs(this.dataType));
+		setObservationIndex(this.sobs, this.eobs);
 
 		// Set the total number of observations
 		setNobs();
@@ -90,7 +90,7 @@ public class Obs14 implements ObsInterface {
 	private void setObservationIndex(Long start, Long end) {
 
 		// Initialize temp variable
-		List tmp = new ArrayList<>();
+		List<Number> tmp = new ArrayList<>();
 
 		// Loop over the observations
 		for(Long i = start; i <= end; i++) {
@@ -117,41 +117,32 @@ public class Obs14 implements ObsInterface {
 	 * later) that provides a consistent API for iterations over observations
 	 */
 	@Override
-	public Iterator<Long> getIterator() {
+	public Iterator<Number> getIterator() {
 		return this.obindex.iterator();
 	}
 
 	/***
-	 * @param dataType A class object which should be used to cast the return
-	 *                 object
-	 *
 	 * @return the starting observation index value
 	 */
 	@Override
-	public <T> T getSobs(T dataType) {
-		return (T)this.sobs;
+	public Long getSobs() {
+		return this.sobs;
 	}
 
 	/***
-	 * @param dataType A class object which should be used to cast the return
-	 *                 object
-	 *
 	 * @return the ending observation index value
 	 */
 	@Override
-	public <T> T getEobs(T dataType) {
-		return (T)this.eobs;
+	public Long getEobs() {
+		return this.eobs;
 	}
 
 	/***
-	 * @param dataType A class object which should be used to cast the return
-	 *                 object
-	 *
 	 * @return the total number of observations
 	 */
 	@Override
-	public <T> T getNobs(T dataType) {
-		return (T)this.nobs;
+	public Long getNobs() {
+		return this.nobs;
 	}
 
 	/**
@@ -162,7 +153,7 @@ public class Obs14 implements ObsInterface {
 	 * observation index values for data accessors and setters
 	 */
 	@Override
-	public List<Long> getObservationIndex() {
+	public List<Number> getObservationIndex() {
 		return this.obindex;
 	}
 

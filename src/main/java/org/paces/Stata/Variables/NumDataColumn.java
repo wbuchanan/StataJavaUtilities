@@ -1,10 +1,9 @@
 package org.paces.Stata.Variables;
 
-import com.stata.sfi.Data;
+import com.stata.sfi.*;
 import org.paces.Stata.MetaData.Meta;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
@@ -25,6 +24,8 @@ public class NumDataColumn {
 	 * A List of double values from a single variable
 	 */
 	public List<Double> colvar;
+
+	private final Integer ver = Double.valueOf(SFIToolkit.getCallerVersion()).intValue();
 
 	/***
 	 * Generic constructor for the class
@@ -50,13 +51,25 @@ public class NumDataColumn {
 	public void setData(Integer var) {
 
 		// Temp variable to store results
-		List<Double> dblvar = new ArrayList<Double>();
+		List<Double> dblvar = new ArrayList<>();
 
-		// Populate the temp variable
-		dblvar.addAll(metaob.obsindex.stream().map(
+		if (this.ver == 13) {
+
+			// Populate the temp variable
+			dblvar.addAll(metaob.getObs13().stream().map(
+				(Function<Integer, Double>) (ob) -> {
+					return Data.getNum(metaob.getVarindex(var), ob);
+				}).collect(Collectors.<Double>toList()));
+
+		} else {
+
+			// Populate the temp variable
+			dblvar.addAll(metaob.getObs14().stream().map(
 				(Function<Long, Double>) (ob) -> {
 					return Data.getNum(metaob.getVarindex(var), ob);
 				}).collect(Collectors.<Double>toList()));
+
+		}
 
 		// Set the member variable to the values of the temp variable
 		this.colvar = dblvar;

@@ -1,6 +1,7 @@
 package org.paces.Stata.Variables;
 
 import com.stata.sfi.Data;
+import org.paces.Stata.DataTypes.StTypes;
 import org.paces.Stata.MetaData.Meta;
 import org.paces.Stata.MetaData.Variables;
 
@@ -117,30 +118,31 @@ public class DataColumn {
 	 * @param obindex The observation index member of the Observations class
 	 * @return A list object containing the data elements from a single variable
 	 */
-	private List<?> makeList(Integer type, Integer varidx, List<Long> obindex) {
+	private List<?> makeList(Integer type, Integer varidx, List<Number>
+		obindex) {
 		if (type <= 32768) {
 			List<String> tmp = new ArrayList<>();
-			for(Long ob : obindex) tmp.add(Data.getStr(varidx, ob));
+			for(Number ob : obindex) tmp.add(Data.getStr(varidx, ob.intValue()));
 			return tmp;
 		} else if (type == 65526) {
 			List<Double> tmp = new ArrayList<>();
-			for(Long ob : obindex) tmp.add(Data.getNum(varidx, ob));
+			for(Number ob : obindex) tmp.add(StTypes.asDouble(varidx, ob));
 			return tmp;
 		} else if (type == 65527) {
 			List<Float> tmp = new ArrayList<>();
-			for(Long ob : obindex) tmp.add((float) Data.getNum(varidx, ob));
+			for(Number ob : obindex) tmp.add(StTypes.asFloat(varidx, ob));
 			return tmp;
 		} else if (type == 65528) {
 			List<Integer> tmp = new ArrayList<>();
-			for(Long ob : obindex) tmp.add((int) Data.getNum(varidx, ob));
+			for(Number ob : obindex) tmp.add(StTypes.asInteger(varidx, ob));
 			return tmp;
 		} else if (type == 65529) {
 			List<Short> tmp = new ArrayList<>();
-			for(Long ob : obindex) tmp.add((short) Data.getNum(varidx, ob));
+			for(Number ob : obindex) tmp.add(StTypes.asShort(varidx, ob));
 			return tmp;
 		} else {
 			List<Byte> tmp = new ArrayList<>();
-			for(Long ob : obindex) tmp.add((byte) Data.getNum(varidx, ob));
+			for(Number ob : obindex) tmp.add(StTypes.asByte(varidx, ob));
 			return tmp;
 		}
 	}

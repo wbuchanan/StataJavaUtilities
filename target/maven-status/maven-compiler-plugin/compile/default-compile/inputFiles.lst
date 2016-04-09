@@ -27,6 +27,7 @@
 /Users/billy/Desktop/Programs/Java/StataJavaUtilities/src/main/java/org/paces/Stata/DataRecords/DataRecordDoubleArray.java
 /Users/billy/Desktop/Programs/Java/StataJavaUtilities/src/main/java/org/paces/Stata/DataRecords/DataRecordStringArray.java
 /Users/billy/Desktop/Programs/Java/StataJavaUtilities/src/main/java/org/paces/Stata/DataSets/DataSetDoubleArrays.java
+/Users/billy/Desktop/Programs/Java/StataJavaUtilities/src/main/java/org/paces/Stata/DataTypes/StTypes.java
 /Users/billy/Desktop/Programs/Java/StataJavaUtilities/src/main/java/org/paces/Stata/Variables/Nvars.java
 /Users/billy/Desktop/Programs/Java/StataJavaUtilities/src/main/java/org/paces/Stata/Variables/VarInterface.java
 /Users/billy/Desktop/Programs/Java/StataJavaUtilities/src/main/java/org/paces/Stata/Variables/ValLabNames.java
@@ -37,4 +38,5 @@
 /Users/billy/Desktop/Programs/Java/StataJavaUtilities/src/main/java/org/paces/Stata/Utilities/StataArgsToCollector.java
 /Users/billy/Desktop/Programs/Java/StataJavaUtilities/src/main/java/org/paces/Stata/Variables/VarTypes.java
 /Users/billy/Desktop/Programs/Java/StataJavaUtilities/src/main/java/org/paces/Stata/Observations/ObsInterface.java
+/Users/billy/Desktop/Programs/Java/StataJavaUtilities/src/main/java/org/paces/Stata/Utilities/MDArrays.java
 /Users/billy/Desktop/Programs/Java/StataJavaUtilities/src/main/java/org/paces/Stata/DataSets/DataSetIntArrays.java

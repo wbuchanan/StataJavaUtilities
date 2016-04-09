@@ -37,7 +37,7 @@ public class Obs13 implements ObsInterface {
 	/***
 	 * Observation indices
 	 */
-	private List<Integer> obindex;
+	private List<Number> obindex;
 
 	/***
 	 * Constructor method for class ObservationsImpl
@@ -52,7 +52,7 @@ public class Obs13 implements ObsInterface {
 		setEobs();
 
 		// Set the observation indices
-		setObservationIndex(getSobs(this.dataType), getEobs(this.dataType));
+		setObservationIndex(this.sobs, this.eobs);
 
 		// Set the total number of observations
 		setNobs();
@@ -91,7 +91,7 @@ public class Obs13 implements ObsInterface {
 	private void setObservationIndex(Integer start, Integer end) {
 
 		// Initialize temp variable
-		List tmp = new ArrayList<>();
+		List<Number> tmp = new ArrayList<>();
 
 		// Loop over the observations
 		for(Integer i = start; i <= end; i++) {
@@ -118,7 +118,7 @@ public class Obs13 implements ObsInterface {
 	 * identify observation index values for data accessors and setters
 	 */
 	@Override
-	public List<Integer> getObservationIndex() {
+	public List<Number> getObservationIndex() {
 		return(this.obindex);
 	}
 
@@ -131,7 +131,7 @@ public class Obs13 implements ObsInterface {
 	 * observations
 	 */
 	@Override
-	public Iterator<Integer> getIterator() {
+	public Iterator<Number> getIterator() {
 
 		// Returns the list of observation indices as an iterator object
 		return this.obindex.iterator();
@@ -139,36 +139,27 @@ public class Obs13 implements ObsInterface {
 	} // End getIterator method
 
 	/***
-	 * @param dataType A class object which should be used to cast the return
-	 *                 object
-	 *
 	 * @return the starting observation index value
 	 */
 	@Override
-	public <T> T getSobs(T dataType) {
-		return((T)this.sobs);
+	public Integer getSobs() {
+		return(this.sobs);
 	}
 
 	/***
-	 * @param dataType A class object which should be used to cast the return
-	 *                 object
-	 *
 	 * @return the ending observation index value
 	 */
 	@Override
-	public <T> T getEobs(T dataType) {
-		return null;
+	public Integer getEobs() {
+		return this.eobs;
 	}
 
 	/***
-	 * @param dataType A class object which should be used to cast the return
-	 *                 object
-	 *
 	 * @return the total number of observations
 	 */
 	@Override
-	public <T> T getNobs(T dataType) {
-		return null;
+	public Integer getNobs() {
+		return this.nobs;
 	}
 
 } // End Class definition

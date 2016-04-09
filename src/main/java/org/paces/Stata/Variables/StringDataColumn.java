@@ -1,6 +1,6 @@
 package org.paces.Stata.Variables;
 
-import com.stata.sfi.Data;
+import com.stata.sfi.*;
 import org.paces.Stata.MetaData.Meta;
 
 import java.util.ArrayList;
@@ -25,6 +25,8 @@ public class StringDataColumn {
 	 * A List of String values from a single variable
 	 */
 	public List<String> colvar;
+
+	private final Integer ver = Double.valueOf(SFIToolkit.getCallerVersion()).intValue();
 
 	/***
 	 * Generic constructor for the class
@@ -51,8 +53,26 @@ public class StringDataColumn {
 		// Temp variable to store results
 		List<String> stringvar = new ArrayList<String>();
 
+		if (this.ver == 13) {
+
+			// Populate the temp variable
+			stringvar.addAll(metaob.getObs13().stream().map(
+				(Function<Integer, String>) (ob) -> {
+					return Data.getStr(metaob.getVarindex(var), ob);
+				}).collect(Collectors.<String>toList()));
+
+		} else {
+
+			// Populate the temp variable
+			stringvar.addAll(metaob.getObs14().stream().map(
+				(Function<Long, String>) (ob) -> {
+					return Data.getStr(metaob.getVarindex(var), ob);
+				}).collect(Collectors.<String>toList()));
+
+		}
+
 		// Populate the temp variable
-		stringvar.addAll(metaob.obsindex.stream().map(
+		stringvar.addAll(metaob.getObs14().stream().map(
 				(Function<Long, String>) (ob) -> {
 					return Data.getStr(metaob.getVarindex(var), ob);
 				}).collect(Collectors.<String>toList()));

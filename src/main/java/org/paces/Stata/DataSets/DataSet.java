@@ -1,5 +1,6 @@
 package org.paces.Stata.DataSets;
 
+import com.stata.sfi.*;
 import joinery.DataFrame;
 import org.paces.Stata.DataRecords.DataRecord;
 import org.paces.Stata.MetaData.DataSource;
@@ -24,7 +25,7 @@ public class DataSet implements StataData {
 	/***
 	 * A new Meta object
 	 */
-	public Meta metaob;
+	private Meta metaob;
 
 	/***
 	 * The name of the data set in memory to be converted to a JSON object
@@ -39,7 +40,12 @@ public class DataSet implements StataData {
 	/***
 	 * POJO Representation of the data set in memory of Stata
 	 */
-	public List<Object> stataDataSet;
+	private List<Object> stataDataSet;
+
+	/**
+	 * Version of the Stata caller
+	 */
+	private final Integer ver = Double.valueOf(SFIToolkit.getCallerVersion()).intValue();
 
 	/***
 	 * Generic constructor method for the class
@@ -68,16 +74,59 @@ public class DataSet implements StataData {
 		// object with key/value pairs
 		List<Object> obs = new ArrayList<Object>();
 
-		obs.addAll(metaob.obsindex.stream().map(
+		if (this.ver == 13) {
+			obs.addAll(this.metaob.getObs13().stream().map(
+				(Function<Integer, Object>) (id) -> {
+					return new DataRecord(id, this.metaob).getData();
+				}
+			).collect(Collectors.<Object>toList()));
+
+		} else {
+			obs.addAll(this.metaob.getObs14().stream().map(
 				(Function<Long, Object>) (id) -> {
 					return new DataRecord(id, this.metaob).getData();
 				}
-		).collect(Collectors.<Object>toList()));
+			).collect(Collectors.<Object>toList()));
+
+		}
 
 		// Set the member variable to this value
 		stataDataSet = obs;
 
 	} // End method declaration to set data value of class
+
+	/***
+	 * Method to build the Stata data object with user specified missing values
+	 *
+	 * @param missingValue The value to use to represent missing data
+	 */
+	@Override
+	public void setData(Number missingValue) {
+
+		// Initialize container to ID the observation and contains a Map
+		// object with key/value pairs
+		List<Object> obs = new ArrayList<Object>();
+
+		if (this.ver == 13) {
+			obs.addAll(this.metaob.getObs13().stream().map(
+				(Function<Integer, Object>) (id) -> {
+					return new DataRecord(id, this.metaob, missingValue).getData();
+				}
+			).collect(Collectors.<Object>toList()));
+
+		} else {
+			obs.addAll(this.metaob.getObs14().stream().map(
+				(Function<Long, Object>) (id) -> {
+					return new DataRecord(id, this.metaob, missingValue).getData();
+				}
+			).collect(Collectors.<Object>toList()));
+
+		}
+
+		// Set the member variable to this value
+		stataDataSet = obs;
+
+	}
 
 	/***
 	 * Getter method to access the POJO representation of the Stata dataset
@@ -160,17 +209,17 @@ public class DataSet implements StataData {
 		List<List<Object>> dataset = new ArrayList<>();
 
 		// Starts loop over the record indices
-		for (int i = 0; i < this.metaob.getObsindex().size(); i++) {
+		for(Integer i : metaob.getObs13()) {
 
 			// Initializes an object to store the values for a given record
 			List<Object> record = new ArrayList<>();
 
 			// Starts loop over the individual variables
-			for (int j = 0; j < this.metaob.getVarindex().size(); j++) {
+			for(Integer j : metaob.getVarindex()) {
 
 				// Adds the datum to the record object using the getData
 				// method with the row and column indices passed as arguments
-				record.add(j, getData(i, j));
+				record.add(j, getData(this.metaob.getObs13().get(i), this.metaob.getVarindex(j)));
 
 			} // Ends the loop over the variables
 

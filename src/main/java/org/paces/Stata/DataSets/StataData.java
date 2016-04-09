@@ -16,6 +16,12 @@ public abstract interface StataData {
 	void setData();
 
 	/***
+	 * Method to build the Stata data object with user specified missing values
+	 * @param missingValue The value to use to represent missing data
+	 */
+	void setData(Number missingValue);
+
+	/***
 	 * Method to retrieve the entire 2d array of data
 	 * @return A POJO containing a Stata data representation
 	 */

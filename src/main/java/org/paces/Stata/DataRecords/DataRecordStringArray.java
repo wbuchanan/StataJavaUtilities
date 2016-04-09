@@ -101,7 +101,7 @@ public class DataRecordStringArray implements Record {
 	@Override
 	public void setData(Long obid) {
 		
-		String[] values = new String[metaob.varindex.size()];
+		String[] values = new String[metaob.getVarindex().size()];
 
 		// Loop over the variable indices
 		for (Integer i : metaob.getVarindex()) {
@@ -123,7 +123,7 @@ public class DataRecordStringArray implements Record {
 	@Override
 	public void setData(Integer obid) {
 
-		String[] values = new String[metaob.varindex.size()];
+		String[] values = new String[metaob.getVarindex().size()];
 
 		// Loop over the variable indices
 		for (Integer i : metaob.getVarindex()) {
@@ -137,6 +137,32 @@ public class DataRecordStringArray implements Record {
 		this.observation = values;
 
 	} // End of setData method definition
+
+	/***
+	 * Method to construct row object with user specified missing value
+	 * override.  The missingValue parameter has no effect in this class
+	 *
+	 * @param obid         The observation ID for which the data are to be
+	 *                     retrieved
+	 * @param missingValue The value to use if missing data are present
+	 */
+	@Override
+	public void setData(Number obid, Number missingValue) {
+
+		String[] values = new String[metaob.getVarindex().size()];
+
+		// Loop over the variable indices
+		for (Integer i : metaob.getVarindex()) {
+
+			// Convert numeric variables to string
+			values[i] = Data.getStr(i, obid.intValue());
+
+		} // End of Loop
+
+		// Set the observation value
+		this.observation = values;
+
+	}
 
 	/***
 	 * Retrieves the data for a given record
