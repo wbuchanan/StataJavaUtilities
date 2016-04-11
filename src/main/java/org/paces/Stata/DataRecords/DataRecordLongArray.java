@@ -50,12 +50,10 @@ public class DataRecordLongArray implements Record {
 
 	} // End declaration of constructor method
 
-	/***
-	 * Constructor method for DataRecordLongArray class
-	 * @param id The observation index value for which to retrieve the data for
-	 * @param metaobject A Meta class object containing metadata from the
-	 *                      Stata dataset
-	 *
+	/**
+	 * Constructor for use with Stata 13 API
+	 * @param id An Integer observation ID
+	 * @param metaobject The Meta object from which the data are accessed
 	 */
 	public DataRecordLongArray(Integer id, Meta metaobject) {
 
@@ -70,6 +68,45 @@ public class DataRecordLongArray implements Record {
 
 	} // End declaration of constructor method
 
+	/**
+	 * Constructor for use with Stata 13 API
+	 * @param id An Integer observation ID
+	 * @param metaobject The Meta object from which the data are accessed
+	 * @param missingValue User specified default missing value
+	 */
+	public DataRecordLongArray(Integer id, Meta metaobject, Number
+		missingValue) {
+
+		// The metadata object
+		this.metaob = metaobject;
+
+		// Set the observation ID variable
+		setObid(id);
+
+		// Set the data (observation) variable
+		setData(id, missingValue);
+
+	} // End declaration of constructor method
+
+	/***
+	 * Constructor method for DataRecordLongArray class
+	 * @param id The observation index value for which to retrieve the data for
+	 * @param metaobject A Meta class object containing metadata from the
+	 *                      Stata dataset
+	 * @param missingValue User specified default missing value
+	 */
+	public DataRecordLongArray(Long id, Meta metaobject, Number missingValue) {
+
+		// The metadata object
+		this.metaob = metaobject;
+
+		// Set the observation ID variable
+		setObid(id);
+
+		// Set the data (observation) variable
+		setData(id, missingValue);
+
+	} // End declaration of constructor method
 
 	/***
 	 * Method to set the observation index value for the record

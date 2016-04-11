@@ -2,56 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="771314f2-eeb1-47f5-8e9b-fb129e4dfd06" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/paces/Stata/DataTypes/StTypes.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/paces/Stata/Utilities/MDArrays.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/StataJavaUtilities-javadoc.jar" afterPath="$PROJECT_DIR$/target/StataJavaUtilities-javadoc.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/StataJavaUtilities-sources.jar" afterPath="$PROJECT_DIR$/target/StataJavaUtilities-sources.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/StataJavaUtilities.jar" afterPath="$PROJECT_DIR$/target/StataJavaUtilities.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/paces/Stata/DataRecords/DataRecord.class" afterPath="$PROJECT_DIR$/target/classes/org/paces/Stata/DataRecords/DataRecord.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/paces/Stata/DataRecords/DataRecordByteArray.class" afterPath="$PROJECT_DIR$/target/classes/org/paces/Stata/DataRecords/DataRecordByteArray.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/paces/Stata/DataRecords/DataRecordDoubleArray.class" afterPath="$PROJECT_DIR$/target/classes/org/paces/Stata/DataRecords/DataRecordDoubleArray.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/paces/Stata/DataRecords/DataRecordIntArray.class" afterPath="$PROJECT_DIR$/target/classes/org/paces/Stata/DataRecords/DataRecordIntArray.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/paces/Stata/DataRecords/DataRecordLongArray.class" afterPath="$PROJECT_DIR$/target/classes/org/paces/Stata/DataRecords/DataRecordLongArray.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/paces/Stata/DataRecords/DataRecordStringArray.class" afterPath="$PROJECT_DIR$/target/classes/org/paces/Stata/DataRecords/DataRecordStringArray.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/paces/Stata/DataRecords/Record.class" afterPath="$PROJECT_DIR$/target/classes/org/paces/Stata/DataRecords/Record.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/paces/Stata/DataSets/DataSet.class" afterPath="$PROJECT_DIR$/target/classes/org/paces/Stata/DataSets/DataSet.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/paces/Stata/DataRecords/RecordFactory.class" afterPath="$PROJECT_DIR$/target/classes/org/paces/Stata/DataRecords/RecordFactory.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/paces/Stata/DataSets/DataSetByteArrays.class" afterPath="$PROJECT_DIR$/target/classes/org/paces/Stata/DataSets/DataSetByteArrays.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/paces/Stata/DataSets/DataSetDoubleArrays.class" afterPath="$PROJECT_DIR$/target/classes/org/paces/Stata/DataSets/DataSetDoubleArrays.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/paces/Stata/DataSets/DataSetIntArrays.class" afterPath="$PROJECT_DIR$/target/classes/org/paces/Stata/DataSets/DataSetIntArrays.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/paces/Stata/DataSets/DataSetLongArrays.class" afterPath="$PROJECT_DIR$/target/classes/org/paces/Stata/DataSets/DataSetLongArrays.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/paces/Stata/DataSets/DataSetStringArrays.class" afterPath="$PROJECT_DIR$/target/classes/org/paces/Stata/DataSets/DataSetStringArrays.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/paces/Stata/DataSets/StataData.class" afterPath="$PROJECT_DIR$/target/classes/org/paces/Stata/DataSets/StataData.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/paces/Stata/MetaData/Meta.class" afterPath="$PROJECT_DIR$/target/classes/org/paces/Stata/MetaData/Meta.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/paces/Stata/Observations/Obs13.class" afterPath="$PROJECT_DIR$/target/classes/org/paces/Stata/Observations/Obs13.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/paces/Stata/Observations/Obs14.class" afterPath="$PROJECT_DIR$/target/classes/org/paces/Stata/Observations/Obs14.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/paces/Stata/Observations/ObsInterface.class" afterPath="$PROJECT_DIR$/target/classes/org/paces/Stata/Observations/ObsInterface.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/paces/Stata/Observations/Observations.class" afterPath="$PROJECT_DIR$/target/classes/org/paces/Stata/Observations/Observations.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/paces/Stata/Variables/DataColumn.class" afterPath="$PROJECT_DIR$/target/classes/org/paces/Stata/Variables/DataColumn.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/paces/Stata/Variables/NumDataColumn.class" afterPath="$PROJECT_DIR$/target/classes/org/paces/Stata/Variables/NumDataColumn.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/paces/Stata/Variables/StringDataColumn.class" afterPath="$PROJECT_DIR$/target/classes/org/paces/Stata/Variables/StringDataColumn.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/paces/Stata/DataRecords/DataRecord.java" afterPath="$PROJECT_DIR$/src/main/java/org/paces/Stata/DataRecords/DataRecord.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/paces/Stata/DataRecords/DataRecordByteArray.java" afterPath="$PROJECT_DIR$/src/main/java/org/paces/Stata/DataRecords/DataRecordByteArray.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/paces/Stata/DataRecords/DataRecordDoubleArray.java" afterPath="$PROJECT_DIR$/src/main/java/org/paces/Stata/DataRecords/DataRecordDoubleArray.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/paces/Stata/DataRecords/DataRecordIntArray.java" afterPath="$PROJECT_DIR$/src/main/java/org/paces/Stata/DataRecords/DataRecordIntArray.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/paces/Stata/DataRecords/DataRecordLongArray.java" afterPath="$PROJECT_DIR$/src/main/java/org/paces/Stata/DataRecords/DataRecordLongArray.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/paces/Stata/DataRecords/DataRecordStringArray.java" afterPath="$PROJECT_DIR$/src/main/java/org/paces/Stata/DataRecords/DataRecordStringArray.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/paces/Stata/DataRecords/Record.java" afterPath="$PROJECT_DIR$/src/main/java/org/paces/Stata/DataRecords/Record.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/paces/Stata/DataSets/DataSet.java" afterPath="$PROJECT_DIR$/src/main/java/org/paces/Stata/DataSets/DataSet.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/paces/Stata/DataRecords/RecordFactory.java" afterPath="$PROJECT_DIR$/src/main/java/org/paces/Stata/DataRecords/RecordFactory.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/paces/Stata/DataSets/DataSetByteArrays.java" afterPath="$PROJECT_DIR$/src/main/java/org/paces/Stata/DataSets/DataSetByteArrays.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/paces/Stata/DataSets/DataSetDoubleArrays.java" afterPath="$PROJECT_DIR$/src/main/java/org/paces/Stata/DataSets/DataSetDoubleArrays.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/paces/Stata/DataSets/DataSetIntArrays.java" afterPath="$PROJECT_DIR$/src/main/java/org/paces/Stata/DataSets/DataSetIntArrays.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/paces/Stata/DataSets/DataSetLongArrays.java" afterPath="$PROJECT_DIR$/src/main/java/org/paces/Stata/DataSets/DataSetLongArrays.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/paces/Stata/DataSets/DataSetStringArrays.java" afterPath="$PROJECT_DIR$/src/main/java/org/paces/Stata/DataSets/DataSetStringArrays.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/paces/Stata/DataSets/StataData.java" afterPath="$PROJECT_DIR$/src/main/java/org/paces/Stata/DataSets/StataData.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/paces/Stata/MetaData/Meta.java" afterPath="$PROJECT_DIR$/src/main/java/org/paces/Stata/MetaData/Meta.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/paces/Stata/Observations/Obs13.java" afterPath="$PROJECT_DIR$/src/main/java/org/paces/Stata/Observations/Obs13.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/paces/Stata/Observations/Obs14.java" afterPath="$PROJECT_DIR$/src/main/java/org/paces/Stata/Observations/Obs14.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/paces/Stata/Observations/ObsInterface.java" afterPath="$PROJECT_DIR$/src/main/java/org/paces/Stata/Observations/ObsInterface.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/paces/Stata/Observations/Observations.java" afterPath="$PROJECT_DIR$/src/main/java/org/paces/Stata/Observations/Observations.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/paces/Stata/Utilities/MDArrays.java" afterPath="$PROJECT_DIR$/src/main/java/org/paces/Stata/Utilities/MDArrays.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/paces/Stata/Variables/DataColumn.java" afterPath="$PROJECT_DIR$/src/main/java/org/paces/Stata/Variables/DataColumn.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/paces/Stata/Variables/NumDataColumn.java" afterPath="$PROJECT_DIR$/src/main/java/org/paces/Stata/Variables/NumDataColumn.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/paces/Stata/Variables/StringDataColumn.java" afterPath="$PROJECT_DIR$/src/main/java/org/paces/Stata/Variables/StringDataColumn.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/allclasses-frame.html" afterPath="$PROJECT_DIR$/target/apidocs/allclasses-frame.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/allclasses-noframe.html" afterPath="$PROJECT_DIR$/target/apidocs/allclasses-noframe.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/constant-values.html" afterPath="$PROJECT_DIR$/target/apidocs/constant-values.html" />
@@ -99,6 +77,12 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/org/paces/Stata/DataSets/package-summary.html" afterPath="$PROJECT_DIR$/target/apidocs/org/paces/Stata/DataSets/package-summary.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/org/paces/Stata/DataSets/package-tree.html" afterPath="$PROJECT_DIR$/target/apidocs/org/paces/Stata/DataSets/package-tree.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/org/paces/Stata/DataSets/package-use.html" afterPath="$PROJECT_DIR$/target/apidocs/org/paces/Stata/DataSets/package-use.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/org/paces/Stata/DataTypes/StTypes.html" afterPath="$PROJECT_DIR$/target/apidocs/org/paces/Stata/DataTypes/StTypes.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/org/paces/Stata/DataTypes/class-use/StTypes.html" afterPath="$PROJECT_DIR$/target/apidocs/org/paces/Stata/DataTypes/class-use/StTypes.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/org/paces/Stata/DataTypes/package-frame.html" afterPath="$PROJECT_DIR$/target/apidocs/org/paces/Stata/DataTypes/package-frame.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/org/paces/Stata/DataTypes/package-summary.html" afterPath="$PROJECT_DIR$/target/apidocs/org/paces/Stata/DataTypes/package-summary.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/org/paces/Stata/DataTypes/package-tree.html" afterPath="$PROJECT_DIR$/target/apidocs/org/paces/Stata/DataTypes/package-tree.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/org/paces/Stata/DataTypes/package-use.html" afterPath="$PROJECT_DIR$/target/apidocs/org/paces/Stata/DataTypes/package-use.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/org/paces/Stata/Matrices/MataMatrix.html" afterPath="$PROJECT_DIR$/target/apidocs/org/paces/Stata/Matrices/MataMatrix.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/org/paces/Stata/Matrices/class-use/MataMatrix.html" afterPath="$PROJECT_DIR$/target/apidocs/org/paces/Stata/Matrices/class-use/MataMatrix.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/org/paces/Stata/Matrices/package-frame.html" afterPath="$PROJECT_DIR$/target/apidocs/org/paces/Stata/Matrices/package-frame.html" />
@@ -133,7 +117,9 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/org/paces/Stata/Observations/package-summary.html" afterPath="$PROJECT_DIR$/target/apidocs/org/paces/Stata/Observations/package-summary.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/org/paces/Stata/Observations/package-tree.html" afterPath="$PROJECT_DIR$/target/apidocs/org/paces/Stata/Observations/package-tree.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/org/paces/Stata/Observations/package-use.html" afterPath="$PROJECT_DIR$/target/apidocs/org/paces/Stata/Observations/package-use.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/org/paces/Stata/Utilities/MDArrays.html" afterPath="$PROJECT_DIR$/target/apidocs/org/paces/Stata/Utilities/MDArrays.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/org/paces/Stata/Utilities/StataXTTS.html" afterPath="$PROJECT_DIR$/target/apidocs/org/paces/Stata/Utilities/StataXTTS.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/org/paces/Stata/Utilities/class-use/MDArrays.html" afterPath="$PROJECT_DIR$/target/apidocs/org/paces/Stata/Utilities/class-use/MDArrays.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/org/paces/Stata/Utilities/class-use/StataXTTS.html" afterPath="$PROJECT_DIR$/target/apidocs/org/paces/Stata/Utilities/class-use/StataXTTS.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/org/paces/Stata/Utilities/package-frame.html" afterPath="$PROJECT_DIR$/target/apidocs/org/paces/Stata/Utilities/package-frame.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/org/paces/Stata/Utilities/package-summary.html" afterPath="$PROJECT_DIR$/target/apidocs/org/paces/Stata/Utilities/package-summary.html" />
@@ -172,10 +158,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/overview-frame.html" afterPath="$PROJECT_DIR$/target/apidocs/overview-frame.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/overview-summary.html" afterPath="$PROJECT_DIR$/target/apidocs/overview-summary.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/overview-tree.html" afterPath="$PROJECT_DIR$/target/apidocs/overview-tree.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/package-list" afterPath="$PROJECT_DIR$/target/apidocs/package-list" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
     </list>
     <ignored path="StataJavaUtilities.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -211,111 +194,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Obs13.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/paces/Stata/Observations/Obs13.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="23" column="7" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="7" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DataSetByteArrays.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/paces/Stata/DataSets/DataSetByteArrays.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="156">
-              <caret line="241" column="30" selection-start-line="241" selection-start-column="30" selection-end-line="241" selection-end-column="30" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DataSetIntArrays.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/paces/Stata/DataSets/DataSetIntArrays.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="156">
-              <caret line="243" column="30" selection-start-line="243" selection-start-column="30" selection-end-line="243" selection-end-column="30" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DataSet.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/paces/Stata/DataSets/DataSet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="230" column="0" selection-start-line="230" selection-start-column="0" selection-end-line="230" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1866#1874#0" expanded="true" />
-                <element signature="e#2786#2794#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DataSetLongArrays.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/paces/Stata/DataSets/DataSetLongArrays.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="156">
-              <caret line="240" column="30" selection-start-line="240" selection-start-column="30" selection-end-line="240" selection-end-column="30" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DataSetStringArrays.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/paces/Stata/DataSets/DataSetStringArrays.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="488">
-              <caret line="232" column="23" selection-start-line="232" selection-start-column="23" selection-end-line="232" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1507">
-              <caret line="75" column="28" selection-start-line="75" selection-start-column="28" selection-end-line="75" selection-end-column="28" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Meta.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/paces/Stata/MetaData/Meta.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="437">
-              <caret line="182" column="5" selection-start-line="182" selection-start-column="5" selection-end-line="182" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#5012#5013#0" expanded="true" />
-                <element signature="e#5039#5040#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DataSetDoubleArrays.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/paces/Stata/DataSets/DataSetDoubleArrays.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="156">
-              <caret line="240" column="30" selection-start-line="240" selection-start-column="30" selection-end-line="240" selection-end-column="30" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="VariableIndex.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/paces/Stata/Variables/VariableIndex.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-660">
-              <caret line="43" column="52" selection-start-line="43" selection-start-column="52" selection-end-line="43" selection-end-column="52" />
+            <state relative-caret-position="135">
+              <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -347,8 +230,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/org/paces/Stata/Utilities/StataXTTS.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/paces/Stata/DataSets/DataSetFactory.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/paces/Stata/Matrices/MataMatrix.java" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/main/java/org/paces/Stata/Missing/StataMissings.java" />
@@ -356,7 +237,6 @@
         <option value="$PROJECT_DIR$/src/main/java/org/paces/Stata/Missing/ByteMissing.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/paces/Stata/Missing/MissingMask.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/paces/Stata/Variables/TypeEnum.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/org/paces/Stata/Variables/StataTypeInterface.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/paces/Stata/Variables/StataTypes.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/paces/Stata/MetaData/Obs13.java" />
@@ -378,26 +258,29 @@
         <option value="$PROJECT_DIR$/src/main/java/org/paces/Stata/Observations/ObsInterface.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/paces/Stata/Observations/Obs13.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/paces/Stata/Observations/Obs14.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/paces/Stata/Utilities/MDArrays.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/paces/Stata/DataSets/StataData.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/paces/Stata/DataRecords/Record.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/paces/Stata/Variables/NumDataColumn.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/paces/Stata/Variables/StringDataColumn.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/paces/Stata/DataRecords/DataRecord.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/paces/Stata/Observations/Observations.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/paces/Stata/DataSets/DataSetStringArrays.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/paces/Stata/DataSets/DataSet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/paces/Stata/MetaData/Meta.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/paces/Stata/DataSets/DataSetLongArrays.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/paces/Stata/DataSets/DataSetIntArrays.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/paces/Stata/DataSets/DataSetByteArrays.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/paces/Stata/DataSets/DataSetDoubleArrays.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/paces/Stata/Utilities/StataXTTS.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/paces/Stata/DataRecords/RecordFactory.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/paces/Stata/DataRecords/DataRecordByteArray.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/paces/Stata/DataRecords/DataRecordDoubleArray.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/paces/Stata/DataRecords/DataRecordIntArray.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/paces/Stata/DataRecords/DataRecordLongArray.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/paces/Stata/DataRecords/DataRecordStringArray.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/paces/Stata/MetaData/Meta.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/paces/Stata/Variables/DataColumn.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/paces/Stata/Variables/NumDataColumn.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/paces/Stata/Variables/StringDataColumn.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/paces/Stata/DataRecords/DataRecord.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/paces/Stata/Observations/Observations.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/paces/Stata/DataSets/DataSetByteArrays.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/paces/Stata/DataSets/DataSetDoubleArrays.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/paces/Stata/DataSets/DataSetIntArrays.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/paces/Stata/DataSets/DataSetLongArrays.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/paces/Stata/DataSets/DataSetStringArrays.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/paces/Stata/DataSets/DataSet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/paces/Stata/Utilities/MDArrays.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>
@@ -1341,13 +1224,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitattributes">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1383,13 +1259,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/paces/Stata/Utilities/StataXTTS.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="138" column="8" selection-start-line="138" selection-start-column="8" selection-end-line="138" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/paces/Stata/DataRecords/RecordArray.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/org/paces/Stata/Utilities/StataArgsToCollector.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1414,16 +1283,6 @@
         <state relative-caret-position="2835">
           <caret line="206" column="0" selection-start-line="206" selection-start-column="0" selection-end-line="206" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/paces/Stata/Variables/VarTypes.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-279">
-          <caret line="115" column="11" selection-start-line="115" selection-start-column="11" selection-end-line="115" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1536,16 +1395,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/paces/Stata/Utilities/MDArrays.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="22" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
-          <folding>
-            <marker date="1460203488000" expanded="true" signature="36:185" placeholder="/**...*/" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/paces/Stata/DataSets/StataData.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="197">
@@ -1558,62 +1407,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="257">
           <caret line="34" column="24" selection-start-line="34" selection-start-column="24" selection-end-line="34" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/paces/Stata/DataTypes/StTypes.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="407">
-          <caret line="98" column="0" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/paces/Stata/DataRecords/DataRecordByteArray.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="167" column="52" selection-start-line="167" selection-start-column="52" selection-end-line="167" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/paces/Stata/DataRecords/DataRecordDoubleArray.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="183" column="54" selection-start-line="183" selection-start-column="54" selection-end-line="183" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/paces/Stata/DataRecords/DataRecordIntArray.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="177" column="66" selection-start-line="177" selection-start-column="66" selection-end-line="177" selection-end-column="66" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/paces/Stata/DataRecords/DataRecordLongArray.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="107">
-          <caret line="104" column="44" selection-start-line="104" selection-start-column="44" selection-end-line="104" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/paces/Stata/DataRecords/DataRecordStringArray.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="103" column="48" selection-start-line="103" selection-start-column="48" selection-end-line="103" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/paces/Stata/Variables/DataColumn.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
-          <caret line="144" column="60" selection-start-line="144" selection-start-column="60" selection-end-line="144" selection-end-column="60" />
           <folding />
         </state>
       </provider>
@@ -1637,16 +1430,6 @@
             <element signature="e#1513#1521#0" expanded="true" />
             <element signature="e#1750#1758#0" expanded="true" />
             <element signature="e#1978#1986#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/paces/Stata/DataRecords/DataRecord.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="99" column="0" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
-          <folding>
-            <marker date="1460206416000" expanded="true" signature="2577:2893" placeholder="/**...*/" />
           </folding>
         </state>
       </provider>
@@ -1684,14 +1467,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1507">
-          <caret line="75" column="28" selection-start-line="75" selection-start-column="28" selection-end-line="75" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/paces/Stata/Variables/VariableIndex.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-660">
@@ -1700,54 +1475,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/paces/Stata/MetaData/Meta.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="182" column="5" selection-start-line="182" selection-start-column="5" selection-end-line="182" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#5012#5013#0" expanded="true" />
-            <element signature="e#5039#5040#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/javadoc/overview-tree.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="223">
           <caret line="99" column="67" selection-start-line="99" selection-start-column="67" selection-end-line="99" selection-end-column="67" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/paces/Stata/DataSets/DataSetByteArrays.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="241" column="30" selection-start-line="241" selection-start-column="30" selection-end-line="241" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/paces/Stata/DataSets/DataSetDoubleArrays.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="240" column="30" selection-start-line="240" selection-start-column="30" selection-end-line="240" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/paces/Stata/DataSets/DataSetIntArrays.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="243" column="30" selection-start-line="243" selection-start-column="30" selection-end-line="243" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/paces/Stata/DataSets/DataSetLongArrays.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="240" column="30" selection-start-line="240" selection-start-column="30" selection-end-line="240" selection-end-column="30" />
           <folding />
         </state>
       </provider>
@@ -1760,15 +1491,168 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/paces/Stata/MetaData/Meta.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="122">
+          <caret line="132" column="0" selection-start-line="132" selection-start-column="0" selection-end-line="132" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#5012#5013#0" expanded="true" />
+            <element signature="e#5039#5040#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/paces/Stata/DataSets/DataSetIntArrays.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="65" column="51" selection-start-line="65" selection-start-column="51" selection-end-line="65" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/paces/Stata/DataSets/DataSetByteArrays.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="63" column="52" selection-start-line="63" selection-start-column="52" selection-end-line="63" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/paces/Stata/DataSets/DataSetLongArrays.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="61" column="0" selection-start-line="59" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/paces/Stata/DataSets/DataSetDoubleArrays.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="257">
+          <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/paces/Stata/DataTypes/StTypes.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="407">
+          <caret line="98" column="0" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/paces/Stata/Variables/VarTypes.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-823">
+          <caret line="115" column="11" selection-start-line="115" selection-start-column="11" selection-end-line="115" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/paces/Stata/Utilities/StataXTTS.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding>
+            <element signature="e#943#944#0" expanded="true" />
+            <element signature="e#965#966#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/paces/Stata/DataRecords/DataRecord.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-73">
+          <caret line="99" column="0" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/paces/Stata/DataRecords/DataRecordByteArray.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="110" column="0" selection-start-line="52" selection-start-column="0" selection-end-line="110" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/paces/Stata/DataRecords/DataRecordDoubleArray.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="71" column="0" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/paces/Stata/DataRecords/DataRecordIntArray.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="422">
+          <caret line="109" column="0" selection-start-line="109" selection-start-column="0" selection-end-line="109" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/paces/Stata/DataRecords/DataRecordLongArray.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="96" column="0" selection-start-line="95" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/paces/Stata/DataRecords/DataRecordStringArray.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="317">
+          <caret line="94" column="37" selection-start-line="94" selection-start-column="37" selection-end-line="94" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/paces/Stata/DataRecords/RecordFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/paces/Stata/Variables/DataColumn.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="680">
+          <caret line="147" column="5" selection-start-line="147" selection-start-column="5" selection-end-line="147" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/paces/Stata/DataSets/DataSet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="230" column="0" selection-start-line="230" selection-start-column="0" selection-end-line="230" selection-end-column="0" />
+        <state relative-caret-position="137">
+          <caret line="237" column="49" selection-start-line="237" selection-start-column="49" selection-end-line="237" selection-end-column="49" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1866#1874#0" expanded="true" />
             <element signature="e#2786#2794#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/paces/Stata/Utilities/MDArrays.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3568">
+          <caret line="91" column="35" selection-start-line="91" selection-start-column="35" selection-end-line="91" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
+          <folding />
         </state>
       </provider>
     </entry>

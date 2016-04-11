@@ -69,11 +69,42 @@ public class DataRecordStringArray implements Record {
 
 	} // End declaration of constructor method
 
+	/***
+	 * Constructor method for DataRecordStringArray class
+	 * @param id The observation index value for which to retrieve the data for
+	 * @param metaobject A Meta class object containing metadata from the
+	 *                      Stata dataset
+	 * @param missingValue User specified default missing value
+	 */
+	public DataRecordStringArray(Integer id, Meta metaobject, Number
+		missingValue) {
+
+		// Constructor ignores the numeric missing value
+		this(id, metaobject);
+
+	} // End of Constructor with missing value
+
 
 	/***
-	 * Method to set the observation index value for the record
-	 * @param observationNumber An observation index value
+	 * Constructor method for DataRecordStringArray class
+	 * @param id The observation index value for which to retrieve the data for
+	 * @param metaobject A Meta class object containing metadata from the
+	 *                      Stata dataset
+	 * @param missingValue User specified default missing value
 	 */
+	public DataRecordStringArray(Long id, Meta metaobject, Number
+		missingValue) {
+
+		// Constructor ignores the numeric missing value
+		this(id, metaobject);
+
+	} // End of Constructor with missing value
+
+
+	/***
+		 * Method to set the observation index value for the record
+		 * @param observationNumber An observation index value
+		 */
 	@Override
 	public void setObid(Long observationNumber) {
 

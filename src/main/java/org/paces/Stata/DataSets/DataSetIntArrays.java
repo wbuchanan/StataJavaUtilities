@@ -57,6 +57,26 @@ public class DataSetIntArrays implements StataData {
 	} // End constructor declaration
 
 	/***
+	 * Generic constructor method for the class
+	 * @param metaobject A Meta class object containing metadata for the
+	 *                      Stata dataset.
+	 * @param missingValue A user defined value to use for representing
+	 *                        missing values in the data
+	 */
+	public DataSetIntArrays(Meta metaobject, Number missingValue) {
+
+		// Set the meta object to the value passed to the constructor
+		this.metaob = metaobject;
+
+		// Set the name variable
+		setFileName();
+
+		// Builds the data object
+		setData(missingValue);
+
+	} // End constructor declaration
+
+	/***
 	 * Generic Setter method for the name of the dataset object
 	 */
 	public void setFileName() {

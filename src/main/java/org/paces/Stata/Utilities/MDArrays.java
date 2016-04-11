@@ -1,5 +1,7 @@
 package org.paces.Stata.Utilities;
 
+import java.util.*;
+
 /**
  * Class with methods for converting two-dimensional arrays between object
  * and primitive types
@@ -87,7 +89,7 @@ public class MDArrays {
 		Byte[][] retdata = new Byte[i][j];
 		for(Integer v = 0; v < i; v++) {
 			for(Integer x = 0; x < j; x++) {
-				retdata[v][x] = Byte.valueOf(thedata[v][x]);
+				retdata[v][x] = thedata[v][x];
 			}
 		}
 		return retdata;
@@ -104,7 +106,7 @@ public class MDArrays {
 		Double[][] retdata = new Double[i][j];
 		for(Integer v = 0; v < i; v++) {
 			for(Integer x = 0; x < j; x++) {
-				retdata[v][x] = Double.valueOf(thedata[v][x]);
+				retdata[v][x] = thedata[v][x];
 			}
 		}
 		return retdata;
@@ -121,7 +123,7 @@ public class MDArrays {
 		Integer[][] retdata = new Integer[i][j];
 		for(Integer v = 0; v < i; v++) {
 			for(Integer x = 0; x < j; x++) {
-				retdata[v][x] = Integer.valueOf(thedata[v][x]);
+				retdata[v][x] = thedata[v][x];
 			}
 		}
 		return retdata;
@@ -138,10 +140,214 @@ public class MDArrays {
 		Long[][] retdata = new Long[i][j];
 		for(Integer v = 0; v < i; v++) {
 			for(Integer x = 0; x < j; x++) {
-				retdata[v][x] = Long.valueOf(thedata[v][x]);
+				retdata[v][x] = thedata[v][x];
 			}
 		}
 		return retdata;
+	}
+
+	/**
+	 * Method that returns a List of Object type Lists containing the data
+	 * @param thedata A two dimensional array of values
+	 * @return A list of lists containing the object types
+	 */
+	public static List<List<Double>> toList(double[][] thedata) {
+		Integer obs = thedata.length;
+		Integer vars = thedata[0].length;
+		List<List<Double>> returnObject = new ArrayList<>();
+		for(Integer i = 0; i < obs; i++) {
+			List<Double> row = new ArrayList<>();
+			for(Integer j = 0; j < vars; j++) {
+				row.add(j, thedata[i][j]);
+			}
+			returnObject.add(i, row);
+		}
+		return returnObject;
+	}
+
+	/**
+	 * Method that returns a List of Object type Lists containing the data
+	 * @param thedata A two dimensional array of values
+	 * @return A list of lists containing the object types
+	 */
+	public static List<List<Float>> toList(float[][] thedata) {
+		Integer obs = thedata.length;
+		Integer vars = thedata[0].length;
+		List<List<Float>> returnObject = new ArrayList<>();
+		for(Integer i = 0; i < obs; i++) {
+			List<Float> row = new ArrayList<>();
+			for(Integer j = 0; j < vars; j++) {
+				row.add(j, thedata[i][j]);
+			}
+			returnObject.add(i, row);
+		}
+		return returnObject;
+	}
+
+	/**
+	 * Method that returns a List of Object type Lists containing the data
+	 * @param thedata A two dimensional array of values
+	 * @return A list of lists containing the object types
+	 */
+	public static List<List<Long>> toList(long[][] thedata) {
+		Integer obs = thedata.length;
+		Integer vars = thedata[0].length;
+		List<List<Long>> returnObject = new ArrayList<>();
+		for(Integer i = 0; i < obs; i++) {
+			List<Long> row = new ArrayList<>();
+			for(Integer j = 0; j < vars; j++) {
+				row.add(j, thedata[i][j]);
+			}
+			returnObject.add(i, row);
+		}
+		return returnObject;
+	}
+
+	/**
+	 * Method that returns a List of Object type Lists containing the data
+	 * @param thedata A two dimensional array of values
+	 * @return A list of lists containing the object types
+	 */
+	public static List<List<Integer>> toList(int[][] thedata) {
+		Integer obs = thedata.length;
+		Integer vars = thedata[0].length;
+		List<List<Integer>> returnObject = new ArrayList<>();
+		for(Integer i = 0; i < obs; i++) {
+			List<Integer> row = new ArrayList<>();
+			for(Integer j = 0; j < vars; j++) {
+				row.add(j, thedata[i][j]);
+			}
+			returnObject.add(i, row);
+		}
+		return returnObject;
+	}
+
+	/**
+	 * Method that returns a List of Object type Lists containing the data
+	 * @param thedata A two dimensional array of values
+	 * @return A list of lists containing the object types
+	 */
+	public static List<List<Byte>> toList(byte[][] thedata) {
+		Integer obs = thedata.length;
+		Integer vars = thedata[0].length;
+		List<List<Byte>> returnObject = new ArrayList<>();
+		for(Integer i = 0; i < obs; i++) {
+			List<Byte> row = new ArrayList<>();
+			for(Integer j = 0; j < vars; j++) {
+				row.add(j, thedata[i][j]);
+			}
+			returnObject.add(i, row);
+		}
+		return returnObject;
+	}
+
+	/**
+	 * Method that returns a List of Object type Lists containing the data
+	 * @param thedata A two dimensional array of values
+	 * @return A list of lists containing the object types
+	 */
+	public static List<List<Short>> toList(short[][] thedata) {
+		Integer obs = thedata.length;
+		Integer vars = thedata[0].length;
+		List<List<Short>> returnObject = new ArrayList<>();
+		for(Integer i = 0; i < obs; i++) {
+			List<Short> row = new ArrayList<>();
+			for(Integer j = 0; j < vars; j++) {
+				row.add(j, thedata[i][j]);
+			}
+			returnObject.add(i, row);
+		}
+		return returnObject;
+	}
+
+	/**
+	 * Method that returns a List of Object type Lists containing the data
+	 * @param thedata A two dimensional array of values
+	 * @return A list of lists containing the object types
+	 */
+	public static List<List<Double>> toList(Double[][] thedata) {
+		Integer obs = thedata.length;
+		Integer vars = thedata[0].length;
+		List<List<Double>> returnObject = new ArrayList<>();
+		for(Integer i = 0; i < obs; i++) {
+			returnObject.add(i, Arrays.asList(thedata[i]));
+		}
+		return returnObject;
+	}
+
+	/**
+	 * Method that returns a List of Object type Lists containing the data
+	 * @param thedata A two dimensional array of values
+	 * @return A list of lists containing the object types
+	 */
+	public static List<List<Float>> toList(Float[][] thedata) {
+		Integer obs = thedata.length;
+		Integer vars = thedata[0].length;
+		List<List<Float>> returnObject = new ArrayList<>();
+		for(Integer i = 0; i < obs; i++) {
+			returnObject.add(i, Arrays.asList(thedata[i]));
+		}
+		return returnObject;
+	}
+
+	/**
+	 * Method that returns a List of Object type Lists containing the data
+	 * @param thedata A two dimensional array of values
+	 * @return A list of lists containing the object types
+	 */
+	public static List<List<Long>> toList(Long[][] thedata) {
+		Integer obs = thedata.length;
+		Integer vars = thedata[0].length;
+		List<List<Long>> returnObject = new ArrayList<>();
+		for(Integer i = 0; i < obs; i++) {
+			returnObject.add(i, Arrays.asList(thedata[i]));
+		}
+		return returnObject;
+	}
+
+	/**
+	 * Method that returns a List of Object type Lists containing the data
+	 * @param thedata A two dimensional array of values
+	 * @return A list of lists containing the object types
+	 */
+	public static List<List<Integer>> toList(Integer[][] thedata) {
+		Integer obs = thedata.length;
+		Integer vars = thedata[0].length;
+		List<List<Integer>> returnObject = new ArrayList<>();
+		for(Integer i = 0; i < obs; i++) {
+			returnObject.add(i, Arrays.asList(thedata[i]));
+		}
+		return returnObject;
+	}
+
+	/**
+	 * Method that returns a List of Object type Lists containing the data
+	 * @param thedata A two dimensional array of values
+	 * @return A list of lists containing the object types
+	 */
+	public static List<List<Byte>> toList(Byte[][] thedata) {
+		Integer obs = thedata.length;
+		Integer vars = thedata[0].length;
+		List<List<Byte>> returnObject = new ArrayList<>();
+		for(Integer i = 0; i < obs; i++) {
+			returnObject.add(i, Arrays.asList(thedata[i]));
+		}
+		return returnObject;
+	}
+
+	/**
+	 * Method that returns a List of Object type Lists containing the data
+	 * @param thedata A two dimensional array of values
+	 * @return A list of lists containing the object types
+	 */
+	public static List<List<Short>> toList(Short[][] thedata) {
+		Integer obs = thedata.length;
+		Integer vars = thedata[0].length;
+		List<List<Short>> returnObject = new ArrayList<>();
+		for(Integer i = 0; i < obs; i++) {
+			returnObject.add(i, Arrays.asList(thedata[i]));
+		}
+		return returnObject;
 	}
 
 
