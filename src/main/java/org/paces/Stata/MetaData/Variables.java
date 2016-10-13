@@ -50,6 +50,12 @@ public class Variables {
 	 */
 	protected VarTypes varTypes;
 
+	/**
+	 * Class containing display formats (used to test if variabel contains
+	 * date/date time values)
+	 */
+	protected VarDisplay displayFmt;
+
 	//
 	// Member containing the integer mappings for the Stata variable types
 	//
@@ -61,7 +67,7 @@ public class Variables {
 	 *                    over which the method will iterate over.
 	 */
 	private void setVarNames(VariableIndex varindex) {
-		this.varnames = new VarNames(this.varindex);
+
 	}
 
 	/***
@@ -70,7 +76,6 @@ public class Variables {
 	 *                    over which the method will iterate over.
 	 */
 	private void setNvars(VariableIndex varindex) {
-		this.nvars = new Nvars(this.varindex);
 	}
 
 	/***
@@ -79,7 +84,6 @@ public class Variables {
 	 *                    over which the method will iterate over.
 	 */
 	private void setVarLabels(VariableIndex varindex) {
-		this.varlabels = new VarLabels(this.varindex);
 	}
 
 	/***
@@ -88,7 +92,6 @@ public class Variables {
 	 *                    over which the method will iterate over.
 	 */
 	private void setValLabNames(VariableIndex varindex) {
-		this.valueLabelNames = new ValLabNames(this.varindex);
 	}
 
 	/***
@@ -97,7 +100,6 @@ public class Variables {
 	 *                    over which the method will iterate over.
 	 */
 	private void setValLabels(VariableIndex varindex) {
-		this.valueLabels = new ValLabels(this.varindex);
 	}
 
 	/***
@@ -106,7 +108,6 @@ public class Variables {
 	 *                    over which the method will iterate over.
 	 */
 	private void setVarTypes(VariableIndex varindex) {
-		this.varTypes = new VarTypes(this.varindex);
 	}
 
 	/***
@@ -114,7 +115,6 @@ public class Variables {
 	 * methods to construct POJO representations of the variables' metadata.
 	 */
 	private void setVariableIndex() {
-		this.varindex = new VariableIndex();
 	}
 
 	//
@@ -129,26 +129,15 @@ public class Variables {
 	 */
 	Variables() {
 
-		// Set the variable index member variable
-		setVariableIndex();
+		this.varindex = new VariableIndex();
+		this.varnames = new VarNames(this.varindex);
+		this.nvars = new Nvars(this.varindex);
+		this.varlabels = new VarLabels(this.varindex);
+		this.valueLabelNames = new ValLabNames(this.varindex);
+		this.valueLabels = new ValLabels(this.varindex);
+		this.varTypes = new VarTypes(this.varindex);
+		this.displayFmt = new VarDisplay(this.varindex);
 
-		// Set the number of variables member variable
-		setNvars(this.varindex);
-
-		// Set the variable name member variable
-		setVarNames(this.varindex);
-
-		// Set the variable label member variable
-		setVarLabels(this.varindex);
-
-		// Set the value label name member variable
-		setValLabNames(this.varindex);
-
-		// Set the value label value/label pair member variable
-		setValLabels(this.varindex);
-
-		// Set the variable is string index member variable
-		setVarTypes(this.varindex);
 
 		// Sets the Stata variable type list
 		// setStVarTypes();
@@ -341,6 +330,25 @@ public class Variables {
 	 */
 	public VarTypes getVarTypesObject() {
 		return this.varTypes;
+	}
+
+	/**
+	 * Method to retrieve the display format object
+	 * @return The display format object
+	 */
+	public VarDisplay getDisplayFmt() {
+		return this.displayFmt;
+	}
+
+	/**
+	 * Returns a boolean indicating whether or not the variable contains
+	 * date/date time values
+	 * @param varnm The variable index to check
+	 * @return Returns a boolean indicating the variable contains a date or
+	 * datetime variable
+	 */
+	public Boolean isDateTime(String varnm) {
+		return this.displayFmt.isDate(varnm);
 	}
 
 } // End Class definition

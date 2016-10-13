@@ -189,6 +189,11 @@ public class DataRecord implements Record {
 				// Store string value if variable contains strings
 				value = Data.getStr(vars.getVariableIndex(i), obid);
 
+			} else if (this.vars.isDateTime(key)) {
+
+				value = Data.getFormattedValue(vars.getVariableIndex(i),
+					obid, true);
+
 			} else {
 
 				// Check for missing numeric values
@@ -248,6 +253,11 @@ public class DataRecord implements Record {
 
 				// Store string value if variable contains strings
 				value = Data.getStr(vars.getVariableIndex(i), obid);
+
+			} else if (this.vars.isDateTime(key)) {
+
+				value = Data.getFormattedValue(vars.getVariableIndex(i),
+					obid, true);
 
 			} else {
 
@@ -311,6 +321,11 @@ public class DataRecord implements Record {
 
 				// Store string value if variable contains strings
 				value = Data.getStr(vars.getVariableIndex(i), obid.intValue());
+
+			} else if (this.vars.isDateTime(key)) {
+
+				value = Data.getFormattedValue(vars.getVariableIndex(i),
+					obid.intValue(), true);
 
 			} else {
 

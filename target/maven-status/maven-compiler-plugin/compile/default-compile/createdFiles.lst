@@ -23,9 +23,11 @@ org/paces/Stata/DataRecords/Record.class
 org/paces/Stata/Matrices/MataMatrix.class
 org/paces/Stata/DataRecords/DataRecordIntArray.class
 org/paces/Stata/Utilities/StataXTTS.class
+org/paces/Stata/Variables/VarDisplay.class
 org/paces/Stata/DataRecords/DataRecordByteArray.class
 org/paces/Stata/MetaData/DataSource.class
 org/paces/Stata/DataRecords/RecordFactory.class
+org/paces/Stata/Utilities/StataDateDisplayFormats.class
 org/paces/Stata/Variables/VarNames.class
 org/paces/Stata/Observations/Obs13.class
 org/paces/Stata/Observations/ObsInterface.class

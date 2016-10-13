@@ -72,7 +72,7 @@ public class DataSet implements StataData {
 
 		// Initialize container to ID the observation and contains a Map
 		// object with key/value pairs
-		List<Object> obs = new ArrayList<Object>();
+		List<Object> obs = new ArrayList<>();
 
 		if (this.ver == 13) {
 			obs.addAll(this.metaob.getObs13().stream().map(
@@ -105,7 +105,7 @@ public class DataSet implements StataData {
 
 		// Initialize container to ID the observation and contains a Map
 		// object with key/value pairs
-		List<Object> obs = new ArrayList<Object>();
+		List<Object> obs = new ArrayList<>();
 
 		if (this.ver == 13) {
 			obs.addAll(this.metaob.getObs13().stream().map(

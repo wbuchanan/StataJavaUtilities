@@ -193,7 +193,7 @@
 			<version>1.7</version>
 			<type>jar</type>
 			<scope>compile</scope>
-			<optional>true</optional>
+			<optional>false</optional>
 		</dependency>
 	</dependencies>
 
