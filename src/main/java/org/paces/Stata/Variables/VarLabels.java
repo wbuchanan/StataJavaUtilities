@@ -5,7 +5,7 @@ import java.util.*;
 /***
  * Class containing variable label map
  * @author Billy Buchanan
- * @version 0.0.0
+ * @version %G%
  *
  */
 public class VarLabels implements VarInterface {

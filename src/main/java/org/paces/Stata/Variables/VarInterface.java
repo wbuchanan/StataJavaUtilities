@@ -4,7 +4,7 @@ import java.util.Iterator;
 
 /**
  * @author Billy Buchanan
- * @version 0.0.0
+ * @version %G%
  */
 public interface VarInterface {
 

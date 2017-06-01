@@ -13,7 +13,7 @@ import static java.time.temporal.ChronoUnit.YEARS;
  * representations. This class and the methods should be tested a bit more
  * before use in a production environment.
  * @author Billy Buchanan
- * @version 0.0.0
+ * @version %G%
  *
  */
 public class StataXTTS {

@@ -1,7 +1,6 @@
 package org.paces.Stata.DataSets;
 
 import com.stata.sfi.*;
-import joinery.DataFrame;
 import org.paces.Stata.DataRecords.DataRecord;
 import org.paces.Stata.MetaData.DataSource;
 import org.paces.Stata.MetaData.Meta;
@@ -17,7 +16,7 @@ import java.util.stream.Collectors;
  * Created by iterating over calls to DataRecord.
  *
  * @author Billy Buchanan
- * @version 0.0.0
+ * @version %G%
  *
  */
 public class DataSet implements StataData {
@@ -234,12 +233,10 @@ public class DataSet implements StataData {
 
 	} // End of Method declaration
 
-	/**
+	/*
 	 * Method to try coercing the dataset object to a joinery.DataFrame class
 	 * object
 	 * @return A DataFrame object
-	 */
-	@SuppressWarnings("unchecked")
 	public DataFrame toDataFrame() {
 		List<List<?>> dataset = new ArrayList<>();
 		for(Integer i : this.metaob.getVarindex()) {
@@ -248,6 +245,7 @@ public class DataSet implements StataData {
 		}
 		return new DataFrame(dataset);
 	}
+	*/
 
 } // End Class declaration
 

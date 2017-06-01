@@ -9,7 +9,7 @@ import java.util.*;
  * Creates an Array of Strings for Individual Observation
  *
  * @author Billy Buchanan
- * @version 0.0.0
+ * @version %G%
  *
  */
 public class DataRecordStringArray implements Record {

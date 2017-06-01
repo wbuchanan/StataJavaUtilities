@@ -11,7 +11,7 @@ import java.util.List;
  * A 2d Array of Bytes containing the data from the active data set in memory.
  *
  * @author Billy Buchanan
- * @version 0.0.0
+ * @version %G%
  *
  */
 public class DataSetByteArrays implements StataData {

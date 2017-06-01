@@ -8,7 +8,7 @@ import org.paces.Stata.MetaData.Meta;
  * method.
  *
  * @author Billy Buchanan
- * @version 0.0.0
+ * @version %G%
  *
  */
 public class DataSetFactory {

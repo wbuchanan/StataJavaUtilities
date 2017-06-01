@@ -1,8 +1,4 @@
 package org.paces.Stata.Variables;
-/**
- * Created by billy on 12/10/15.
- */
-
 import com.stata.sfi.Data;
 
 import java.util.ArrayList;
@@ -13,7 +9,7 @@ import java.util.List;
  * classes in the Variables package to extract and store data about the
  * variables in the active Stata session.
  * @author Billy Buchanan
- * @version 0.0.0
+ * @version %G%
  *
  */
 public class VariableIndex {

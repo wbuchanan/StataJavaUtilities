@@ -8,7 +8,7 @@ import java.util.*;
 /***
  * Class used to store value labels from Stata data set
  * @author Billy Buchanan
- * @version 0.0.0
+ * @version %G%
  *
  */
 public class ValLabels implements VarInterface {

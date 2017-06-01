@@ -11,7 +11,7 @@ import java.util.stream.Collectors;
 /**
  * Class to return all values of a single variable
  * @author Billy Buchanan
- * @version 0.0.0
+ * @version %G%
  *
  */
 public class StringDataColumn {

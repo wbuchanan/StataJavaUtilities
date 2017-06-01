@@ -7,7 +7,7 @@ import java.util.stream.Collectors;
 /***
  * Class containing variable names list
  * @author Billy Buchanan
- * @version 0.0.0
+ * @version %G%
  *
  */
 public class VarNames implements VarInterface {

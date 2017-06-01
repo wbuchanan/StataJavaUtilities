@@ -13,7 +13,7 @@ import java.util.Map;
  * Class to return all values of a single Stata variable.
  * This class requires the detection of the Stata variable types.
  * @author Billy Buchanan
- * @version 0.0.0
+ * @version %G%
  * @see org.paces.Stata.Variables.VarTypes
  */
 public class DataColumn {

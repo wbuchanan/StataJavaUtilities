@@ -10,7 +10,7 @@ import java.util.*;
  * A 2d Array of Longs containing the data from the active data set in memory.
  *
  * @author Billy Buchanan
- * @version 0.0.0
+ * @version %G%
  *
  */
 public class DataSetLongArrays implements StataData {

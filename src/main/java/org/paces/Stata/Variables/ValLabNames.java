@@ -8,7 +8,7 @@ import java.util.*;
 /***
  * Class used to store value label names
  * @author Billy Buchanan
- * @version 0.0.0
+ * @version %G%
  *
  */
 public class ValLabNames implements VarInterface {

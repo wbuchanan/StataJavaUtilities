@@ -10,7 +10,7 @@ import java.util.*;
  * loaded in memory.
  *
  * @author Billy Buchanan
- * @version 0.0.0
+ * @version %G%
  *
  */
 public class DataRecord implements Record {

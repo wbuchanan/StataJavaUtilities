@@ -11,7 +11,7 @@ import java.util.Map;
  * builds/contains data related to the observation metadata.
  *
  * @author Billy Buchanan
- * @version 0.0.0
+ * @version %G%
  */
 public class Variables {
 

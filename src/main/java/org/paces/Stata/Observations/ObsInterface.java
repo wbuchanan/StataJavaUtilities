@@ -5,7 +5,7 @@ import java.util.*;
 /**
  * Interface for observation methods
  * @author Billy Buchanan
- * @version 0.0.0
+ * @version %G%
  */
 public interface ObsInterface {
 

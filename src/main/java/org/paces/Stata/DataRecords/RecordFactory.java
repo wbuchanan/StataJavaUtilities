@@ -7,7 +7,7 @@ import org.paces.Stata.MetaData.Meta;
  * ID, a Meta class object, and a string argument to define the return type.
  *
  * @author Billy Buchanan
- * @version 0.0.0
+ * @version %G%
  *
  */
 public class RecordFactory {
@@ -77,6 +77,7 @@ public class RecordFactory {
 	 *                from the Stata dataset in memory
 	 * @param metaob An object of class Meta used to define the
 	 *                  observation/variable indices and metadata overall
+	 * @param missingValue The numeric value to use to represent missing values in the data.
 	 * @return A Record class object of type defined by the user.  An empty
 	 * string will return the object used for JSON serialization
 	 */

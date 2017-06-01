@@ -6,7 +6,7 @@ import java.util.*;
  * Class with methods for converting two-dimensional arrays between object
  * and primitive types
  * @author Billy Buchanan
- * @version 0.0.0
+ * @version %G%
  */
 public class MDArrays {
 

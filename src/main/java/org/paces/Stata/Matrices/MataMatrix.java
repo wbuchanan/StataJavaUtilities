@@ -13,7 +13,7 @@ import java.util.Map;
  * Class used to construct POJO representation of Mata Matrix.
  *
  * @author Billy Buchanan
- * @version 0.0.0
+ * @version %G%
  *
  */
 public class MataMatrix {

@@ -9,7 +9,7 @@ import java.util.*;
  * dataset and to store metadata related to observations.
  *
  * @author Billy Buchanan
- * @version 0.0.0
+ * @version %G%
  *
  */
 public class Obs14 implements ObsInterface {

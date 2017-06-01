@@ -12,7 +12,7 @@ import java.util.*;
  * DataSet objects inherit Meta to construct these representations.
  *
  * @author Billy Buchanan
- * @version 0.0.0
+ * @version %G%
  *
  */
 public class Meta {
@@ -38,16 +38,10 @@ public class Meta {
 	private List<Number> obsindex;
 
 	/***
-	 * Constructor for object w/o any arguments passed
-	 * @param args Arguments passed from the javacall command in Stata
-	 */
-	@Deprecated
-	public Meta(String[] args) {
-		this();
-	}
-
-	/***
-	 * Constructor for object w/o any arguments passed
+	 * Constructor for Meta object without need to pass any arguments.
+	 * This constructor should be used by default as it will create all the other objects necessary to define the
+	 * metadata for the dataset in memory.  The objects contained in this class can then be accessed using the
+	 * appropriate accessor methods.
 	 */
 	public Meta() {
 
@@ -64,6 +58,15 @@ public class Meta {
 		setObsindex(stataobs);
 
 	} // End constructor declaration
+
+	/***
+	 * Constructor for object w/o any arguments passed
+	 * @param args Arguments passed from the javacall command in Stata
+	 */
+	@Deprecated
+	public Meta(String[] args) {
+		this();
+	}
 
 	/***
 	 * Generic setter method for observations member variable

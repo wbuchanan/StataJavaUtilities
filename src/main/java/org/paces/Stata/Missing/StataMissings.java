@@ -5,7 +5,7 @@ import java.util.TreeMap;
 
 /**
  * @author Billy Buchanan
- * @version 0.0.0
+ * @version %G%
  */
 public class StataMissings {
 

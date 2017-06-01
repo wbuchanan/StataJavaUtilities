@@ -5,7 +5,7 @@ import java.util.List;
 /***
  * Class containing number of variables in the active Stata session
  * @author Billy Buchanan
- * @version 0.0.0
+ * @version %G%
  *
  */
 public class Nvars {

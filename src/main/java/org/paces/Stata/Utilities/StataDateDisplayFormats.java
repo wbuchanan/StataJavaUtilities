@@ -8,7 +8,7 @@ import java.time.format.DateTimeFormatter;
  * Also need to implement small parser to handle the translation from Stata
  * datetime formats to the Java equivalents where possible.
  * @author Billy Buchanan
- * @version 0.0.0
+ * @version %G%
  */
 public class StataDateDisplayFormats {
 

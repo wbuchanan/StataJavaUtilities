@@ -6,7 +6,7 @@ import com.stata.sfi.Macro;
  * Class with Static Methods to retrieve data about the source of the Stata data
  * files.
  * @author Billy Buchanan
- * @version 0.0.0
+ * @version %G%
  *
  */
 public class DataSource {

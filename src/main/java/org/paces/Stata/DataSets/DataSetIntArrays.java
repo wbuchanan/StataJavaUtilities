@@ -12,7 +12,7 @@ import java.util.List;
  * memory.
  *
  * @author Billy Buchanan
- * @version 0.0.0
+ * @version %G%
  *
  */
 public class DataSetIntArrays implements StataData {

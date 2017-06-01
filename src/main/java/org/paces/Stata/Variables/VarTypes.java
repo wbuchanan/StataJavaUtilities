@@ -6,7 +6,7 @@ import java.util.*;
 /***
  * Class containing string variable indicators
  * @author Billy Buchanan
- * @version 0.0.0
+ * @version %G%
  *
  */
 public class VarTypes implements VarInterface {
