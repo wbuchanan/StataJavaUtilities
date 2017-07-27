@@ -24,148 +24,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="771314f2-eeb1-47f5-8e9b-fb129e4dfd06" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/index.html" afterPath="$PROJECT_DIR$/docs/root.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/constant-values.html" afterPath="$PROJECT_DIR$/docs/constant-values.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/deprecated-list.html" afterPath="$PROJECT_DIR$/docs/deprecated-list.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/help-doc.html" afterPath="$PROJECT_DIR$/docs/help-doc.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/index-files/index-1.html" afterPath="$PROJECT_DIR$/docs/index-files/index-1.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/index-files/index-10.html" afterPath="$PROJECT_DIR$/docs/index-files/index-10.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/index-files/index-11.html" afterPath="$PROJECT_DIR$/docs/index-files/index-11.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/index-files/index-12.html" afterPath="$PROJECT_DIR$/docs/index-files/index-12.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/index-files/index-13.html" afterPath="$PROJECT_DIR$/docs/index-files/index-13.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/index-files/index-14.html" afterPath="$PROJECT_DIR$/docs/index-files/index-14.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/index-files/index-15.html" afterPath="$PROJECT_DIR$/docs/index-files/index-15.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/index-files/index-16.html" afterPath="$PROJECT_DIR$/docs/index-files/index-16.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/index-files/index-17.html" afterPath="$PROJECT_DIR$/docs/index-files/index-17.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/index-files/index-18.html" afterPath="$PROJECT_DIR$/docs/index-files/index-18.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/index-files/index-2.html" afterPath="$PROJECT_DIR$/docs/index-files/index-2.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/index-files/index-3.html" afterPath="$PROJECT_DIR$/docs/index-files/index-3.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/index-files/index-4.html" afterPath="$PROJECT_DIR$/docs/index-files/index-4.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/index-files/index-5.html" afterPath="$PROJECT_DIR$/docs/index-files/index-5.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/index-files/index-6.html" afterPath="$PROJECT_DIR$/docs/index-files/index-6.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/index-files/index-7.html" afterPath="$PROJECT_DIR$/docs/index-files/index-7.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/index-files/index-8.html" afterPath="$PROJECT_DIR$/docs/index-files/index-8.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/index-files/index-9.html" afterPath="$PROJECT_DIR$/docs/index-files/index-9.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/org/paces/Stata/DataRecords/DataRecord.html" afterPath="$PROJECT_DIR$/docs/org/paces/Stata/DataRecords/DataRecord.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/org/paces/Stata/DataRecords/DataRecordByteArray.html" afterPath="$PROJECT_DIR$/docs/org/paces/Stata/DataRecords/DataRecordByteArray.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/org/paces/Stata/DataRecords/DataRecordDoubleArray.html" afterPath="$PROJECT_DIR$/docs/org/paces/Stata/DataRecords/DataRecordDoubleArray.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/org/paces/Stata/DataRecords/DataRecordIntArray.html" afterPath="$PROJECT_DIR$/docs/org/paces/Stata/DataRecords/DataRecordIntArray.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/org/paces/Stata/DataRecords/DataRecordLongArray.html" afterPath="$PROJECT_DIR$/docs/org/paces/Stata/DataRecords/DataRecordLongArray.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/org/paces/Stata/DataRecords/DataRecordStringArray.html" afterPath="$PROJECT_DIR$/docs/org/paces/Stata/DataRecords/DataRecordStringArray.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/org/paces/Stata/DataRecords/Record.html" afterPath="$PROJECT_DIR$/docs/org/paces/Stata/DataRecords/Record.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/org/paces/Stata/DataRecords/RecordFactory.html" afterPath="$PROJECT_DIR$/docs/org/paces/Stata/DataRecords/RecordFactory.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/org/paces/Stata/DataRecords/class-use/DataRecord.html" afterPath="$PROJECT_DIR$/docs/org/paces/Stata/DataRecords/class-use/DataRecord.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/org/paces/Stata/DataRecords/class-use/DataRecordByteArray.html" afterPath="$PROJECT_DIR$/docs/org/paces/Stata/DataRecords/class-use/DataRecordByteArray.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/org/paces/Stata/DataRecords/class-use/DataRecordDoubleArray.html" afterPath="$PROJECT_DIR$/docs/org/paces/Stata/DataRecords/class-use/DataRecordDoubleArray.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/org/paces/Stata/DataRecords/class-use/DataRecordIntArray.html" afterPath="$PROJECT_DIR$/docs/org/paces/Stata/DataRecords/class-use/DataRecordIntArray.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/org/paces/Stata/DataRecords/class-use/DataRecordLongArray.html" afterPath="$PROJECT_DIR$/docs/org/paces/Stata/DataRecords/class-use/DataRecordLongArray.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/org/paces/Stata/DataRecords/class-use/DataRecordStringArray.html" afterPath="$PROJECT_DIR$/docs/org/paces/Stata/DataRecords/class-use/DataRecordStringArray.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/org/paces/Stata/DataRecords/class-use/Record.html" afterPath="$PROJECT_DIR$/docs/org/paces/Stata/DataRecords/class-use/Record.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/org/paces/Stata/DataRecords/class-use/RecordFactory.html" afterPath="$PROJECT_DIR$/docs/org/paces/Stata/DataRecords/class-use/RecordFactory.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/org/paces/Stata/DataRecords/package-summary.html" afterPath="$PROJECT_DIR$/docs/org/paces/Stata/DataRecords/package-summary.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/org/paces/Stata/DataRecords/package-tree.html" afterPath="$PROJECT_DIR$/docs/org/paces/Stata/DataRecords/package-tree.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/org/paces/Stata/DataRecords/package-use.html" afterPath="$PROJECT_DIR$/docs/org/paces/Stata/DataRecords/package-use.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/org/paces/Stata/DataSets/DataSet.html" afterPath="$PROJECT_DIR$/docs/org/paces/Stata/DataSets/DataSet.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/org/paces/Stata/DataSets/DataSetByteArrays.html" afterPath="$PROJECT_DIR$/docs/org/paces/Stata/DataSets/DataSetByteArrays.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/org/paces/Stata/DataSets/DataSetDoubleArrays.html" afterPath="$PROJECT_DIR$/docs/org/paces/Stata/DataSets/DataSetDoubleArrays.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/org/paces/Stata/DataSets/DataSetFactory.html" afterPath="$PROJECT_DIR$/docs/org/paces/Stata/DataSets/DataSetFactory.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/org/paces/Stata/DataSets/DataSetIntArrays.html" afterPath="$PROJECT_DIR$/docs/org/paces/Stata/DataSets/DataSetIntArrays.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/org/paces/Stata/DataSets/DataSetLongArrays.html" afterPath="$PROJECT_DIR$/docs/org/paces/Stata/DataSets/DataSetLongArrays.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/org/paces/Stata/DataSets/DataSetStringArrays.html" afterPath="$PROJECT_DIR$/docs/org/paces/Stata/DataSets/DataSetStringArrays.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/org/paces/Stata/DataSets/StataData.html" afterPath="$PROJECT_DIR$/docs/org/paces/Stata/DataSets/StataData.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/org/paces/Stata/DataSets/class-use/DataSet.html" afterPath="$PROJECT_DIR$/docs/org/paces/Stata/DataSets/class-use/DataSet.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/org/paces/Stata/DataSets/class-use/DataSetByteArrays.html" afterPath="$PROJECT_DIR$/docs/org/paces/Stata/DataSets/class-use/DataSetByteArrays.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/org/paces/Stata/DataSets/class-use/DataSetDoubleArrays.html" afterPath="$PROJECT_DIR$/docs/org/paces/Stata/DataSets/class-use/DataSetDoubleArrays.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/org/paces/Stata/DataSets/class-use/DataSetFactory.html" afterPath="$PROJECT_DIR$/docs/org/paces/Stata/DataSets/class-use/DataSetFactory.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/org/paces/Stata/DataSets/class-use/DataSetIntArrays.html" afterPath="$PROJECT_DIR$/docs/org/paces/Stata/DataSets/class-use/DataSetIntArrays.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/org/paces/Stata/DataSets/class-use/DataSetLongArrays.html" afterPath="$PROJECT_DIR$/docs/org/paces/Stata/DataSets/class-use/DataSetLongArrays.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/org/paces/Stata/DataSets/class-use/DataSetStringArrays.html" afterPath="$PROJECT_DIR$/docs/org/paces/Stata/DataSets/class-use/DataSetStringArrays.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/org/paces/Stata/DataSets/class-use/StataData.html" afterPath="$PROJECT_DIR$/docs/org/paces/Stata/DataSets/class-use/StataData.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/org/paces/Stata/DataSets/package-summary.html" afterPath="$PROJECT_DIR$/docs/org/paces/Stata/DataSets/package-summary.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/org/paces/Stata/DataSets/package-tree.html" afterPath="$PROJECT_DIR$/docs/org/paces/Stata/DataSets/package-tree.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/org/paces/Stata/DataSets/package-use.html" afterPath="$PROJECT_DIR$/docs/org/paces/Stata/DataSets/package-use.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/org/paces/Stata/DataTypes/StTypes.html" afterPath="$PROJECT_DIR$/docs/org/paces/Stata/DataTypes/StTypes.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/org/paces/Stata/DataTypes/class-use/StTypes.html" afterPath="$PROJECT_DIR$/docs/org/paces/Stata/DataTypes/class-use/StTypes.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/org/paces/Stata/DataTypes/package-summary.html" afterPath="$PROJECT_DIR$/docs/org/paces/Stata/DataTypes/package-summary.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/org/paces/Stata/DataTypes/package-tree.html" afterPath="$PROJECT_DIR$/docs/org/paces/Stata/DataTypes/package-tree.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/org/paces/Stata/DataTypes/package-use.html" afterPath="$PROJECT_DIR$/docs/org/paces/Stata/DataTypes/package-use.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/org/paces/Stata/Matrices/MataMatrix.html" afterPath="$PROJECT_DIR$/docs/org/paces/Stata/Matrices/MataMatrix.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/org/paces/Stata/Matrices/class-use/MataMatrix.html" afterPath="$PROJECT_DIR$/docs/org/paces/Stata/Matrices/class-use/MataMatrix.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/org/paces/Stata/Matrices/package-summary.html" afterPath="$PROJECT_DIR$/docs/org/paces/Stata/Matrices/package-summary.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/org/paces/Stata/Matrices/package-tree.html" afterPath="$PROJECT_DIR$/docs/org/paces/Stata/Matrices/package-tree.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/org/paces/Stata/Matrices/package-use.html" afterPath="$PROJECT_DIR$/docs/org/paces/Stata/Matrices/package-use.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/org/paces/Stata/MetaData/DataSource.html" afterPath="$PROJECT_DIR$/docs/org/paces/Stata/MetaData/DataSource.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/org/paces/Stata/MetaData/Meta.html" afterPath="$PROJECT_DIR$/docs/org/paces/Stata/MetaData/Meta.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/org/paces/Stata/MetaData/Observations.html" afterPath="$PROJECT_DIR$/docs/org/paces/Stata/MetaData/Observations.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/org/paces/Stata/MetaData/Variables.html" afterPath="$PROJECT_DIR$/docs/org/paces/Stata/MetaData/Variables.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/org/paces/Stata/MetaData/class-use/DataSource.html" afterPath="$PROJECT_DIR$/docs/org/paces/Stata/MetaData/class-use/DataSource.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/org/paces/Stata/MetaData/class-use/Meta.html" afterPath="$PROJECT_DIR$/docs/org/paces/Stata/MetaData/class-use/Meta.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/org/paces/Stata/MetaData/class-use/Observations.html" afterPath="$PROJECT_DIR$/docs/org/paces/Stata/MetaData/class-use/Observations.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/org/paces/Stata/MetaData/class-use/Variables.html" afterPath="$PROJECT_DIR$/docs/org/paces/Stata/MetaData/class-use/Variables.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/org/paces/Stata/MetaData/package-summary.html" afterPath="$PROJECT_DIR$/docs/org/paces/Stata/MetaData/package-summary.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/org/paces/Stata/MetaData/package-tree.html" afterPath="$PROJECT_DIR$/docs/org/paces/Stata/MetaData/package-tree.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/org/paces/Stata/MetaData/package-use.html" afterPath="$PROJECT_DIR$/docs/org/paces/Stata/MetaData/package-use.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/org/paces/Stata/Missing/StataMissings.html" afterPath="$PROJECT_DIR$/docs/org/paces/Stata/Missing/StataMissings.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/org/paces/Stata/Missing/class-use/StataMissings.html" afterPath="$PROJECT_DIR$/docs/org/paces/Stata/Missing/class-use/StataMissings.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/org/paces/Stata/Missing/package-summary.html" afterPath="$PROJECT_DIR$/docs/org/paces/Stata/Missing/package-summary.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/org/paces/Stata/Missing/package-tree.html" afterPath="$PROJECT_DIR$/docs/org/paces/Stata/Missing/package-tree.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/org/paces/Stata/Missing/package-use.html" afterPath="$PROJECT_DIR$/docs/org/paces/Stata/Missing/package-use.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/org/paces/Stata/Observations/Obs13.html" afterPath="$PROJECT_DIR$/docs/org/paces/Stata/Observations/Obs13.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/org/paces/Stata/Observations/Obs14.html" afterPath="$PROJECT_DIR$/docs/org/paces/Stata/Observations/Obs14.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/org/paces/Stata/Observations/ObsInterface.html" afterPath="$PROJECT_DIR$/docs/org/paces/Stata/Observations/ObsInterface.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/org/paces/Stata/Observations/Observations.html" afterPath="$PROJECT_DIR$/docs/org/paces/Stata/Observations/Observations.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/org/paces/Stata/Observations/class-use/Obs13.html" afterPath="$PROJECT_DIR$/docs/org/paces/Stata/Observations/class-use/Obs13.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/org/paces/Stata/Observations/class-use/Obs14.html" afterPath="$PROJECT_DIR$/docs/org/paces/Stata/Observations/class-use/Obs14.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/org/paces/Stata/Observations/class-use/ObsInterface.html" afterPath="$PROJECT_DIR$/docs/org/paces/Stata/Observations/class-use/ObsInterface.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/org/paces/Stata/Observations/class-use/Observations.html" afterPath="$PROJECT_DIR$/docs/org/paces/Stata/Observations/class-use/Observations.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/org/paces/Stata/Observations/package-summary.html" afterPath="$PROJECT_DIR$/docs/org/paces/Stata/Observations/package-summary.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/org/paces/Stata/Observations/package-tree.html" afterPath="$PROJECT_DIR$/docs/org/paces/Stata/Observations/package-tree.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/org/paces/Stata/Observations/package-use.html" afterPath="$PROJECT_DIR$/docs/org/paces/Stata/Observations/package-use.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/org/paces/Stata/Utilities/MDArrays.html" afterPath="$PROJECT_DIR$/docs/org/paces/Stata/Utilities/MDArrays.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/org/paces/Stata/Utilities/StataArgsToCollector.html" afterPath="$PROJECT_DIR$/docs/org/paces/Stata/Utilities/StataArgsToCollector.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/org/paces/Stata/Utilities/StataDateDisplayFormats.html" afterPath="$PROJECT_DIR$/docs/org/paces/Stata/Utilities/StataDateDisplayFormats.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/org/paces/Stata/Utilities/StataXTTS.html" afterPath="$PROJECT_DIR$/docs/org/paces/Stata/Utilities/StataXTTS.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/org/paces/Stata/Utilities/class-use/MDArrays.html" afterPath="$PROJECT_DIR$/docs/org/paces/Stata/Utilities/class-use/MDArrays.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/org/paces/Stata/Utilities/class-use/StataArgsToCollector.html" afterPath="$PROJECT_DIR$/docs/org/paces/Stata/Utilities/class-use/StataArgsToCollector.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/org/paces/Stata/Utilities/class-use/StataDateDisplayFormats.html" afterPath="$PROJECT_DIR$/docs/org/paces/Stata/Utilities/class-use/StataDateDisplayFormats.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/org/paces/Stata/Utilities/class-use/StataXTTS.html" afterPath="$PROJECT_DIR$/docs/org/paces/Stata/Utilities/class-use/StataXTTS.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/org/paces/Stata/Utilities/package-summary.html" afterPath="$PROJECT_DIR$/docs/org/paces/Stata/Utilities/package-summary.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/org/paces/Stata/Utilities/package-tree.html" afterPath="$PROJECT_DIR$/docs/org/paces/Stata/Utilities/package-tree.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/org/paces/Stata/Utilities/package-use.html" afterPath="$PROJECT_DIR$/docs/org/paces/Stata/Utilities/package-use.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/org/paces/Stata/Variables/DataColumn.html" afterPath="$PROJECT_DIR$/docs/org/paces/Stata/Variables/DataColumn.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/org/paces/Stata/Variables/NumDataColumn.html" afterPath="$PROJECT_DIR$/docs/org/paces/Stata/Variables/NumDataColumn.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/org/paces/Stata/Variables/Nvars.html" afterPath="$PROJECT_DIR$/docs/org/paces/Stata/Variables/Nvars.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/org/paces/Stata/Variables/StataTypeInterface.html" afterPath="$PROJECT_DIR$/docs/org/paces/Stata/Variables/StataTypeInterface.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/org/paces/Stata/Variables/StataTypes.html" afterPath="$PROJECT_DIR$/docs/org/paces/Stata/Variables/StataTypes.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/org/paces/Stata/Variables/StringDataColumn.html" afterPath="$PROJECT_DIR$/docs/org/paces/Stata/Variables/StringDataColumn.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/org/paces/Stata/Variables/ValLabNames.html" afterPath="$PROJECT_DIR$/docs/org/paces/Stata/Variables/ValLabNames.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/org/paces/Stata/Variables/ValLabels.html" afterPath="$PROJECT_DIR$/docs/org/paces/Stata/Variables/ValLabels.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/org/paces/Stata/Variables/VarDisplay.html" afterPath="$PROJECT_DIR$/docs/org/paces/Stata/Variables/VarDisplay.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/org/paces/Stata/Variables/VarInterface.html" afterPath="$PROJECT_DIR$/docs/org/paces/Stata/Variables/VarInterface.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/org/paces/Stata/Variables/VarLabels.html" afterPath="$PROJECT_DIR$/docs/org/paces/Stata/Variables/VarLabels.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/org/paces/Stata/Variables/VarNames.html" afterPath="$PROJECT_DIR$/docs/org/paces/Stata/Variables/VarNames.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/org/paces/Stata/Variables/VarTypes.html" afterPath="$PROJECT_DIR$/docs/org/paces/Stata/Variables/VarTypes.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/org/paces/Stata/Variables/VariableIndex.html" afterPath="$PROJECT_DIR$/docs/org/paces/Stata/Variables/VariableIndex.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/org/paces/Stata/Variables/class-use/DataColumn.html" afterPath="$PROJECT_DIR$/docs/org/paces/Stata/Variables/class-use/DataColumn.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/org/paces/Stata/Variables/class-use/NumDataColumn.html" afterPath="$PROJECT_DIR$/docs/org/paces/Stata/Variables/class-use/NumDataColumn.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/org/paces/Stata/Variables/class-use/Nvars.html" afterPath="$PROJECT_DIR$/docs/org/paces/Stata/Variables/class-use/Nvars.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/org/paces/Stata/Variables/class-use/StataTypeInterface.html" afterPath="$PROJECT_DIR$/docs/org/paces/Stata/Variables/class-use/StataTypeInterface.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/org/paces/Stata/Variables/class-use/StataTypes.html" afterPath="$PROJECT_DIR$/docs/org/paces/Stata/Variables/class-use/StataTypes.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/org/paces/Stata/Variables/class-use/StringDataColumn.html" afterPath="$PROJECT_DIR$/docs/org/paces/Stata/Variables/class-use/StringDataColumn.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/org/paces/Stata/Variables/class-use/ValLabNames.html" afterPath="$PROJECT_DIR$/docs/org/paces/Stata/Variables/class-use/ValLabNames.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/org/paces/Stata/Variables/class-use/ValLabels.html" afterPath="$PROJECT_DIR$/docs/org/paces/Stata/Variables/class-use/ValLabels.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/org/paces/Stata/Variables/class-use/VarDisplay.html" afterPath="$PROJECT_DIR$/docs/org/paces/Stata/Variables/class-use/VarDisplay.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/org/paces/Stata/Variables/class-use/VarInterface.html" afterPath="$PROJECT_DIR$/docs/org/paces/Stata/Variables/class-use/VarInterface.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/org/paces/Stata/Variables/class-use/VarLabels.html" afterPath="$PROJECT_DIR$/docs/org/paces/Stata/Variables/class-use/VarLabels.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/org/paces/Stata/Variables/class-use/VarNames.html" afterPath="$PROJECT_DIR$/docs/org/paces/Stata/Variables/class-use/VarNames.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/org/paces/Stata/Variables/class-use/VarTypes.html" afterPath="$PROJECT_DIR$/docs/org/paces/Stata/Variables/class-use/VarTypes.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/org/paces/Stata/Variables/class-use/VariableIndex.html" afterPath="$PROJECT_DIR$/docs/org/paces/Stata/Variables/class-use/VariableIndex.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/org/paces/Stata/Variables/package-summary.html" afterPath="$PROJECT_DIR$/docs/org/paces/Stata/Variables/package-summary.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/org/paces/Stata/Variables/package-tree.html" afterPath="$PROJECT_DIR$/docs/org/paces/Stata/Variables/package-tree.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/org/paces/Stata/Variables/package-use.html" afterPath="$PROJECT_DIR$/docs/org/paces/Stata/Variables/package-use.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/overview-summary.html" afterPath="$PROJECT_DIR$/docs/overview-summary.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/overview-tree.html" afterPath="$PROJECT_DIR$/docs/overview-tree.html" />
     </list>
     <ignored path="StataJavaUtilities.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -269,11 +128,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="root.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/docs/root.html">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docs/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="195">
-              <caret line="13" column="13" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
+              <caret line="13" column="13" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -283,7 +142,7 @@
         <entry file="file://$PROJECT_DIR$/docs/overview-summary.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="167">
-              <caret line="49" column="20" lean-forward="false" selection-start-line="49" selection-start-column="13" selection-end-line="49" selection-end-column="20" />
+              <caret line="49" column="21" lean-forward="false" selection-start-line="49" selection-start-column="13" selection-end-line="49" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -1155,12 +1014,12 @@
       <workItem from="1497232516711" duration="332000" />
       <workItem from="1500937047364" duration="1644000" />
       <workItem from="1501161302768" duration="366000" />
-      <workItem from="1501162232996" duration="733000" />
+      <workItem from="1501162232996" duration="823000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15706000" />
+    <option name="totallyTimeSpent" value="15796000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="19" y="47" width="1648" height="879" extended-state="0" />
@@ -1733,15 +1592,15 @@
     <entry file="file://$PROJECT_DIR$/docs/overview-summary.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="167">
-          <caret line="49" column="20" lean-forward="false" selection-start-line="49" selection-start-column="13" selection-end-line="49" selection-end-column="20" />
+          <caret line="49" column="21" lean-forward="false" selection-start-line="49" selection-start-column="13" selection-end-line="49" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docs/root.html">
+    <entry file="file://$PROJECT_DIR$/docs/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
-          <caret line="13" column="13" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
+          <caret line="13" column="13" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
           <folding />
         </state>
       </provider>
